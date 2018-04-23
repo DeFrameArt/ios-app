@@ -9,7 +9,10 @@
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-One to two paragraph statement about your product and what it does.
+## What is DeFrame?
+DeFrame allows art enthusiasts to connect with museums and galleries and interact with the exhibits through a digital experience on a mobile app, where visitors are free to engage and share user-generated content.
+
+We provide museums and art galleries access to the platform via a SAaS model, where they can gather analytics, explore marketing channels, and create new customer relationships to increase traffic into their space. DeFrame aims to democratize the meaning of Art.
 
 ![](header.png)
 
