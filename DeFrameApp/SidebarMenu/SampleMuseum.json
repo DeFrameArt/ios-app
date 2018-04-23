@@ -1,0 +1,18 @@
+{
+    "museums": [
+            
+                {
+                "name": "Museum of Fine Arts",
+                "lat": "42.339381",
+                "lon": "-71.094048",
+                "imageName": "mfa.jpg"
+                },
+                {
+                "name": "Museum of Science",
+                "lat": "42.367687",
+                "lon": "-71.070924",
+                "imageName": "ms.jpg"
+                }
+               ]
+    
+}

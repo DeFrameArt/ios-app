@@ -1,0 +1,22 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+target 'DeFrameApp' do
+   use_frameworks!
+
+      pod 'SwiftyJSON'
+      pod 'SDWebImage'
+      pod 'FacebookCore'
+      pod 'FacebookLogin'
+      pod 'FacebookShare'
+      pod 'ApiAI'
+      pod 'MBProgressHUD'
+      pod 'JSQMessagesViewController'
+      pod 'JSQSystemSoundPlayer'
+      pod 'BubbleTransition', '~> 2.0.0'
+      pod 'RMPZoomTransitionAnimator'
+     target 'DeFrameAppTests' do
+
+   end
+
+end

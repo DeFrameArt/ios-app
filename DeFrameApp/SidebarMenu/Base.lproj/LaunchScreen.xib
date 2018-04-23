@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="461" height="739"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="fDf-qQ-hCU">
+                    <rect key="frame" x="0.0" y="0.0" width="461" height="739"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="JS6-YN-dfK">
+                    <rect key="frame" x="189" y="284" width="83" height="83"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="83" id="3ez-Hr-E4b"/>
+                        <constraint firstAttribute="height" constant="83" id="Xpj-CB-L6p"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DeFrame" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="G6i-Rh-Bue">
+                    <rect key="frame" x="108" y="375" width="245" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="15I-ni-Ybe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.75839769840000004" green="0.30180859570000002" blue="0.47458842400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="JS6-YN-dfK" firstAttribute="centerX" secondItem="fDf-qQ-hCU" secondAttribute="centerX" id="0ep-J9-Lkr"/>
+                <constraint firstItem="JS6-YN-dfK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="89m-AH-QRq"/>
+                <constraint firstItem="fDf-qQ-hCU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BUj-XU-Rod"/>
+                <constraint firstItem="fDf-qQ-hCU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OTf-ud-mwu"/>
+                <constraint firstItem="JS6-YN-dfK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="284" id="Vg4-RK-MT3"/>
+                <constraint firstItem="G6i-Rh-Bue" firstAttribute="top" secondItem="JS6-YN-dfK" secondAttribute="bottom" constant="8" id="n0s-xr-UNj"/>
+                <constraint firstItem="G6i-Rh-Bue" firstAttribute="centerX" secondItem="JS6-YN-dfK" secondAttribute="centerX" constant="0.25" id="oZc-oy-WlC"/>
+                <constraint firstAttribute="bottom" secondItem="fDf-qQ-hCU" secondAttribute="bottom" id="pN8-JM-d13"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="528" y="386"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Background.png" width="376" height="668"/>
+        <image name="Logo.png" width="83" height="83"/>
+    </resources>
+</document>

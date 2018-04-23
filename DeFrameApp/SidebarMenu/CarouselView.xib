@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CarouselView" customModule="DeFrameApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KAg-44-wci">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KAg-44-wci" secondAttribute="bottom" constant="1" id="VxF-De-49J"/>
+                <constraint firstAttribute="trailing" secondItem="KAg-44-wci" secondAttribute="trailing" id="XXi-ZB-DSo"/>
+                <constraint firstItem="KAg-44-wci" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Y0y-la-JbG"/>
+                <constraint firstItem="KAg-44-wci" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="d8e-JY-KRe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="carouselView" destination="KAg-44-wci" id="Ln0-IR-jqL"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="498.5"/>
+        </view>
+    </objects>
+</document>

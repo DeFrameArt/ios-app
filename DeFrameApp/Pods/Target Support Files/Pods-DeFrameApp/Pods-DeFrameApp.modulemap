@@ -1,0 +1,6 @@
+framework module Pods_DeFrameApp {
+  umbrella header "Pods-DeFrameApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
