@@ -1,5 +1,5 @@
 # Deframe
-> Short blurb about what your product does.
+> Connecting people, art and museum.
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
