@@ -10,19 +10,22 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## What is DeFrame?
-DeFrame allows art enthusiasts to connect with museums and galleries and interact with the exhibits through a digital experience on a mobile app, where visitors are free to engage and share user-generated content.
+DeFrame is a universal Free app for Museums and Art galleries. 
 
-We provide museums and art galleries access to the platform via a SAaS model, where they can gather analytics, explore marketing channels, and create new customer relationships to increase traffic into their space. DeFrame aims to democratize the meaning of Art.
+DeFrame mobile application allows you to discover, connect, and interact with art museums near you. The content provided by DeFrame is ​constantly updated so you are always aware of what’s going on in the art world.
 
 ![](header.png)
 
 ## Features
 
-- [x] Feature 1
-- [x] Feature 2
-- [x] Feature 3
-- [x] Feature 4
-- [x] Feature 5
+- [x] Discover local museums and galleries near you
+- [x] Look at their art highlights
+- [x] Read about featured art exhibitions
+- [x] (Ask Frida) Your virtual Art Assistant any question related to Museums and Art.
+- Currently, we are featuring local Boston museums. Stay tuned for upcoming updates and addition of museum and art galleries in your city.
+
+One App - All Museums.
+
 
 ## Requirements
 
