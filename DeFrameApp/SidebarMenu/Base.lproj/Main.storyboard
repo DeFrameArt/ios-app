@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -49,34 +49,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ucI-Ej-d2m">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ucI-Ej-d2m">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellMuseum" id="Sa9-w8-DOw" customClass="MuseumTableViewCell" customModule="DeFrameApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellMuseum" rowHeight="160" id="Sa9-w8-DOw" customClass="MuseumTableViewCell" customModule="DeFrameApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sa9-w8-DOw" id="Iw0-8y-t4s">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="userPic11.png" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-qE-hW7">
-                                                    <rect key="frame" x="15" y="8" width="70" height="70"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPic11.png" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-qE-hW7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdA-KU-Ne7">
-                                                    <rect key="frame" x="93" y="39" width="222" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A4C-Ty-7pV">
+                                                    <rect key="frame" x="0.0" y="-20" width="320" height="180"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.39029489436619719" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdA-KU-Ne7">
+                                                    <rect key="frame" x="8" y="8" width="35" height="17"/>
                                                     <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRJ-51-xif">
+                                                    <rect key="frame" x="0.0" y="109.5" width="320" height="50"/>
+                                                    <color key="backgroundColor" red="0.75839769840000004" green="0.30180859570000002" blue="0.47458842400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="oyv-xF-Pa0"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Learn More">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="DetailsActionOnClick:" destination="Sa9-w8-DOw" eventType="touchUpInside" id="ZEm-gC-mHe"/>
+                                                        <segue destination="HbW-gY-snx" kind="presentation" identifier="selectedMuseum" modalTransitionStyle="crossDissolve" id="4MU-Ba-dRG"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XdA-KU-Ne7" firstAttribute="top" secondItem="Iw0-8y-t4s" secondAttribute="top" constant="8" id="1by-UZ-AQU"/>
+                                                <constraint firstAttribute="bottom" secondItem="BRJ-51-xif" secondAttribute="bottom" id="6HQ-ao-SE3"/>
+                                                <constraint firstAttribute="trailing" secondItem="A4C-Ty-7pV" secondAttribute="trailing" id="CQg-Z0-xIa"/>
+                                                <constraint firstItem="afQ-qE-hW7" firstAttribute="top" secondItem="Iw0-8y-t4s" secondAttribute="top" id="P7c-mW-1Z2"/>
+                                                <constraint firstAttribute="trailing" secondItem="afQ-qE-hW7" secondAttribute="trailing" id="b3n-Jk-Rft"/>
+                                                <constraint firstItem="A4C-Ty-7pV" firstAttribute="leading" secondItem="Iw0-8y-t4s" secondAttribute="leading" id="dwa-kD-fuD"/>
+                                                <constraint firstItem="BRJ-51-xif" firstAttribute="trailing" secondItem="afQ-qE-hW7" secondAttribute="trailing" id="goM-hk-0gb"/>
+                                                <constraint firstAttribute="bottom" secondItem="afQ-qE-hW7" secondAttribute="bottom" id="hin-ka-moQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="A4C-Ty-7pV" secondAttribute="bottom" id="lZw-AC-y0P"/>
+                                                <constraint firstItem="XdA-KU-Ne7" firstAttribute="leading" secondItem="Iw0-8y-t4s" secondAttribute="leading" constant="8" id="n4c-jp-W7R"/>
+                                                <constraint firstItem="BRJ-51-xif" firstAttribute="leading" secondItem="afQ-qE-hW7" secondAttribute="leading" id="qnh-xZ-ADF"/>
+                                                <constraint firstItem="A4C-Ty-7pV" firstAttribute="top" secondItem="Iw0-8y-t4s" secondAttribute="top" id="u57-Cb-5zc"/>
+                                                <constraint firstItem="afQ-qE-hW7" firstAttribute="leading" secondItem="Iw0-8y-t4s" secondAttribute="leading" id="vbd-QG-VgG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="coverView" destination="A4C-Ty-7pV" id="hrR-gl-2IO"/>
+                                            <outlet property="detailsAction" destination="BRJ-51-xif" id="BEm-xw-nQP"/>
                                             <outlet property="imageM" destination="afQ-qE-hW7" id="cmC-40-X40"/>
                                             <outlet property="titleMuseum" destination="XdA-KU-Ne7" id="sO7-lt-WXr"/>
-                                            <segue destination="HbW-gY-snx" kind="presentation" identifier="selectedMuseum" modalTransitionStyle="crossDissolve" id="Ym1-VZ-rzv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0z-kg-iXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5966" y="-3172"/>
+            <point key="canvasLocation" x="5964.375" y="-3172.1830985915494"/>
         </scene>
         <!--Museums-->
         <scene sceneID="MMi-W1-KaJ">
@@ -9528,7 +9560,7 @@ AAbotQAG6LgABujKAAbozQAG6NIAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAAAbo1A
         <image name="user_icon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ym1-VZ-rzv"/>
+        <segue reference="4MU-Ba-dRG"/>
         <segue reference="4ao-t1-l3u"/>
         <segue reference="Y80-0G-iRU"/>
     </inferredMetricsTieBreakers>

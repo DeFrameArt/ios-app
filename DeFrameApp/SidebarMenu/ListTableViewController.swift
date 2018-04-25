@@ -23,6 +23,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     let controller = UISearchController(searchResultsController: nil)
     var filteredCandies = [Museum]()
     
+    
     override func viewDidLoad() {
     
     self.resultSearchController = ({
@@ -32,20 +33,47 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     controller.searchBar.sizeToFit()
     controller.searchBar.barStyle = UIBarStyle.default
     controller.searchBar.barTintColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
-    controller.searchBar.backgroundColor = UIColor.clear
+    controller.searchBar.backgroundColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
     
-    self.definesPresentationContext = true;
+   
    // self.tableView.animateTableView(animation: myCoolTableAnimation)
-    self.tableView.tableHeaderView = controller.searchBar
+        if #available(iOS 11.0, *) {
+           
+            let scb = controller.searchBar
+            scb.tintColor = UIColor.white
+            scb.barTintColor = UIColor.white
+            
+            if let textfield = scb.value(forKey: "searchField") as? UITextField {
+                textfield.textColor = UIColor.blue
+                if let backgroundview = textfield.subviews.first {
+                    
+                    // Background color
+                    backgroundview.backgroundColor = UIColor.white
+                    
+                    // Rounded corner
+                    backgroundview.layer.cornerRadius = 10;
+                    backgroundview.clipsToBounds = true;
+                }
+            }
+            
+          
+            navigationItem.searchController = controller
+            navigationItem.hidesSearchBarWhenScrolling = false
+        } else {
+            // Fallback on earlier versions
+            tableView.tableHeaderView = controller.searchBar
+        }
+         self.definesPresentationContext = true;
     return controller
     })()
     super.viewDidLoad()
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 100.0; // set to whatever your "average" cell height is
+    self.tableView.estimatedRowHeight = 160.0; // set to whatever your "average" cell height is
     // Setup the Search Controller
-    
+    //tableView.tableFooterView = UIView()
     
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     resultSearchController.dismiss(animated: false, completion: nil)
@@ -60,14 +88,16 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     // Returns true if the text is empty or nil
     return resultSearchController.searchBar.text?.isEmpty ?? true
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "selectedMuseum" {
-    if let indexPath = tableView.indexPathForSelectedRow {
+      
+    
     let museum1: Museum
     if isFiltering() {
-    museum1 = filteredCandies[indexPath.row]
+    museum1 = filteredCandies[indexP]
     } else {
-    museum1 = museum[indexPath.row]
+    museum1 = museum[indexP]
     }
         let navVC = segue.destination as? UINavigationController
        
@@ -87,26 +117,32 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     museumViewController.logoURL = museum1.logoURL
     // controller1.detailCandy = museum
    
-    }
-    }
-    }
-    /* func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-     {
-     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-     
-     
-     vc.museumbannerURL = self.museumpagebannerURL
-     vc.museumStreetLabel = self.museumpagestreetLabel!
-     vc.museumCityStateZipLabel = self.museumpageCityStateZipLabel!
-     vc.museumCountryLabel = self.museumpageCountryLabel!
-     vc.museumPageMuseumId = self.museumId
-     vc.museumLabel = self.museumpageNameLabel!
-     vc.logoURL = self.museumPagelogoURL
-     
-     self.navigationController?.pushViewController(vc, animated: true)
-     
-     }*/
     
+    }
+    }
+   var selectedRowIndex = -1
+    var cellstaped=false
+    var indexP=0
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if selectedRowIndex == indexPath.row {
+            selectedRowIndex = -1
+            
+       
+        } else {
+            
+            self.tableView.beginUpdates()
+            self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            self.tableView.endUpdates()
+                self.selectedRowIndex = indexPath.row
+                self.indexP=indexPath.row
+            
+        }
+      //  tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.reloadData()
+    }
+
+    
+ 
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
         transition.bubbleColor =  UIColor.white
@@ -137,7 +173,16 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 80.0;//Choose your custom row height
+        if indexPath.row == selectedRowIndex {
+            cellstaped=true
+          
+            return 250 //Expanded
+            
+        }
+        cellstaped=false
+      
+        return 160 //Not expanded
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cellMuseum", for: indexPath as IndexPath) as! MuseumTableViewCell
@@ -150,16 +195,25 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     } else {
     museums = museum[indexPath.row]
     }
-    let urlImage=museums.bannerURL
+    let urlImage=museums.logoURL
     cell.titleMuseum.text = museums.name
         if(modelName=="iPhone 5s"){
             cell.titleMuseum.font=UIFont(name: "Times New Roman", size: 14.0)
         }
-        cell.imageM.sd_setImage(with: URL(string: museums.logoURL!))
-         cell.imageM.layer.cornerRadius = ( cell.imageM.frame.size.height/2);
-         cell.imageM.layer.masksToBounds = true;
-         cell.imageM.layer.borderWidth = 2;
-         cell.imageM.layer.borderColor = (UIColor(red: 193/255, green: 77/255, blue: 121/255, alpha: 1)).cgColor
+        cell.imageM.sd_setImage(with: URL(string: museums.bannerURL!))
+        if(cellstaped==true){
+            cell.detailsAction.isHidden=false
+            cell.coverView.addBlurEffect()
+        }
+        else{
+             cell.detailsAction.isHidden=true
+            cell.coverView.removeBlurEffect()
+        }
+        
+        // cell.imageM.layer.cornerRadius = ( cell.imageM.frame.size.height/2);
+      //   cell.imageM.layer.masksToBounds = true;
+    //     cell.imageM.layer.borderWidth = 2;
+     //    cell.imageM.layer.borderColor = (UIColor(red: 193/255, green: 77/255, blue: 121/255, alpha: 1)).cgColor
     return cell
     }
     func searchBar(_ searchBar: UISearchBar) {
@@ -237,4 +291,22 @@ public extension UIDevice {
     }
 }
 
-
+extension UIView
+{
+    func addBlurEffect()
+    {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        self.addSubview(blurEffectView)
+    }
+    
+    func removeBlurEffect() {
+        let blurredEffectViews = self.subviews.filter{$0 is UIVisualEffectView}
+        blurredEffectViews.forEach{ blurView in
+            blurView.removeFromSuperview()
+        }
+    }
+}

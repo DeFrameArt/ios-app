@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2C1D9F9BE02BB981F93AB80E /* Pods_DeFrameApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CD2666E740BAE932E3FA5D /* Pods_DeFrameApp.framework */; };
 		351B5D942067357400F3D6E8 /* UrlImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 351B5D932067357300F3D6E8 /* UrlImage.png */; };
-		351B5D972067577000F3D6E8 /* UserProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 351B5D952067576500F3D6E8 /* UserProfile.png */; };
 		351B5D982067577000F3D6E8 /* userPic2.png in Resources */ = {isa = PBXBuildFile; fileRef = 351B5D962067576A00F3D6E8 /* userPic2.png */; };
 		3544613020748B2300FA1CBF /* MuseumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544612F20748B2300FA1CBF /* MuseumTableViewCell.swift */; };
 		3544613120748B2300FA1CBF /* MuseumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544612F20748B2300FA1CBF /* MuseumTableViewCell.swift */; };
@@ -72,6 +71,8 @@
 		35A25EBA204DFA7D0023A77D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A25EB9204DFA7C0023A77D /* Logo.png */; };
 		35A25EBB204DFA7D0023A77D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A25EB9204DFA7C0023A77D /* Logo.png */; };
 		35A4BAD7201B870200FA1786 /* artHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */; };
+		35B0DA8A208ECE650005272C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35B0DA89208ECE640005272C /* Info.plist */; };
+		35B0DA8B208ECE650005272C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35B0DA89208ECE640005272C /* Info.plist */; };
 		35BCA31F2079D7C20068E899 /* bank (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA31E2079D7BD0068E899 /* bank (1).png */; };
 		35BCA3212079DAD90068E899 /* secure-file (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3202079DAD40068E899 /* secure-file (2).png */; };
 		35BCA3232079DB1A0068E899 /* info (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3222079DB160068E899 /* info (2).png */; };
@@ -181,6 +182,7 @@
 		35A25EB3204DF9820023A77D /* NewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		35A25EB6204DF9930023A77D /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		35A25EB9204DFA7C0023A77D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		35B0DA89208ECE640005272C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BCA31E2079D7BD0068E899 /* bank (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank (1).png"; sourceTree = "<group>"; };
 		35BCA3202079DAD40068E899 /* secure-file (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secure-file (2).png"; sourceTree = "<group>"; };
 		35BCA3222079DB160068E899 /* info (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info (2).png"; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 				351B5D952067576500F3D6E8 /* UserProfile.png */,
 				35488E5020101F9800A2858A /* images.png */,
 				A083563D1FEAFB1600850FAA /* Bot Button@2x.png */,
+				35B0DA89208ECE640005272C /* Info.plist */,
 				F47029F41A7F27DB00E30A3C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -561,7 +564,7 @@
 				TargetAttributes = {
 					F47029EF1A7F27DB00E30A3C = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = J42C78J3VY;
+						DevelopmentTeam = 4XCFZVG8M4;
 						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -618,7 +621,6 @@
 				359615CA2079B52000B6760D /* info.png in Resources */,
 				35BCA31F2079D7C20068E899 /* bank (1).png in Resources */,
 				A0B6CCAF2088496D001060BE /* show-more-button-with-three-dots (1).png in Resources */,
-				351B5D972067577000F3D6E8 /* UserProfile.png in Resources */,
 				35BCA3212079DAD90068E899 /* secure-file (2).png in Resources */,
 				351B5D982067577000F3D6E8 /* userPic2.png in Resources */,
 				3557CEEC20685E9B00548D99 /* UserProfile.png in Resources */,
@@ -629,6 +631,7 @@
 				359615D22079B6DA00B6760D /* feedback (1).png in Resources */,
 				359615CC2079B52000B6760D /* secure-file.png in Resources */,
 				A0FE6279208D672F00948CDD /* Podfile in Resources */,
+				35B0DA8A208ECE650005272C /* Info.plist in Resources */,
 				359615DB2079BD4A00B6760D /* bank.png in Resources */,
 				F4702A001A7F27DC00E30A3C /* LaunchScreen.xib in Resources */,
 				F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */,
@@ -665,6 +668,7 @@
 				359615CB2079B52000B6760D /* info.png in Resources */,
 				359615D02079B5E500B6760D /* feedback.png in Resources */,
 				3557CEED20685E9B00548D99 /* UserProfile.png in Resources */,
+				35B0DA8B208ECE650005272C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,7 +1029,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J42C78J3VY;
+				DEVELOPMENT_TEAM = 4XCFZVG8M4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1050,7 +1054,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J42C78J3VY;
+				DEVELOPMENT_TEAM = 4XCFZVG8M4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
