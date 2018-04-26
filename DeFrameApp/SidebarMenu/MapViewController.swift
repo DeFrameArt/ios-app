@@ -370,7 +370,7 @@ func startDownloadingMuseums(){
 //    }
     
     
-    var url : String = "http://deframe-test-api.us-east-1.elasticbeanstalk.com/museums"
+    let url : String = "http://deframe-test-api.us-east-1.elasticbeanstalk.com/museums"
     print("in  start download prediction callback ")
     
     if(Thread.isMainThread){
