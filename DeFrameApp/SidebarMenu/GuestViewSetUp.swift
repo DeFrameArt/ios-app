@@ -20,6 +20,8 @@ class GuestViewSetUp:UIViewController,UICollectionViewDataSource, UICollectionVi
     var listOFImages=["userPic3.png","userPic4.png","userPic8.png","userPic9.png","userPic11.png","userPic5.png","userPic7.png","userPic2.png","UserProfile.png"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .lightContent
+        navigationController?.navigationBar.tintColor = .white
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

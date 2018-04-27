@@ -71,7 +71,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     self.tableView.estimatedRowHeight = 160.0; // set to whatever your "average" cell height is
     // Setup the Search Controller
     //tableView.tableFooterView = UIView()
-    
+    // viewLad=true
+        tableView.reloadWithAnimation()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -123,6 +124,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
    var selectedRowIndex = -1
     var cellstaped=false
     var indexP=0
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if selectedRowIndex == indexPath.row {
             selectedRowIndex = -1
@@ -184,6 +186,40 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         return 160 //Not expanded
         
     }
+     var viewLad=true
+      private var finishedLoadingInitialTableCells = false
+   /* func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+       
+        var lastInitialDisplayableCell = false
+        
+        //change flag as soon as last displayable cell is being loaded (which will mean table has initially loaded)
+        if filteredCandies.count > 0 && !finishedLoadingInitialTableCells {
+            if let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows,
+                let lastIndexPath = indexPathsForVisibleRows.last, lastIndexPath.row == indexPath.row {
+                lastInitialDisplayableCell = true
+            }
+        }
+        
+        if !finishedLoadingInitialTableCells {
+            
+            if lastInitialDisplayableCell {
+                finishedLoadingInitialTableCells = true
+            }
+            
+            //animates the cell as it is being displayed for the first time
+            cell.transform = CGAffineTransform(translationX: 0, y: self.tableView.rowHeight/2)
+            cell.alpha = 0
+            
+            UIView.animate(withDuration: 2, delay:0.5*Double(indexPath.row), options: [.curveEaseIn], animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                cell.alpha = 1
+            }, completion: nil)
+        }
+           //  viewLad=false
+        
+        
+    }
+    */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cellMuseum", for: indexPath as IndexPath) as! MuseumTableViewCell
     let museums: Museum
@@ -204,10 +240,16 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         if(cellstaped==true){
             cell.detailsAction.isHidden=false
             cell.coverView.addBlurEffect()
+            //let second = "\(a), \(b)"
+            cell.address.isHidden=false
+            var temp : String?
+            temp="\(museums.street ?? ""), \(museums.city ?? ""), \(museums.zip ?? "")"
+            cell.address.text = temp
         }
         else{
              cell.detailsAction.isHidden=true
             cell.coverView.removeBlurEffect()
+             cell.address.isHidden=true
         }
         
         // cell.imageM.layer.cornerRadius = ( cell.imageM.frame.size.height/2);
@@ -307,6 +349,26 @@ extension UIView
         let blurredEffectViews = self.subviews.filter{$0 is UIVisualEffectView}
         blurredEffectViews.forEach{ blurView in
             blurView.removeFromSuperview()
+        }
+    }
+    
+}
+extension UITableView {
+    func reloadWithAnimation() {
+        self.reloadData()
+        let tableViewHeight = self.bounds.size.height
+        let cells = self.visibleCells
+        var delayCounter = 0
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
+        }
+        for cell in cells {
+            //UIView.animate(withDuration: 1.6, delay: 0.1 * Double(delayCounter),usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                UIView.animate(withDuration: 1, delay: 0.2 * Double(delayCounter), options: [.curveEaseInOut], animations: {
+                
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+            delayCounter += 1
         }
     }
 }

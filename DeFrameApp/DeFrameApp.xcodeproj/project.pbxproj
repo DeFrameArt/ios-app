@@ -288,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				582037B71F369CCA00C0F384 /* CarouselView.swift */,
+				A058F37E1FC40B03001FC901 /* PrivacyScreen */,
 				58F68F191F7A0AF5006F7510 /* MuseumDetailsView.swift */,
 				58FED4C21F40DC6800239CBC /* artCollectionViewCell.swift */,
 				F491E7521A7F7DF20026528E /* MapViewController.swift */,
@@ -424,7 +425,6 @@
 				A058F38A1FCFA76C001FC901 /* ChatBotScreen */,
 				A058F3841FC40B64001FC901 /* TermsandconditionScreen */,
 				A058F37F1FC40B0E001FC901 /* Utils */,
-				A058F37E1FC40B03001FC901 /* PrivacyScreen */,
 				A058F37D1FC40AF0001FC901 /* FeedbackScreen */,
 				A058F37A1FC40A95001FC901 /* Login */,
 				A058F37B1FC40AA3001FC901 /* MuseumScreen */,

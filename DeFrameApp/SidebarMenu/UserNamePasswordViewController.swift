@@ -215,6 +215,8 @@ extension UserNamePasswordViewController{
     
 }
 
+
+
 extension UserNamePasswordViewController: UITextFieldDelegate{
     func addToolBar(textField: UITextField){
         var toolBar = UIToolbar()
@@ -238,6 +240,4 @@ extension UserNamePasswordViewController: UITextFieldDelegate{
     }
     
 }
-
-
 
