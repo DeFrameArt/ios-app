@@ -13,6 +13,10 @@ import CoreLocation
 import MapKit
 import ApiAI
 import CoreData
+import Fabric
+import Crashlytics
+import Pyze
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
@@ -30,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         configuration.clientAccessToken = "ce43ad2bcd2e4be294f87b30460e50f7"
         let apiai = ApiAI.shared()
         apiai?.configuration = configuration
+        
+        Fabric.with([Crashlytics.self])
+        Pyze.initialize("mbFjzLzfSn273A11RFfScg", withLogThrottling: .PyzelogLevelMinimal)
+        
         return true
         
     }

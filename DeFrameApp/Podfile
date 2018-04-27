@@ -15,6 +15,8 @@ target 'DeFrameApp' do
       pod 'JSQSystemSoundPlayer'
       pod 'BubbleTransition', '~> 2.0.0'
       pod 'RMPZoomTransitionAnimator'
+      pod 'pyze-sdk-iOS'
+      
      target 'DeFrameAppTests' do
 
    end
