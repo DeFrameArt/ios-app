@@ -14,6 +14,7 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import CoreData
 import BubbleTransition
+import MaterialComponents.MaterialTypography
 //protocol AddItemProtocol {
     //code for the requirements of this protocole
   //  func addMusuem(_ item:SelectedMuseum)
@@ -77,7 +78,34 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
 
         map.showsUserLocation = true
 
+         self.museumNameLabel.font = MDCTypography.headlineFont()
+         self.museumNameLabel.alpha = MDCTypography.headlineFontOpacity()
         
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+         self.museumNameLabel.sizeToFit()
+        
+        
+        self.streetLabel.font = MDCTypography.body1Font()
+        self.streetLabel.alpha = MDCTypography.body1FontOpacity()
+        
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+        self.streetLabel.sizeToFit()
+        
+        self.cityStateZipLabel.font = MDCTypography.body1Font()
+        self.cityStateZipLabel.alpha = MDCTypography.body1FontOpacity()
+        
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+        self.cityStateZipLabel.sizeToFit()
+        
+        self.countryLabel.font = MDCTypography.body1Font()
+        self.countryLabel.alpha = MDCTypography.body1FontOpacity()
+        
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+        self.countryLabel.sizeToFit()
         
         self.musemImageViewButton.sd_setBackgroundImage(with: URL(string: "https://s3.amazonaws.com/deframe-musuem-gallery/musuem-1/banner/mfa-banner.jpg"), for: .normal)
         self.museumNameLabel.text = "Museum of Fine Arts"

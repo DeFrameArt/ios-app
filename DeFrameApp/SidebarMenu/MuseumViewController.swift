@@ -9,7 +9,7 @@
 import Foundation
 import SDWebImage
 import SwiftyJSON
-
+import MaterialComponents.MaterialTypography
 
 class MuseumViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     @IBOutlet weak var backBtn: UIBarButtonItem!
@@ -159,7 +159,12 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         print(featureImageURLsArray[indexPath.row])
        
        cell.galleryHeadingLabel.text =  self.headingsArray[indexPath.row]
+        cell.galleryHeadingLabel.font = MDCTypography.body1Font()
+        cell.galleryHeadingLabel.alpha = MDCTypography.titleFontOpacity()
         
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+       cell.galleryHeadingLabel.sizeToFit()
        
         
         return cell
@@ -173,10 +178,45 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
         commentView.mueumNameLagel.text=museumLabel
         
+        commentView.mueumNameLagel.font = MDCTypography.body2Font()
+        commentView.mueumNameLagel.alpha = MDCTypography.body2FontOpacity()
+        
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+        commentView.mueumNameLagel.sizeToFit()
+        
+        
+        
         
         commentView.countryLabel.text=museumCountryLabel
+        commentView.countryLabel.font = MDCTypography.body1Font()
+        commentView.countryLabel.alpha = MDCTypography.body1FontOpacity()
+        
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+        commentView.countryLabel.sizeToFit()
+        
+        
         commentView.streetLabel.text=museumStreetLabel
+        
+       
+         commentView.streetLabel.font = MDCTypography.body1Font()
+         commentView.streetLabel.alpha = MDCTypography.body1FontOpacity()
+        
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+         commentView.streetLabel.sizeToFit()
+        
         commentView.cityStateZipLabel.text=museumCityStateZipLabel
+        
+        commentView.cityStateZipLabel.font = MDCTypography.body1Font()
+        commentView.cityStateZipLabel.alpha = MDCTypography.body1FontOpacity()
+        
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+        commentView.cityStateZipLabel.sizeToFit()
+        
+        
         commentView.museumImageView.sd_setImage(with: URL(string:museumbannerURL! ))
         commentView.museumLogoImageView.sd_setImage(with:URL(string:logoURL!))
         

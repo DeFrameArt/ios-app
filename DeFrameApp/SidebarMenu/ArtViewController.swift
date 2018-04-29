@@ -9,7 +9,7 @@
 import Foundation
 import SDWebImage
 import SwiftyJSON
-
+import MaterialComponents.MaterialTypography
 class ArtViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate{
     
 
@@ -46,8 +46,32 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.descriptionTextView.font = MDCTypography.captionFont()
+        self.descriptionTextView.alpha = MDCTypography.captionFontOpacity()
+        self.descriptionTextView.sizeThatFits(CGSize(width: self.descriptionTextView.frame.size.width, height:  self.descriptionTextView.frame.size.height))
+        self.headingLabel.font = MDCTypography.titleFont()
+        self.headingLabel.alpha = MDCTypography.titleFontOpacity()
         
+      self.descriptionTextView.sizeToFit()
 
+        
+        
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+        self.headingLabel.sizeToFit()
+        
+        self.authorLabel.font = MDCTypography.body1Font()
+        self.authorLabel.alpha = MDCTypography.body1FontOpacity()
+        
+        
+        self.authorLabel.sizeToFit()
+        
+        self.yearLabel.font = MDCTypography.body1Font()
+        self.yearLabel.alpha = MDCTypography.body1FontOpacity()
+        
+       
+        
+        self.yearLabel.sizeToFit()
         
         
         self.startDownloadingArtImagesData()
@@ -119,6 +143,15 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
         
         print(artPageImageURLsArray[indexPath.row])
         cell.galleryHeadingLabel.text = self.artPageHeadingsArray[indexPath.row]
+        
+        cell.galleryHeadingLabel.font = MDCTypography.body1Font()
+        cell.galleryHeadingLabel.alpha = MDCTypography.titleFontOpacity()
+        
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+       cell.galleryHeadingLabel.sizeToFit()
+        
+        
         artImageView.sd_setImage(with: URL(string: artPageImageURLsArray[indexPath.row]))
         
         
@@ -140,10 +173,40 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "artCollectionViewCell", for: indexPath) as! artCollectionViewCell
         
         self.artImageView.sd_setImage(with: URL(string: self.artPageImageURLsArray[indexPath.row]))
+        
         self.descriptionTextView.text = self.artPageDescriptionArray[indexPath.row]
+        
+        self.descriptionTextView.font = MDCTypography.captionFont()
+        self.descriptionTextView.alpha = MDCTypography.captionFontOpacity()
+         self.descriptionTextView.sizeThatFits(CGSize(width: self.descriptionTextView.frame.size.width, height:  self.descriptionTextView.frame.size.height))
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+       // self.descriptionTextView.sizeToFit()
+        
+        self.headingLabel.font = MDCTypography.titleFont()
+        self.headingLabel.alpha = MDCTypography.titleFontOpacity()
+        
         self.headingLabel.text = self.artPageHeadingsArray[indexPath.row]
+        
+      
+        // If using autolayout, the following line is unnecessary as long
+        // as all constraints are valid.
+        self.headingLabel.sizeToFit()
+        
+        self.authorLabel.font = MDCTypography.body1Font()
+        self.authorLabel.alpha = MDCTypography.body1FontOpacity()
+
         self.authorLabel.text=self.artPageAuthorArray[indexPath.row]
+        
+       
+         self.authorLabel.sizeToFit()
+        
+        self.yearLabel.font = MDCTypography.body1Font()
+        self.yearLabel.alpha = MDCTypography.body1FontOpacity()
+        
         self.yearLabel.text=self.artPageYear[indexPath.row]
+    
+        self.yearLabel.sizeToFit()
     }
     
     

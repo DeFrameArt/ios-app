@@ -15,6 +15,7 @@ import FBSDKLoginKit
 import CoreData
 import SDWebImage
 import BubbleTransition
+import MaterialComponents.MaterialTypography
 
 class ListTableViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,UISearchResultsUpdating,UIViewControllerTransitioningDelegate  {
      let transition = BubbleTransition()
@@ -178,7 +179,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         if indexPath.row == selectedRowIndex {
             cellstaped=true
           
-            return 250 //Expanded
+            return 200 //Expanded
             
         }
         cellstaped=false
@@ -234,21 +235,34 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     let urlImage=museums.logoURL
     cell.titleMuseum.text = museums.name
         if(modelName=="iPhone 5s"){
-            cell.titleMuseum.font=UIFont(name: "Times New Roman", size: 14.0)
+            cell.titleMuseum.font = MDCTypography.display1Font()
+             cell.titleMuseum.alpha = MDCTypography.display1FontOpacity()
+            
+            // If using autolayout, the following line is unnecessary as long
+            // as all constraints are valid.
+             cell.titleMuseum.sizeToFit()
         }
         cell.imageM.sd_setImage(with: URL(string: museums.bannerURL!))
         if(cellstaped==true){
             cell.detailsAction.isHidden=false
             cell.coverView.addBlurEffect()
             //let second = "\(a), \(b)"
+            
             cell.address.isHidden=false
             var temp : String?
             temp="\(museums.street ?? ""), \(museums.city ?? ""), \(museums.zip ?? "")"
             cell.address.text = temp
+             cell.address.font = MDCTypography.subheadFont()
+             cell.address.alpha = MDCTypography.subheadFontOpacity()
+            
+            // If using autolayout, the following line is unnecessary as long
+            // as all constraints are valid.
+           cell.address.sizeToFit()
         }
         else{
              cell.detailsAction.isHidden=true
             cell.coverView.removeBlurEffect()
+            
              cell.address.isHidden=true
         }
         
