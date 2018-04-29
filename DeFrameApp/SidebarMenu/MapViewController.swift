@@ -78,8 +78,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
 
         map.showsUserLocation = true
 
-         self.museumNameLabel.font = MDCTypography.headlineFont()
-         self.museumNameLabel.alpha = MDCTypography.headlineFontOpacity()
+         self.museumNameLabel.font = MDCTypography.titleFont()
+         self.museumNameLabel.alpha = MDCTypography.titleFontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
