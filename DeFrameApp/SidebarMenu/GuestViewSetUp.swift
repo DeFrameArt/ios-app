@@ -14,6 +14,7 @@ import MapKit
 import CoreLocation
 import FBSDKCoreKit
 import CoreData
+import MaterialComponents.MaterialTextFields
 
 class GuestViewSetUp:UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     @IBOutlet weak var NickUserText: UITextField!
@@ -30,8 +31,10 @@ class GuestViewSetUp:UIViewController,UICollectionViewDataSource, UICollectionVi
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(true)
+       
+       // NickUserText = MDCTextField()
         NickUserText.layer.borderColor = (UIColor(red: 193/255, green: 77/255, blue: 121/255, alpha: 1)).cgColor
-        
+       
         NickUserText.layer.borderWidth = 1
         NickUserText.layer.cornerRadius = 5.0
         self.addToolBar(textField: NickUserText)

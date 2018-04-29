@@ -60,14 +60,14 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
         // as all constraints are valid.
         self.headingLabel.sizeToFit()
         
-        self.authorLabel.font = MDCTypography.body1Font()
-        self.authorLabel.alpha = MDCTypography.body1FontOpacity()
+        self.authorLabel.font = MDCTypography.subheadFont()
+        self.authorLabel.alpha = MDCTypography.subheadFontOpacity()
         
         
         self.authorLabel.sizeToFit()
         
-        self.yearLabel.font = MDCTypography.body1Font()
-        self.yearLabel.alpha = MDCTypography.body1FontOpacity()
+        self.yearLabel.font = MDCTypography.subheadFont()
+        self.yearLabel.alpha = MDCTypography.subheadFontOpacity()
         
        
         
