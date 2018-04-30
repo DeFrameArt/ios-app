@@ -521,6 +521,7 @@ PODS:
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
   - MotionTransitioning (5.0.0)
+  - pyze-sdk-iOS (5.0.1)
   - RMPZoomTransitionAnimator (1.0.3)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
@@ -537,6 +538,7 @@ DEPENDENCIES:
   - JSQSystemSoundPlayer
   - MaterialComponents
   - MBProgressHUD
+  - pyze-sdk-iOS
   - RMPZoomTransitionAnimator
   - SDWebImage
   - SwiftyJSON
@@ -560,10 +562,11 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
+  pyze-sdk-iOS: 13b03c552537a67a836c9ee07949e3bf9e8e3c45
   RMPZoomTransitionAnimator: 33ded739d91052810c05c8e553663cc9ec79275b
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 4d48707f6ca2d89cedb2c03a129a55c998a78849
+PODFILE CHECKSUM: 9eac60641a85b3d2b8974c20e69e5ede1768719c
 
 COCOAPODS: 1.4.0

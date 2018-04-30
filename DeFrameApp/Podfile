@@ -16,6 +16,8 @@ target 'DeFrameApp' do
       pod 'BubbleTransition', '~> 2.0.0'
       pod 'MaterialComponents'
       pod 'RMPZoomTransitionAnimator'
+      pod 'pyze-sdk-iOS'
+      
      target 'DeFrameAppTests' do
 
    end
