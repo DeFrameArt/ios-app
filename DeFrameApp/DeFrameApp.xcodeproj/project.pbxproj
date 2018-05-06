@@ -121,8 +121,8 @@
 		A08356401FEAFB1A00850FAA /* Directory button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A083563E1FEAFB1900850FAA /* Directory button@2x.png */; };
 		A0B6CCAF2088496D001060BE /* show-more-button-with-three-dots (1).png in Resources */ = {isa = PBXBuildFile; fileRef = A0B6CCAE2088496C001060BE /* show-more-button-with-three-dots (1).png */; };
 		A0CBDFC91FB7F13700D36FAD /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CBDFC81FB7F13600D36FAD /* PrivacyViewController.swift */; };
+		A0CF79FB2096E1270091D894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CF79FA2096E1270091D894 /* AppDelegate.swift */; };
 		A0FE6279208D672F00948CDD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0FE6278208D672F00948CDD /* Podfile */; };
-		F47029F61A7F27DB00E30A3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47029F51A7F27DB00E30A3C /* AppDelegate.swift */; };
 		F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47029FC1A7F27DB00E30A3C /* Images.xcassets */; };
 		F4702A001A7F27DC00E30A3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F47029FE1A7F27DB00E30A3C /* LaunchScreen.xib */; };
 		F4702A0C1A7F27DC00E30A3C /* SidebarMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4702A0B1A7F27DC00E30A3C /* SidebarMenuTests.swift */; };
@@ -218,11 +218,11 @@
 		A083563E1FEAFB1900850FAA /* Directory button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Directory button@2x.png"; sourceTree = "<group>"; };
 		A0B6CCAE2088496C001060BE /* show-more-button-with-three-dots (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "show-more-button-with-three-dots (1).png"; sourceTree = "<group>"; };
 		A0CBDFC81FB7F13600D36FAD /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		A0CF79FA2096E1270091D894 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		A0FE6278208D672F00948CDD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D587A9E509B42E717AC93DC6 /* Pods_DeFrameApp_DeFrameAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeFrameApp_DeFrameAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47029F01A7F27DB00E30A3C /* DeFrameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeFrameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47029F41A7F27DB00E30A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F47029F51A7F27DB00E30A3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47029FA1A7F27DB00E30A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F47029FC1A7F27DB00E30A3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F47029FF1A7F27DB00E30A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -428,7 +428,7 @@
 				A058F37D1FC40AF0001FC901 /* FeedbackScreen */,
 				A058F37A1FC40A95001FC901 /* Login */,
 				A058F37B1FC40AA3001FC901 /* MuseumScreen */,
-				F47029F51A7F27DB00E30A3C /* AppDelegate.swift */,
+				A0CF79FA2096E1270091D894 /* AppDelegate.swift */,
 				A058F37C1FC40AB5001FC901 /* MenuScreen */,
 				586B948E1F1305DF00F89AE8 /* SampleMuseum.json */,
 				F47029FE1A7F27DB00E30A3C /* LaunchScreen.xib */,
@@ -564,7 +564,7 @@
 				TargetAttributes = {
 					F47029EF1A7F27DB00E30A3C = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 4XCFZVG8M4;
+						DevelopmentTeam = J42C78J3VY;
 						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -702,6 +702,7 @@
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/pyze-sdk-iOS/Pyze.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -725,6 +726,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pyze.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -824,6 +826,7 @@
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/pyze-sdk-iOS/Pyze.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -847,6 +850,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pyze.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -872,9 +876,9 @@
 				581F719A1F5B24610064496C /* LoginViewController.swift in Sources */,
 				581F719C1F6993E70064496C /* FloorPlanViewController.swift in Sources */,
 				58F68F131F759BA6006F7510 /* ArtView.swift in Sources */,
+				A0CF79FB2096E1270091D894 /* AppDelegate.swift in Sources */,
 				586B94921F144D4500F89AE8 /* locationAnnotation.swift in Sources */,
 				F4702A181A7F351C00E30A3C /* MenuController.swift in Sources */,
-				F47029F61A7F27DB00E30A3C /* AppDelegate.swift in Sources */,
 				586B948C1F11E09100F89AE8 /* Museum.swift in Sources */,
 				3544613320748B9200FA1CBF /* ListTableViewController.swift in Sources */,
 				3556093620635E3300621E4F /* loginedUser.xcdatamodeld in Sources */,
@@ -1053,7 +1057,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 4XCFZVG8M4;
+				DEVELOPMENT_TEAM = J42C78J3VY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1078,7 +1082,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 4XCFZVG8M4;
+				DEVELOPMENT_TEAM = J42C78J3VY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
