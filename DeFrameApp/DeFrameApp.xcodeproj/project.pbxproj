@@ -16,6 +16,7 @@
 		3544613420748B9200FA1CBF /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544613220748B9200FA1CBF /* ListTableViewController.swift */; };
 		35488E5120101F9900A2858A /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 35488E5020101F9800A2858A /* images.png */; };
 		35490F22201ADCDD00429192 /* artHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */; };
+		3552EC8D209F8F2D00D1C29D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552EC8C209F8F2D00D1C29D /* AppDelegate.swift */; };
 		3555AF9E201E6C6700202931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47029F91A7F27DB00E30A3C /* Main.storyboard */; };
 		3555AF9F201E8A2B00202931 /* NewMuseumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356813A6201AD3C40094B16E /* NewMuseumViewController.swift */; };
 		3556093620635E3300621E4F /* loginedUser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3556093420635E3300621E4F /* loginedUser.xcdatamodeld */; };
@@ -121,7 +122,6 @@
 		A08356401FEAFB1A00850FAA /* Directory button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A083563E1FEAFB1900850FAA /* Directory button@2x.png */; };
 		A0B6CCAF2088496D001060BE /* show-more-button-with-three-dots (1).png in Resources */ = {isa = PBXBuildFile; fileRef = A0B6CCAE2088496C001060BE /* show-more-button-with-three-dots (1).png */; };
 		A0CBDFC91FB7F13700D36FAD /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CBDFC81FB7F13600D36FAD /* PrivacyViewController.swift */; };
-		A0CF79FB2096E1270091D894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CF79FA2096E1270091D894 /* AppDelegate.swift */; };
 		A0FE6279208D672F00948CDD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0FE6278208D672F00948CDD /* Podfile */; };
 		F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47029FC1A7F27DB00E30A3C /* Images.xcassets */; };
 		F4702A001A7F27DC00E30A3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F47029FE1A7F27DB00E30A3C /* LaunchScreen.xib */; };
@@ -154,6 +154,8 @@
 		3544613220748B9200FA1CBF /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		35488E5020101F9800A2858A /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		3552EC8C209F8F2D00D1C29D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../AppDelegate.swift; sourceTree = "<group>"; };
+		3552EC8E209F8F3300D1C29D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../AppDelegate.swift; sourceTree = "<group>"; };
 		3556093520635E3300621E4F /* loginedUser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = loginedUser.xcdatamodel; sourceTree = "<group>"; };
 		3556093720635ED700621E4F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3557CEDE20675B4B00548D99 /* GuestViewSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewSetUp.swift; sourceTree = "<group>"; };
@@ -218,7 +220,6 @@
 		A083563E1FEAFB1900850FAA /* Directory button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Directory button@2x.png"; sourceTree = "<group>"; };
 		A0B6CCAE2088496C001060BE /* show-more-button-with-three-dots (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "show-more-button-with-three-dots (1).png"; sourceTree = "<group>"; };
 		A0CBDFC81FB7F13600D36FAD /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
-		A0CF79FA2096E1270091D894 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		A0FE6278208D672F00948CDD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D587A9E509B42E717AC93DC6 /* Pods_DeFrameApp_DeFrameAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeFrameApp_DeFrameAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47029F01A7F27DB00E30A3C /* DeFrameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeFrameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +288,7 @@
 		A058F37B1FC40AA3001FC901 /* MuseumScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3552EC8C209F8F2D00D1C29D /* AppDelegate.swift */,
 				582037B71F369CCA00C0F384 /* CarouselView.swift */,
 				A058F37E1FC40B03001FC901 /* PrivacyScreen */,
 				58F68F191F7A0AF5006F7510 /* MuseumDetailsView.swift */,
@@ -428,7 +430,7 @@
 				A058F37D1FC40AF0001FC901 /* FeedbackScreen */,
 				A058F37A1FC40A95001FC901 /* Login */,
 				A058F37B1FC40AA3001FC901 /* MuseumScreen */,
-				A0CF79FA2096E1270091D894 /* AppDelegate.swift */,
+				3552EC8E209F8F3300D1C29D /* AppDelegate.swift */,
 				A058F37C1FC40AB5001FC901 /* MenuScreen */,
 				586B948E1F1305DF00F89AE8 /* SampleMuseum.json */,
 				F47029FE1A7F27DB00E30A3C /* LaunchScreen.xib */,
@@ -702,7 +704,6 @@
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${PODS_ROOT}/pyze-sdk-iOS/Pyze.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -726,7 +727,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pyze.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -826,7 +826,6 @@
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${PODS_ROOT}/pyze-sdk-iOS/Pyze.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -850,7 +849,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pyze.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -876,13 +874,13 @@
 				581F719A1F5B24610064496C /* LoginViewController.swift in Sources */,
 				581F719C1F6993E70064496C /* FloorPlanViewController.swift in Sources */,
 				58F68F131F759BA6006F7510 /* ArtView.swift in Sources */,
-				A0CF79FB2096E1270091D894 /* AppDelegate.swift in Sources */,
 				586B94921F144D4500F89AE8 /* locationAnnotation.swift in Sources */,
 				F4702A181A7F351C00E30A3C /* MenuController.swift in Sources */,
 				586B948C1F11E09100F89AE8 /* Museum.swift in Sources */,
 				3544613320748B9200FA1CBF /* ListTableViewController.swift in Sources */,
 				3556093620635E3300621E4F /* loginedUser.xcdatamodeld in Sources */,
 				A058F3791FC3C0F7001FC901 /* Constants.swift in Sources */,
+				3552EC8D209F8F2D00D1C29D /* AppDelegate.swift in Sources */,
 				F491E74C1A7F4C630026528E /* NewsTableViewCell.swift in Sources */,
 				35A25EB1204DF9720023A77D /* UploadProfilePicViewController.swift in Sources */,
 				F491E7531A7F7DF20026528E /* MapViewController.swift in Sources */,
