@@ -15,7 +15,7 @@ import ApiAI
 import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
-
+/////
     var window: UIWindow?
     var locManager: CLLocationManager!
 
