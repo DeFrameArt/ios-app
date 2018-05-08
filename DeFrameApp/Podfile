@@ -16,7 +16,7 @@ target 'DeFrameApp' do
       pod 'BubbleTransition', '~> 2.0.0'
       pod 'MaterialComponents'
       pod 'RMPZoomTransitionAnimator'
-  
+      pod 'DGRunkeeperSwitch', '~> 1.1.4'
       
      target 'DeFrameAppTests' do
 

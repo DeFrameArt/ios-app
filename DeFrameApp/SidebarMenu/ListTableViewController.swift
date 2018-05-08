@@ -17,16 +17,21 @@ import SDWebImage
 import BubbleTransition
 import MaterialComponents.MaterialTypography
 
-class ListTableViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,UISearchResultsUpdating,UIViewControllerTransitioningDelegate  {
+class ListTableViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,UISearchResultsUpdating,UIViewControllerTransitioningDelegate, UITabBarDelegate,AddItemProtocol  {
      let transition = BubbleTransition()
     @IBOutlet weak var tableView: UITableView!
     var resultSearchController = UISearchController()
     let controller = UISearchController(searchResultsController: nil)
     var filteredCandies = [Museum]()
+   
     
+    func addItemtoCheckList(_ item:[Museum]){
+        museum=item
+        //tableView.reloadData()
+    }
     
     override func viewDidLoad() {
-    
+   
     self.resultSearchController = ({
     ///search br
     controller.searchResultsUpdater = self
@@ -35,7 +40,6 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     controller.searchBar.barStyle = UIBarStyle.default
     controller.searchBar.barTintColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
     controller.searchBar.backgroundColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
-    
    
    // self.tableView.animateTableView(animation: myCoolTableAnimation)
         if #available(iOS 11.0, *) {
@@ -73,9 +77,18 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     // Setup the Search Controller
     //tableView.tableFooterView = UIView()
     // viewLad=true
+        
         tableView.reloadWithAnimation()
+   // self.navigationController?.isNavigationBarHidden = false
     }
     
+    func addItemtoCheckList() {
+        //items.append(item)
+    
+        
+    }
+
+   
     override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     resultSearchController.dismiss(animated: false, completion: nil)

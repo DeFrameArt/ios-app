@@ -50,7 +50,7 @@ class MenuController: UITableViewController {
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-       self.viewTop.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height:47.0)
+       //self.viewTop.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height:47.0)
        let modelName = UIDevice.current.modelName1
         print(modelName)
         //Constants.FbData.dic = defaults.value(forKey: "fbData") as! NSDictionary

@@ -17,6 +17,10 @@
 		35488E5120101F9900A2858A /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 35488E5020101F9800A2858A /* images.png */; };
 		35490F22201ADCDD00429192 /* artHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */; };
 		3552EC8D209F8F2D00D1C29D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552EC8C209F8F2D00D1C29D /* AppDelegate.swift */; };
+		3552EC90209FB9A500D1C29D /* MAP.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC8F209FB9A500D1C29D /* MAP.png */; };
+		3552EC92209FB9EB00D1C29D /* display.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC91209FB9E200D1C29D /* display.png */; };
+		3552EC94209FD43900D1C29D /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC93209FD3DE00D1C29D /* compass.png */; };
+		3552EC96209FD54200D1C29D /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC95209FD51700D1C29D /* avatar.png */; };
 		3555AF9E201E6C6700202931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47029F91A7F27DB00E30A3C /* Main.storyboard */; };
 		3555AF9F201E8A2B00202931 /* NewMuseumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356813A6201AD3C40094B16E /* NewMuseumViewController.swift */; };
 		3556093620635E3300621E4F /* loginedUser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3556093420635E3300621E4F /* loginedUser.xcdatamodeld */; };
@@ -78,6 +82,7 @@
 		35BCA3212079DAD90068E899 /* secure-file (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3202079DAD40068E899 /* secure-file (2).png */; };
 		35BCA3232079DB1A0068E899 /* info (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3222079DB160068E899 /* info (2).png */; };
 		35BCA3252079DB870068E899 /* feedback (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3242079DB830068E899 /* feedback (2).png */; };
+		35C6CEE820A0076900E3E220 /* robot.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C6CEE720A0076700E3E220 /* robot.png */; };
 		35CFAB192083052900054444 /* MuseumViewControllerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CFAB182083052900054444 /* MuseumViewControllerList.swift */; };
 		35CFAB1A2083052900054444 /* MuseumViewControllerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CFAB182083052900054444 /* MuseumViewControllerList.swift */; };
 		35D0DAF42082D07B0067A5BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47029F91A7F27DB00E30A3C /* Main.storyboard */; };
@@ -156,6 +161,10 @@
 		35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		3552EC8C209F8F2D00D1C29D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../AppDelegate.swift; sourceTree = "<group>"; };
 		3552EC8E209F8F3300D1C29D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../AppDelegate.swift; sourceTree = "<group>"; };
+		3552EC8F209FB9A500D1C29D /* MAP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAP.png; sourceTree = "<group>"; };
+		3552EC91209FB9E200D1C29D /* display.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = display.png; sourceTree = "<group>"; };
+		3552EC93209FD3DE00D1C29D /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
+		3552EC95209FD51700D1C29D /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		3556093520635E3300621E4F /* loginedUser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = loginedUser.xcdatamodel; sourceTree = "<group>"; };
 		3556093720635ED700621E4F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3557CEDE20675B4B00548D99 /* GuestViewSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewSetUp.swift; sourceTree = "<group>"; };
@@ -189,6 +198,7 @@
 		35BCA3202079DAD40068E899 /* secure-file (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secure-file (2).png"; sourceTree = "<group>"; };
 		35BCA3222079DB160068E899 /* info (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info (2).png"; sourceTree = "<group>"; };
 		35BCA3242079DB830068E899 /* feedback (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback (2).png"; sourceTree = "<group>"; };
+		35C6CEE720A0076700E3E220 /* robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robot.png; sourceTree = "<group>"; };
 		35CFAB182083052900054444 /* MuseumViewControllerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumViewControllerList.swift; sourceTree = "<group>"; };
 		35DCB61D20791E9800224480 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
 		581F70CC1F4287040064496C /* ArtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +306,10 @@
 				F491E7521A7F7DF20026528E /* MapViewController.swift */,
 				582037B31F33E82900C0F384 /* MuseumViewController.swift */,
 				581F70CC1F4287040064496C /* ArtViewController.swift */,
+				3552EC91209FB9E200D1C29D /* display.png */,
+				3552EC95209FD51700D1C29D /* avatar.png */,
+				35C6CEE720A0076700E3E220 /* robot.png */,
+				3552EC93209FD3DE00D1C29D /* compass.png */,
 				58F68F121F759BA6006F7510 /* ArtView.swift */,
 				586B948B1F11E09100F89AE8 /* Museum.swift */,
 				356813A6201AD3C40094B16E /* NewMuseumViewController.swift */,
@@ -341,6 +355,7 @@
 		A058F37E1FC40B03001FC901 /* PrivacyScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3552EC8F209FB9A500D1C29D /* MAP.png */,
 				A0CBDFC81FB7F13600D36FAD /* PrivacyViewController.swift */,
 			);
 			name = PrivacyScreen;
@@ -609,8 +624,10 @@
 				35A25EBA204DFA7D0023A77D /* Logo.png in Resources */,
 				3557CEEA20685E9B00548D99 /* userPic3.png in Resources */,
 				58233A761F219462008D125F /* CraftARResourcesODIR.bundle in Resources */,
+				3552EC92209FB9EB00D1C29D /* display.png in Resources */,
 				351B5D942067357400F3D6E8 /* UrlImage.png in Resources */,
 				35A25EB7204DF9960023A77D /* Background.png in Resources */,
+				3552EC94209FD43900D1C29D /* compass.png in Resources */,
 				357E908C20688FDA00B595D5 /* userPic11.png in Resources */,
 				359615D62079BCF000B6760D /* info (1).png in Resources */,
 				3557CEF720685F2C00548D99 /* userPic8.png in Resources */,
@@ -629,6 +646,7 @@
 				A08356401FEAFB1A00850FAA /* Directory button@2x.png in Resources */,
 				58F68F1A1F7A0AF5006F7510 /* MuseumDetails.xib in Resources */,
 				582037B61F33E8A300C0F384 /* CarouselView.xib in Resources */,
+				3552EC90209FB9A500D1C29D /* MAP.png in Resources */,
 				3557CEF320685F2C00548D99 /* UserProfile.png in Resources */,
 				359615D22079B6DA00B6760D /* feedback (1).png in Resources */,
 				359615CC2079B52000B6760D /* secure-file.png in Resources */,
@@ -637,7 +655,9 @@
 				359615DB2079BD4A00B6760D /* bank.png in Resources */,
 				F4702A001A7F27DC00E30A3C /* LaunchScreen.xib in Resources */,
 				F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */,
+				35C6CEE820A0076900E3E220 /* robot.png in Resources */,
 				586B948F1F1305DF00F89AE8 /* SampleMuseum.json in Resources */,
+				3552EC96209FD54200D1C29D /* avatar.png in Resources */,
 				3557CEE820685E9B00548D99 /* userPic5.png in Resources */,
 				3557CEEE20685E9B00548D99 /* userPic7.png in Resources */,
 				3557CEE620685E9B00548D99 /* userPic4.png in Resources */,
@@ -687,6 +707,7 @@
 				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
@@ -710,6 +731,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGRunkeeperSwitch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
@@ -809,6 +831,7 @@
 				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
@@ -832,6 +855,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGRunkeeperSwitch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",

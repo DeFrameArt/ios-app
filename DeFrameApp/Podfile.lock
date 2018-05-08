@@ -31,6 +31,7 @@ PODS:
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
   - BubbleTransition (2.0.2)
+  - DGRunkeeperSwitch (1.1.4)
   - FacebookCore (0.3.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.27)
@@ -499,6 +500,7 @@ PODS:
 DEPENDENCIES:
   - ApiAI
   - BubbleTransition (~> 2.0.0)
+  - DGRunkeeperSwitch (~> 1.1.4)
   - FacebookCore
   - FacebookLogin
   - FacebookShare
@@ -514,6 +516,7 @@ SPEC CHECKSUMS:
   ApiAI: d4b49d3736f33ce6f3ef66dc33c0e0fccb23579e
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BubbleTransition: 7d98ed7d56f0940e83f350a98103ad473491c769
+  DGRunkeeperSwitch: cc237936f42237307f5e212e18136a27bf907bf1
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
   FacebookShare: 0469964297ebd75f052be2c5083389a4208e82b7
@@ -533,6 +536,6 @@ SPEC CHECKSUMS:
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: dd22714da16ca4ef1c7214046e171a7bc6b1204a
+PODFILE CHECKSUM: a1cf37655adc1cb6430d6827c4a7e99b4fe0972e
 
 COCOAPODS: 1.4.0

@@ -15,11 +15,17 @@ import FBSDKLoginKit
 import CoreData
 import BubbleTransition
 import MaterialComponents.MaterialTypography
+import DGRunkeeperSwitch
 //protocol AddItemProtocol {
     //code for the requirements of this protocole
   //  func addMusuem(_ item:SelectedMuseum)
 //}
-class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewControllerTransitioningDelegate {
+protocol AddItemProtocol {
+    //code for the requirements of this protocole
+    func addItemtoCheckList(_ item:[Museum])
+}
+
+class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewControllerTransitioningDelegate,UITabBarControllerDelegate {
     // var delegate:AddItemProtocol?
     @IBOutlet weak var menuButton:UIBarButtonItem!
 
@@ -37,6 +43,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     
     @IBOutlet var logoutButton: UIBarButtonItem!
     
+    @IBOutlet weak var infoView: UIView!
     @IBOutlet var LogOutButton: FBSDKLoginButton!
     
     @IBOutlet var mapDetailSubView: UIView!
@@ -56,11 +63,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     var museumPagelogoURL: String = "https://s3.amazonaws.com/deframe-musuem-gallery/musuem-1/logo/MFA.png"
     var locManager: CLLocationManager!
     var isAnyMuseumSelected: Bool = false
-    
+    let runkeeperSwitch2 = DGRunkeeperSwitch()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         self.tabBarController?.delegate = self
         navigationController?.navigationBar.tintColor = UIColor.white
     
         if revealViewController() != nil {
@@ -70,7 +77,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
             
         }
         
-    
+        infoView.dropShadow()
+        infoView.layer.cornerRadius = 5.0
+       
+ 
+     /*   runkeeperSwitch2.titles = ["Map", "Museums"]
+        runkeeperSwitch2.backgroundColor = UIColor(red: 200/255.0, green: 31/255.0, blue: 97/255.0, alpha: 1)
+        runkeeperSwitch2.selectedBackgroundColor = .white
+        runkeeperSwitch2.titleColor = .white
+        runkeeperSwitch2.selectedTitleColor = UIColor(red: 200/255.0, green: 31/255.0, blue: 97/255.0, alpha: 1)
+        runkeeperSwitch2.titleFont = UIFont(name: "HelveticaNeue-Medium", size: 13.0)
+        runkeeperSwitch2.frame = CGRect(x: 50.0, y: 30.0, width: view.bounds.width - 100.0, height: 30.0)
+        runkeeperSwitch2.autoresizingMask = [.flexibleWidth] // This is needed if you want the control to resize
+          runkeeperSwitch2.addTarget(self, action: #selector(MapViewController.switchValueDidChange(sender:)), for: .valueChanged)
+        view.addSubview(runkeeperSwitch2)*/
         
         locManager = CLLocationManager()
         locManager.delegate = self
@@ -114,9 +134,26 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         self.countryLabel.text = "United States"
                 
         self.startDownloadingMuseums()
-
+      
     }
-
+    
+   /* override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+      
+        let vc = self.tabBarController?.viewControllers![2] as! ListTableViewController
+        vc.museum = allMuseums
+    }*/
+    
+    @IBAction func switchValueDidChange(sender: DGRunkeeperSwitch!) {
+        print("valueChanged: \(sender.selectedIndex)")
+    }
+    var delegate:AddItemProtocol?
+  
+    
+    
+    
+    
+    
     var saveUser: [NSManagedObject] = []
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -145,7 +182,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         }
        
    }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         askForLocationAuthorization()
@@ -153,6 +190,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         if(CLLocationManager.authorizationStatus() == .denied ){
             locationManager.requestWhenInUseAuthorization()
         }
+        
+
+
 }
 
 
@@ -252,6 +292,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     @IBOutlet weak var museumButtonDetails: UIButton!
   //  let navVC = segue.destination as? UINavigationController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        if let yellowVC = segue.destination as? ListTableViewController {
+            yellowVC.museum = allMuseums
+        }
+        
         
         if(segue.identifier == "mapToMuseumSegue"){
             
@@ -487,8 +532,13 @@ func startDownloadingMuseums(){
                                     DispatchQueue.main.async(execute: {
                                         completion(self.allMuseums)
                                         self.map.addAnnotations(self.allMuseums)
-
+                                        //self.addMuseumList(self.allMuseums)
+                                        let navController = self.tabBarController?.viewControllers![2] as! UINavigationController
+                                        let vc = navController.topViewController as! ListTableViewController
+                                    
                                         
+                                      
+                                        vc.museum = self.allMuseums
                                     })
                                     
                                 }
@@ -512,7 +562,7 @@ func startDownloadingMuseums(){
     
         
         
-        
+    
     }
     
     
@@ -607,4 +657,20 @@ func startDownloadingMuseums(){
     
     
 
+}
+
+extension UIView {
+    
+    // OUTPUT 1
+    func dropShadow(scale: Bool = true) {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
+        layer.shadowRadius = 5
+        
+        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+}
 }
