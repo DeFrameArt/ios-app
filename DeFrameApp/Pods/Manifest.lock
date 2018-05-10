@@ -492,6 +492,7 @@ PODS:
   - MotionInterchange (1.6.0)
   - MotionTransitioning (5.0.0)
   - RMPZoomTransitionAnimator (1.0.3)
+  - ScalingCarousel (2.2)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
@@ -509,6 +510,7 @@ DEPENDENCIES:
   - MaterialComponents
   - MBProgressHUD
   - RMPZoomTransitionAnimator
+  - ScalingCarousel
   - SDWebImage
   - SwiftyJSON
 
@@ -533,9 +535,10 @@ SPEC CHECKSUMS:
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
   RMPZoomTransitionAnimator: 33ded739d91052810c05c8e553663cc9ec79275b
+  ScalingCarousel: 346af59372a3823a1a38d5bc02ac4fd16afa4fd7
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: a1cf37655adc1cb6430d6827c4a7e99b4fe0972e
+PODFILE CHECKSUM: cf49d7ee4d68b9bed213d1c04bd4c5567213aa17
 
 COCOAPODS: 1.4.0

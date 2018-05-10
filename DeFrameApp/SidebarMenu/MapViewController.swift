@@ -454,22 +454,13 @@ func startDownloadingMuseums(){
     
     downloadMuseums(url) { (array) in
         print("in  download prediction callback ")
-//        self.downloadedMuseums = array
-//      self.map.addAnnotations(self.downloadedMuseums)
-       // self.isPredictionDownloadCompleted = true
-       // self.tableView.reloadData()
         
     }
+    
     print("Schedule cant be called here")
     
-
-
-    
 }
-    
 
-    
-    
     func downloadMuseums(_ urlStr:String, completion: @escaping (_ array:[Museum]) -> ()) {
         
         let concurrentQueue = DispatchQueue(label: "com.queue.Concurrent", attributes: .concurrent)
@@ -551,7 +542,7 @@ func startDownloadingMuseums(){
                     catch {
                                 print(error.localizedDescription)
                           }
-                    } // if
+                    } 
                 }
                 
                 

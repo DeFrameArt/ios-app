@@ -32,6 +32,8 @@ class RegistrationViewController: UIViewController, UIBarPositioningDelegate {
         super.viewWillAppear(true)
         createGradientLayer()
     }
+    
+    
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
         
