@@ -497,6 +497,7 @@ PODS:
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
   - SwiftyJSON (4.1.0)
+  - Tamamushi (0.1.3)
 
 DEPENDENCIES:
   - ApiAI
@@ -513,6 +514,7 @@ DEPENDENCIES:
   - ScalingCarousel
   - SDWebImage
   - SwiftyJSON
+  - Tamamushi
 
 SPEC CHECKSUMS:
   ApiAI: d4b49d3736f33ce6f3ef66dc33c0e0fccb23579e
@@ -538,7 +540,8 @@ SPEC CHECKSUMS:
   ScalingCarousel: 346af59372a3823a1a38d5bc02ac4fd16afa4fd7
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  Tamamushi: 4c07eb1e0f612f0bd9e67d7c5f0f3edd3a238680
 
-PODFILE CHECKSUM: cf49d7ee4d68b9bed213d1c04bd4c5567213aa17
+PODFILE CHECKSUM: 1193e03b414784d452c03c43a823d118ead947cc
 
 COCOAPODS: 1.4.0

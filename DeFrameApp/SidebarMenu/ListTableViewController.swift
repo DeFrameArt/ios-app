@@ -16,9 +16,36 @@ import CoreData
 import SDWebImage
 import BubbleTransition
 import MaterialComponents.MaterialTypography
-
+import Tamamushi
 class ListTableViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,UISearchResultsUpdating,UIViewControllerTransitioningDelegate, UITabBarDelegate,AddItemProtocol  {
+    let colorNames = [
+        "SoundCloud",
+        "Facebook Messenger",
+        "Flickr",
+        "Vine",
+        "YouTube",
+        "Pinky",
+        "Sunrise",
+        "Playing with Reds",
+        "Ukraine",
+        "Curiosity blue",
+        "Between Night and Day",
+        "Timber",
+        "Passion",
+        "Master Card",
+        "Green and Blue",
+        "Inbox",
+        "Little Leaf",
+        "Alihossein",
+        "Endless River",
+        "Kyoto",
+        "Twitch"
+    ]
+    
+    var lastSelectedIndexPath = IndexPath(row: 0, section: 0)
+    var gradientDirection = Direction.vertical
      let transition = BubbleTransition()
+   
     @IBOutlet weak var tableView: UITableView!
     var resultSearchController = UISearchController()
     let controller = UISearchController(searchResultsController: nil)
@@ -30,17 +57,31 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         //tableView.reloadData()
     }
     
+    func setGradientBarWithIndexPath(indexPath: IndexPath, onBar: UINavigationBar) {
+        TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
+    }
+    
+ /*   override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
+    }*/
     override func viewDidLoad() {
-   
+        super.viewDidLoad()
+       
+        
+       self.navigationController?.isNavigationBarHidden = false
     self.resultSearchController = ({
     ///search br
     controller.searchResultsUpdater = self
     controller.dimsBackgroundDuringPresentation = false
+    controller.hidesNavigationBarDuringPresentation = false
     controller.searchBar.sizeToFit()
     controller.searchBar.barStyle = UIBarStyle.default
-    controller.searchBar.barTintColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
-    controller.searchBar.backgroundColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
-   
+    //controller.searchBar.barTintColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
+   // controller.searchBar.backgroundColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
+      
+       
    // self.tableView.animateTableView(animation: myCoolTableAnimation)
         if #available(iOS 11.0, *) {
            
@@ -64,22 +105,24 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
           
             navigationItem.searchController = controller
             navigationItem.hidesSearchBarWhenScrolling = false
-        } else {
+        }
+        else {
             // Fallback on earlier versions
             tableView.tableHeaderView = controller.searchBar
         }
+        
+        
          self.definesPresentationContext = true;
+        
     return controller
     })()
-    super.viewDidLoad()
+        
+        
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 160.0; // set to whatever your "average" cell height is
-    // Setup the Search Controller
-    //tableView.tableFooterView = UIView()
-    // viewLad=true
+   
         
         tableView.reloadWithAnimation()
-   // self.navigationController?.isNavigationBarHidden = false
     }
     
     func addItemtoCheckList() {
@@ -94,11 +137,13 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     resultSearchController.dismiss(animated: false, completion: nil)
     }
     
+    
     override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     }
     
     var museum = [Museum(id:"12", name:"Museum", acronym:"212", street:"Museum", city:"Museum", state:"State", country:"State", zip:"Zip", lat:32.33, lon:32.33, bannerURL:"String", logoURL:"String"), Museum(id:"12", name:"Museum", acronym:"212", street:"Museum", city:"Museum", state:"State", country:"State", zip:"Zip", lat:32.33, lon:32.33, bannerURL:"String", logoURL:"String")]
+  
     func searchBarIsEmpty() -> Bool {
     // Returns true if the text is empty or nil
     return resultSearchController.searchBar.text?.isEmpty ?? true

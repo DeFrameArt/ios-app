@@ -10,6 +10,7 @@ import Foundation
 import SDWebImage
 import SwiftyJSON
 import MaterialComponents.MaterialTypography
+import Tamamushi
 
 class MuseumViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     @IBOutlet weak var backBtn: UIBarButtonItem!
@@ -67,16 +68,47 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     var museumPageMuseumId: String?
     var featureType: String?
     var logoURL: String?
+    let colorNames = [
+        "SoundCloud",
+        "Facebook Messenger",
+        "Flickr",
+        "Vine",
+        "YouTube",
+        "Pinky",
+        "Sunrise",
+        "Playing with Reds",
+        "Ukraine",
+        "Curiosity blue",
+        "Between Night and Day",
+        "Timber",
+        "Passion",
+        "Master Card",
+        "Green and Blue",
+        "Inbox",
+        "Little Leaf",
+        "Alihossein",
+        "Endless River",
+        "Kyoto",
+        "Twitch"
+    ]
+    
+    var lastSelectedIndexPath = IndexPath(row: 0, section: 0)
+    var gradientDirection = Direction.vertical
+    func setGradientBarWithIndexPath(indexPath: IndexPath, onBar: UINavigationBar) {
+        TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
+    }
+  
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
      //navBar.backgroundColor=UIColor.black
-      
+        self.navigationController?.isNavigationBarHidden = false
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
         let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
 
         self.startDownloadingImagesData()
+        
     }
     
     func setUpNavBar(){
@@ -97,7 +129,7 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewWillAppear(_ animated: Bool) {
         
        
-        
+      
         
         print(self.museumPageMuseumId)
         

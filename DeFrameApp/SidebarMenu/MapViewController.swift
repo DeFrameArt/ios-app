@@ -16,6 +16,7 @@ import CoreData
 import BubbleTransition
 import MaterialComponents.MaterialTypography
 import DGRunkeeperSwitch
+import Tamamushi
 //protocol AddItemProtocol {
     //code for the requirements of this protocole
   //  func addMusuem(_ item:SelectedMuseum)
@@ -64,12 +65,44 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     var locManager: CLLocationManager!
     var isAnyMuseumSelected: Bool = false
     let runkeeperSwitch2 = DGRunkeeperSwitch()
+    let colorNames = [
+        "SoundCloud",
+        "Facebook Messenger",
+        "Flickr",
+        "Vine",
+        "YouTube",
+        "Pinky",
+        "Sunrise",
+        "Playing with Reds",
+        "Ukraine",
+        "Curiosity blue",
+        "Between Night and Day",
+        "Timber",
+        "Passion",
+        "Master Card",
+        "Green and Blue",
+        "Inbox",
+        "Little Leaf",
+        "Alihossein",
+        "Endless River",
+        "Kyoto",
+        "Twitch"
+    ]
+    
+    var lastSelectedIndexPath = IndexPath(row: 0, section: 0)
+    var gradientDirection = Direction.vertical
+    func setGradientBarWithIndexPath(indexPath: IndexPath, onBar: UINavigationBar) {
+        TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
          self.tabBarController?.delegate = self
         navigationController?.navigationBar.tintColor = UIColor.white
-    
+       
+      /*  TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)*/
+        
         if revealViewController() != nil {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -80,17 +113,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         infoView.dropShadow()
         infoView.layer.cornerRadius = 5.0
        
- 
-     /*   runkeeperSwitch2.titles = ["Map", "Museums"]
-        runkeeperSwitch2.backgroundColor = UIColor(red: 200/255.0, green: 31/255.0, blue: 97/255.0, alpha: 1)
-        runkeeperSwitch2.selectedBackgroundColor = .white
-        runkeeperSwitch2.titleColor = .white
-        runkeeperSwitch2.selectedTitleColor = UIColor(red: 200/255.0, green: 31/255.0, blue: 97/255.0, alpha: 1)
-        runkeeperSwitch2.titleFont = UIFont(name: "HelveticaNeue-Medium", size: 13.0)
-        runkeeperSwitch2.frame = CGRect(x: 50.0, y: 30.0, width: view.bounds.width - 100.0, height: 30.0)
-        runkeeperSwitch2.autoresizingMask = [.flexibleWidth] // This is needed if you want the control to resize
-          runkeeperSwitch2.addTarget(self, action: #selector(MapViewController.switchValueDidChange(sender:)), for: .valueChanged)
-        view.addSubview(runkeeperSwitch2)*/
         
         locManager = CLLocationManager()
         locManager.delegate = self

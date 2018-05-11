@@ -11,6 +11,9 @@ import UIKit
 class TermsAndConditionViewController: UIViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
     
+    @IBAction func CloseAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
