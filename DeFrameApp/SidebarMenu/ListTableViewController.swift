@@ -57,6 +57,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         //tableView.reloadData()
     }
     
+    @IBOutlet weak var viewCell: UIView!
     func setGradientBarWithIndexPath(indexPath: IndexPath, onBar: UINavigationBar) {
         TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
     }
@@ -69,7 +70,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
+
        self.navigationController?.isNavigationBarHidden = false
     self.resultSearchController = ({
     ///search br
@@ -103,12 +104,13 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
             }
             
           
-            navigationItem.searchController = controller
+            navigationItem.titleView = controller.searchBar
             navigationItem.hidesSearchBarWhenScrolling = false
         }
         else {
             // Fallback on earlier versions
-            tableView.tableHeaderView = controller.searchBar
+           // tableView.tableHeaderView = controller.searchBar
+            self.navigationItem.titleView = controller.searchBar
         }
         
         
@@ -120,7 +122,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 160.0; // set to whatever your "average" cell height is
-   
+        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
         
         tableView.reloadWithAnimation()
     }
@@ -150,7 +153,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "selectedMuseum" {
+    if segue.identifier == "museumInfo" {
       
     
     let museum1: Museum
@@ -159,13 +162,13 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     } else {
     museum1 = museum[indexP]
     }
-        let navVC = segue.destination as? UINavigationController
+    let navVC = segue.destination as? UINavigationController
        
-   // let  museumViewController = segue.destination as! MuseumViewController
-       let museumViewController = navVC?.viewControllers.first as! MuseumViewController
+  // let  museumViewController = segue.destination as! MuseumViewController
+    let museumViewController = navVC?.viewControllers.first as! MuseumViewController
         //let museumViewController = segue.destination as! MuseumViewController
-      navVC!.transitioningDelegate = self
-      navVC!.modalPresentationStyle = .custom
+     // navVC!.transitioningDelegate = self
+     // navVC!.modalPresentationStyle = .custom
         
    // let museumViewController = segue.destination as! MuseumViewController
     museumViewController.museumbannerURL = museum1.bannerURL
@@ -242,7 +245,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         }
         cellstaped=false
       
-        return 160 //Not expanded
+        return 200 //Not expanded
         
     }
      var viewLad=true
@@ -281,6 +284,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cellMuseum", for: indexPath as IndexPath) as! MuseumTableViewCell
+        cell.coverView.dropShadow()
     let museums: Museum
     
         let modelName = UIDevice.current.modelName2
@@ -293,8 +297,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     let urlImage=museums.logoURL
     cell.titleMuseum.text = museums.name
         if(modelName=="iPhone 5s"){
-            cell.titleMuseum.font = MDCTypography.display1Font()
-             cell.titleMuseum.alpha = MDCTypography.display1FontOpacity()
+            cell.titleMuseum.font = MDCTypography.subheadFont()
+            cell.titleMuseum.alpha = MDCTypography.display1FontOpacity()
             
             // If using autolayout, the following line is unnecessary as long
             // as all constraints are valid.
@@ -303,7 +307,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         cell.imageM.sd_setImage(with: URL(string: museums.bannerURL!))
         if(cellstaped==true){
             cell.detailsAction.isHidden=false
-            cell.coverView.addBlurEffect()
+           // cell.coverView.addBlurEffect()
             //let second = "\(a), \(b)"
             
             cell.address.isHidden=false
@@ -319,9 +323,9 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         }
         else{
              cell.detailsAction.isHidden=true
-            cell.coverView.removeBlurEffect()
+            //cell.coverView.removeBlurEffect()
             
-             cell.address.isHidden=true
+          //   cell.address.isHidden=true
         }
         
         // cell.imageM.layer.cornerRadius = ( cell.imageM.frame.size.height/2);
@@ -330,6 +334,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
      //    cell.imageM.layer.borderColor = (UIColor(red: 193/255, green: 77/255, blue: 121/255, alpha: 1)).cgColor
     return cell
     }
+    @IBOutlet weak var CellViewContent: UIView!
     func searchBar(_ searchBar: UISearchBar) {
     filterContentForSearchText(searchBar.text!)
     }
