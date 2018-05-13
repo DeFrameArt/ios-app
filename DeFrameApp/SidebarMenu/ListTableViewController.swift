@@ -183,26 +183,11 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     
     }
     }
-   var selectedRowIndex = -1
-    var cellstaped=false
+  
     var indexP=0
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if selectedRowIndex == indexPath.row {
-            selectedRowIndex = -1
-            
-       
-        } else {
-            
-            self.tableView.beginUpdates()
-            self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-            self.tableView.endUpdates()
-                self.selectedRowIndex = indexPath.row
-                self.indexP=indexPath.row
-            
-        }
-      //  tableView.reloadRows(at: [indexPath], with: .automatic)
-        tableView.reloadData()
+      
     }
 
     
@@ -237,51 +222,14 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        if indexPath.row == selectedRowIndex {
-            cellstaped=true
-          
-            return 200 //Expanded
-            
-        }
-        cellstaped=false
+   
       
         return 200 //Not expanded
         
     }
      var viewLad=true
       private var finishedLoadingInitialTableCells = false
-   /* func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-       
-        var lastInitialDisplayableCell = false
-        
-        //change flag as soon as last displayable cell is being loaded (which will mean table has initially loaded)
-        if filteredCandies.count > 0 && !finishedLoadingInitialTableCells {
-            if let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows,
-                let lastIndexPath = indexPathsForVisibleRows.last, lastIndexPath.row == indexPath.row {
-                lastInitialDisplayableCell = true
-            }
-        }
-        
-        if !finishedLoadingInitialTableCells {
-            
-            if lastInitialDisplayableCell {
-                finishedLoadingInitialTableCells = true
-            }
-            
-            //animates the cell as it is being displayed for the first time
-            cell.transform = CGAffineTransform(translationX: 0, y: self.tableView.rowHeight/2)
-            cell.alpha = 0
-            
-            UIView.animate(withDuration: 2, delay:0.5*Double(indexPath.row), options: [.curveEaseIn], animations: {
-                cell.transform = CGAffineTransform(translationX: 0, y: 0)
-                cell.alpha = 1
-            }, completion: nil)
-        }
-           //  viewLad=false
-        
-        
-    }
-    */
+ 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cellMuseum", for: indexPath as IndexPath) as! MuseumTableViewCell
         cell.coverView.dropShadow()
@@ -305,10 +253,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
              cell.titleMuseum.sizeToFit()
         }
         cell.imageM.sd_setImage(with: URL(string: museums.bannerURL!))
-        if(cellstaped==true){
-            cell.detailsAction.isHidden=false
-           // cell.coverView.addBlurEffect()
-            //let second = "\(a), \(b)"
+       
+        
             
             cell.address.isHidden=false
             var temp : String?
@@ -320,18 +266,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
             // If using autolayout, the following line is unnecessary as long
             // as all constraints are valid.
            cell.address.sizeToFit()
-        }
-        else{
-             cell.detailsAction.isHidden=true
-            //cell.coverView.removeBlurEffect()
-            
-          //   cell.address.isHidden=true
-        }
-        
-        // cell.imageM.layer.cornerRadius = ( cell.imageM.frame.size.height/2);
-      //   cell.imageM.layer.masksToBounds = true;
-    //     cell.imageM.layer.borderWidth = 2;
-     //    cell.imageM.layer.borderColor = (UIColor(red: 193/255, green: 77/255, blue: 121/255, alpha: 1)).cgColor
+    
     return cell
     }
     @IBOutlet weak var CellViewContent: UIView!
