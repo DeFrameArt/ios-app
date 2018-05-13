@@ -62,11 +62,6 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
     }
     
- /*   override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
-        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
-    }*/
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -79,11 +74,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     controller.hidesNavigationBarDuringPresentation = false
     controller.searchBar.sizeToFit()
     controller.searchBar.barStyle = UIBarStyle.default
-    //controller.searchBar.barTintColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
-   // controller.searchBar.backgroundColor = UIColor(red: 217/255, green: 63/255, blue: 119/255, alpha:0.5)
-      
-       
-   // self.tableView.animateTableView(animation: myCoolTableAnimation)
+        controller.searchBar.placeholder="Search by Museum"
+
         if #available(iOS 11.0, *) {
            
             let scb = controller.searchBar
@@ -164,13 +156,9 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     }
     let navVC = segue.destination as? UINavigationController
        
-  // let  museumViewController = segue.destination as! MuseumViewController
+
     let museumViewController = navVC?.viewControllers.first as! MuseumViewController
-        //let museumViewController = segue.destination as! MuseumViewController
-     // navVC!.transitioningDelegate = self
-     // navVC!.modalPresentationStyle = .custom
-        
-   // let museumViewController = segue.destination as! MuseumViewController
+     
     museumViewController.museumbannerURL = museum1.bannerURL
     museumViewController.museumStreetLabel = museum1.street!
     museumViewController.museumCityStateZipLabel = museum1.zip!
@@ -232,7 +220,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cellMuseum", for: indexPath as IndexPath) as! MuseumTableViewCell
-        cell.coverView.dropShadow()
+        cell.infoView.dropShadow()
     let museums: Museum
     
         let modelName = UIDevice.current.modelName2

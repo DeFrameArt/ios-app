@@ -10,6 +10,7 @@ import UIKit
 
 class MuseumTableViewCell: UITableViewCell {
    
+    @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var coverView: UIView!
     @IBOutlet weak var imageM: UIImageView!

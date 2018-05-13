@@ -322,23 +322,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
             
             // let  museumViewController = segue.destination as! MuseumViewController
             let museumViewController = navVC?.viewControllers.first as! MuseumViewController
-            //let museumViewController = segue.destination as! MuseumViewController
-            // navVC!.transitioningDelegate = self
-            // navVC!.modalPresentationStyle = .custom
-            
-            
-            
-            // controller1.detailCandy = museum
+
             if(self.isAnyMuseumSelected){
-                
-            /*    museumViewController.museumbannerURL = museum1.bannerURL
-                museumViewController.museumStreetLabel = museum1.street!
-                museumViewController.museumCityStateZipLabel = museum1.zip!
-                museumViewController.museumCountryLabel = museum1.country
-                museumViewController.museumPageMuseumId = museum1.id
-                museumViewController.museumLabel = museum1.name
-                museumViewController.logoURL = museum1.logoURL*/
-                
                 
                 
            
@@ -349,8 +334,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
             museumViewController.museumPageMuseumId = self.museumId
             museumViewController.museumLabel = self.museumpageNameLabel!
             museumViewController.logoURL = self.museumPagelogoURL
-            //  navVC!.pushViewController(museumViewController, animated: true)
-            //    self.navigationController!.present(museumViewController, animated: false, completion: nil)
+
             print("using segue")
             
             }

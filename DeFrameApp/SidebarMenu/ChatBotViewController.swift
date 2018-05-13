@@ -127,7 +127,8 @@ extension ChatBotViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+      //  let messageView = JSQMessagesViewController()
+
         //To remove attachment buutton on the leftof input text field
         
         self.inputToolbar.contentView.leftBarButtonItem = nil;
@@ -145,6 +146,10 @@ extension ChatBotViewController {
         self.senderDisplayName = currentUser.name
         
         self.messages = getMessages()
+        let navigationBarHeight = 66
+        let bottomTabBarHeight = 44
+        self.view.frame=CGRect(x:0, y: 0, width:self.view.frame.width, height:self.view.frame.height - CGFloat(bottomTabBarHeight) - CGFloat(navigationBarHeight))
+       // self.view.addSubview(messageView.view)
         
     }
     
