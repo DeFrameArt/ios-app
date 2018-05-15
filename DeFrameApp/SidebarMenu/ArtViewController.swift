@@ -149,9 +149,9 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
-       cell.galleryHeadingLabel.sizeToFit()
-        
-        
+     //  cell.galleryHeadingLabel.sizeToFit()
+       // cell.galleryHeadingLabel.sizeThatFits(CGSize(width: self.galleryHeadingLabel.frame.size.width, height:  self.galleryHeadingLabel.frame.size.height))
+         cell.galleryHeadingLabel.adjustsFontSizeToFitWidth = true
         artImageView.sd_setImage(with: URL(string: artPageImageURLsArray[indexPath.row]))
         
         
