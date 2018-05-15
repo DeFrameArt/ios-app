@@ -592,7 +592,7 @@ func startDownloadingMuseums(){
         
         
         if(annotation is Museum){
-            annotationView?.image = UIImage(named: "marker")
+            annotationView?.image = UIImage(named: "pinMap")
             
         }
         
