@@ -378,8 +378,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Institute Of Contemporary Art" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0g0-wz-SQI">
-                                                    <rect key="frame" x="119" y="212" width="247.5" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Institute Of Contemporary Art" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="0g0-wz-SQI">
+                                                    <rect key="frame" x="119" y="212" width="287" height="20"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -422,10 +422,10 @@
                                                 <constraint firstItem="YcI-us-jHm" firstAttribute="top" secondItem="ZMb-ho-FIA" secondAttribute="bottom" constant="18.5" id="Vpu-fg-Coa"/>
                                                 <constraint firstItem="ZMb-ho-FIA" firstAttribute="top" secondItem="quq-ep-2pI" secondAttribute="top" id="XfL-zO-Ya8"/>
                                                 <constraint firstItem="whk-b3-tl9" firstAttribute="top" secondItem="EvI-vD-rfP" secondAttribute="bottom" constant="8" id="bWE-hd-IaE"/>
-                                                <constraint firstItem="mmy-k8-eIN" firstAttribute="top" secondItem="whk-b3-tl9" secondAttribute="bottom" constant="62" id="drt-tb-HSg"/>
                                                 <constraint firstItem="EvI-vD-rfP" firstAttribute="top" secondItem="0g0-wz-SQI" secondAttribute="bottom" constant="8" id="eBv-Gc-aqa"/>
                                                 <constraint firstItem="ZMb-ho-FIA" firstAttribute="leading" secondItem="quq-ep-2pI" secondAttribute="leading" id="gpF-Uf-gbI"/>
                                                 <constraint firstItem="ZMb-ho-FIA" firstAttribute="leading" secondItem="9Zu-2j-9ko" secondAttribute="leading" id="iVS-g7-vbp"/>
+                                                <constraint firstAttribute="trailing" secondItem="0g0-wz-SQI" secondAttribute="trailing" constant="8" id="jAT-xO-v8k"/>
                                                 <constraint firstItem="h37-ee-u9U" firstAttribute="top" secondItem="whk-b3-tl9" secondAttribute="bottom" constant="8" id="jc7-Ox-xmM"/>
                                                 <constraint firstItem="0g0-wz-SQI" firstAttribute="leading" secondItem="YcI-us-jHm" secondAttribute="trailing" constant="20" id="lTE-o4-Mgr"/>
                                                 <constraint firstItem="EvI-vD-rfP" firstAttribute="leading" secondItem="YcI-us-jHm" secondAttribute="trailing" constant="20" id="nd3-I6-QtA"/>
@@ -9887,7 +9887,7 @@ AAbotQAG6LgABujKAAbozQAG6NIAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAAAbo1A
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kFb-Uj-P5h"/>
-        <segue reference="0sQ-uD-mAS"/>
+        <segue reference="UZh-Ym-JJe"/>
         <segue reference="Y80-0G-iRU"/>
         <segue reference="3p1-Mz-F30"/>
     </inferredMetricsTieBreakers>
