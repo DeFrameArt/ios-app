@@ -198,26 +198,26 @@
                                     <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwL-kV-Azo">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="85"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Q-Wl-p9K">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="46Q-Wl-p9K">
                                         <rect key="frame" x="128" y="64" width="22.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ix4-cC-9IA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ix4-cC-9IA">
                                         <rect key="frame" x="128" y="38" width="162" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Museum of Fine Arts" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vik-S1-sxd">
-                                        <rect key="frame" x="128" y="8" width="150" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Museum of Fine Arts" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vik-S1-sxd">
+                                        <rect key="frame" x="128" y="8" width="164" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7N-lp-yFY">
-                                        <rect key="frame" x="155.5" y="64" width="17" height="13.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="N7N-lp-yFY">
+                                        <rect key="frame" x="155.5" y="64" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -237,6 +237,7 @@
                                     <constraint firstItem="mwn-fJ-0vq" firstAttribute="height" secondItem="QvZ-cs-jQF" secondAttribute="height" id="5fy-ef-naC"/>
                                     <constraint firstItem="46Q-Wl-p9K" firstAttribute="top" secondItem="ix4-cC-9IA" secondAttribute="bottom" constant="10" id="9Yc-Mp-7jD"/>
                                     <constraint firstItem="nwL-kV-Azo" firstAttribute="height" secondItem="QvZ-cs-jQF" secondAttribute="height" id="BHu-w0-Ety"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vik-S1-sxd" secondAttribute="trailing" constant="8" id="BJJ-Va-Ptb"/>
                                     <constraint firstItem="nwL-kV-Azo" firstAttribute="top" secondItem="QvZ-cs-jQF" secondAttribute="top" id="EYF-Um-Eim"/>
                                     <constraint firstItem="Vik-S1-sxd" firstAttribute="top" secondItem="QvZ-cs-jQF" secondAttribute="top" constant="8" id="FDs-cf-khV"/>
                                     <constraint firstItem="46Q-Wl-p9K" firstAttribute="leading" secondItem="nwL-kV-Azo" secondAttribute="trailing" constant="8" id="VWj-pj-MdE"/>
@@ -684,6 +685,7 @@
                             <constraint firstItem="1RS-53-Ux0" firstAttribute="leading" secondItem="CYq-eC-Xlx" secondAttribute="leading" id="Uej-f7-0D0"/>
                             <constraint firstAttribute="trailing" secondItem="1RS-53-Ux0" secondAttribute="trailing" id="i2v-Wk-aDc"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="nue-NP-XDZ"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="URm-DL-lD5"/>

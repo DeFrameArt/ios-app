@@ -120,7 +120,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
 
         map.showsUserLocation = true
 
-         self.museumNameLabel.font = MDCTypography.titleFont()
+         self.museumNameLabel.font = MDCTypography.subheadFont()
+       /// titleFont()
          self.museumNameLabel.alpha = MDCTypography.titleFontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
@@ -128,21 +129,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
          self.museumNameLabel.sizeToFit()
         
         
-        self.streetLabel.font = MDCTypography.body1Font()
+        self.streetLabel.font = MDCTypography.captionFont()
         self.streetLabel.alpha = MDCTypography.body1FontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
         self.streetLabel.sizeToFit()
         
-        self.cityStateZipLabel.font = MDCTypography.body1Font()
+        self.cityStateZipLabel.font = MDCTypography.captionFont()
         self.cityStateZipLabel.alpha = MDCTypography.body1FontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
         self.cityStateZipLabel.sizeToFit()
         
-        self.countryLabel.font = MDCTypography.body1Font()
+        self.countryLabel.font = MDCTypography.captionFont()
         self.countryLabel.alpha = MDCTypography.body1FontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
@@ -153,7 +154,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         self.museumNameLabel.text = "Museum of Fine Arts"
         self.streetLabel.text = "465 Huntington Ave"
         self.cityStateZipLabel.text = "Boston MA, 02115"
-        self.countryLabel.text = "United States"
+       // self.countryLabel.text = "United States"
                 
         self.startDownloadingMuseums()
       
@@ -624,7 +625,7 @@ func startDownloadingMuseums(){
             self.musemImageViewButton.sd_setImage(with: URL(string: museumAnnotation.bannerURL!), for: .normal)
             self.streetLabel.text = museumAnnotation.street
             self.cityStateZipLabel.text = museumAnnotation.city!+" "+museumAnnotation.state!+", "+museumAnnotation.zip!
-            self.countryLabel.text = museumAnnotation.country
+           // self.countryLabel.text = museumAnnotation.country
             self.museumId = museumAnnotation.id!
             self.museumPagelogoURL = museumAnnotation.logoURL!
             UserDefaults.standard.setValue(museumAnnotation.id, forKey: "selected_museumId")
