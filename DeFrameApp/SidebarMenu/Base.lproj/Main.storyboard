@@ -193,10 +193,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvZ-cs-jQF">
-                                <rect key="frame" x="10" y="413" width="300" height="85"/>
+                                <rect key="frame" x="10" y="396" width="300" height="102"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwL-kV-Azo">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="85"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="102"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="46Q-Wl-p9K">
                                         <rect key="frame" x="128" y="64" width="22.5" height="14.5"/>
@@ -223,7 +223,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwn-fJ-0vq">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="85"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="102"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -263,7 +263,7 @@
                             <constraint firstItem="nsc-35-MTe" firstAttribute="width" secondItem="HE4-02-mb0" secondAttribute="width" id="U4e-Oj-ugF"/>
                             <constraint firstItem="QvZ-cs-jQF" firstAttribute="leading" secondItem="HE4-02-mb0" secondAttribute="leading" constant="10" id="VjZ-gG-FP0"/>
                             <constraint firstItem="nsc-35-MTe" firstAttribute="centerX" secondItem="QvZ-cs-jQF" secondAttribute="centerX" id="gLK-oJ-tt2"/>
-                            <constraint firstItem="QvZ-cs-jQF" firstAttribute="height" secondItem="HE4-02-mb0" secondAttribute="height" multiplier="0.15" id="rfo-NI-yF6"/>
+                            <constraint firstItem="QvZ-cs-jQF" firstAttribute="height" secondItem="HE4-02-mb0" secondAttribute="height" multiplier="0.18" id="rfo-NI-yF6"/>
                             <constraint firstItem="nsc-35-MTe" firstAttribute="top" secondItem="HE4-02-mb0" secondAttribute="top" id="wgV-z2-cxB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NUI-hw-zQk"/>
