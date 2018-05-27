@@ -34,6 +34,7 @@ class NewMuseumViewController: UIViewController,UICollectionViewDataSource, UICo
    /* @IBOutlet var galleryCollectionView: UICollectionView!*/
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .lightContent
 
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))

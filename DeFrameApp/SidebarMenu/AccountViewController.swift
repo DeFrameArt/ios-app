@@ -42,7 +42,8 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
+        UIApplication.shared.statusBarStyle = .lightContent
+
         viewImage.layer.shadowOpacity = 0.5
         viewImage.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
         viewImage.layer.shadowRadius = 5.0

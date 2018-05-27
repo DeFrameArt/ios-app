@@ -46,6 +46,8 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .lightContent
+
         self.descriptionTextView.font = MDCTypography.captionFont()
         self.descriptionTextView.alpha = MDCTypography.captionFontOpacity()
         self.descriptionTextView.sizeThatFits(CGSize(width: self.descriptionTextView.frame.size.width, height:  self.descriptionTextView.frame.size.height))

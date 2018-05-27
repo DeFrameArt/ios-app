@@ -64,7 +64,8 @@ class MuseumViewControllerList: UIViewController, UICollectionViewDataSource, UI
         
         super.viewDidLoad()
         //navBar.backgroundColor=UIColor.black
-        
+        UIApplication.shared.statusBarStyle = .lightContent
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
         let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
         

@@ -98,8 +98,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     override func viewDidLoad() {
         super.viewDidLoad()
          self.tabBarController?.delegate = self
-        navigationController?.navigationBar.tintColor = UIColor.white
-       
+       // navigationController?.navigationBar.tintColor = UIColor.white
+        UIApplication.shared.statusBarStyle = .default
+
       /*  TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
         setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)*/
         

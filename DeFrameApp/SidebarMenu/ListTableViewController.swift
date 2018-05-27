@@ -65,6 +65,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        UIApplication.shared.statusBarStyle = .lightContent
 
        self.navigationController?.isNavigationBarHidden = false
     self.resultSearchController = ({
