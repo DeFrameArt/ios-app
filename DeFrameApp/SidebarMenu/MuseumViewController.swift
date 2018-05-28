@@ -115,18 +115,7 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
     }
     
-    func setUpNavBar(){
-        //For title in navigation bar
-        self.navigationController?.view.backgroundColor = UIColor.white
-        self.navigationController?.view.tintColor = UIColor.orange
-        self.navigationItem.title = "About Us"
-        
-        //For back button in navigation bar
-        let backButton = UIBarButtonItem()
-        backButton.title = "Back"
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-    }
-    
+
     @IBAction func backModalAction(_ sender: Any) {
       self.dismiss(animated: true, completion: nil)
     }

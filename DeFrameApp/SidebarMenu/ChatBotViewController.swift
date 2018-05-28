@@ -12,7 +12,7 @@ import ApiAI
 import UIKit
 import MBProgressHUD
 import JSQMessagesViewController
-
+import Tamamushi
 struct User {
     
     let id: String
@@ -21,7 +21,31 @@ struct User {
 }
 
 class ChatBotViewController: JSQMessagesViewController {
-    
+    var lastSelectedIndexPath = IndexPath(row: 0, section: 0)
+    var gradientDirection = Direction.vertical
+    let colorNames = [
+        "SoundCloud",
+        "Facebook Messenger",
+        "Flickr",
+        "Vine",
+        "YouTube",
+        "Pinky",
+        "Sunrise",
+        "Playing with Reds",
+        "Ukraine",
+        "Curiosity blue",
+        "Between Night and Day",
+        "Timber",
+        "Passion",
+        "Master Card",
+        "Green and Blue",
+        "Inbox",
+        "Little Leaf",
+        "Alihossein",
+        "Endless River",
+        "Kyoto",
+        "Twitch"
+    ]
     let user1 = User(id: "1", name: "Frida")
     
     let user2 = User(id: "2", name: Constants.userName as! String)
@@ -123,12 +147,16 @@ extension ChatBotViewController {
 
 
 extension ChatBotViewController {
+
     
+    func setGradientBarWithIndexPath(indexPath: IndexPath, onBar: UINavigationBar) {
+        TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
+    }
     override func viewDidLoad() {
         
         super.viewDidLoad()
-      //  let messageView = JSQMessagesViewController()
-
+         UIApplication.shared.statusBarStyle = .lightContent
+   
         //To remove attachment buutton on the leftof input text field
         
         self.inputToolbar.contentView.leftBarButtonItem = nil;
@@ -153,6 +181,19 @@ extension ChatBotViewController {
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationItem.title="Frida"
+        //  let messageView = JSQMessagesViewController()
+        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
 }
 
 
