@@ -134,7 +134,7 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         
        
       
-        
+         UIApplication.shared.statusBarStyle = .lightContent
         print(self.museumPageMuseumId)
         
         print("In will appear")

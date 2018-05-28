@@ -127,7 +127,10 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         
     }
 
-   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         UIApplication.shared.statusBarStyle = .lightContent
+    }
     override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     resultSearchController.dismiss(animated: false, completion: nil)

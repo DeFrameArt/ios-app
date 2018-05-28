@@ -87,7 +87,7 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
     override func viewWillAppear(_ animated: Bool) {
     
         super.viewWillAppear(true)
-    
+     UIApplication.shared.statusBarStyle = .lightContent
         artCollectionView.layoutIfNeeded()
         artCollectionView.isScrollEnabled = true
         artCollectionView.contentSize = CGSize(width: self.view.frame.width, height: artCollectionView.frame.size.height)
