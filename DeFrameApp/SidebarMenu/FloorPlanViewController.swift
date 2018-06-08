@@ -9,10 +9,34 @@
 import Foundation
 import UIKit
 import SwiftyJSON
-
+import Tamamushi
 class FloorPlanViewController: UIViewController, UIScrollViewDelegate{
     
-    
+    let colorNames = [
+        "SoundCloud",
+        "Facebook Messenger",
+        "Flickr",
+        "Vine",
+        "YouTube",
+        "Pinky",
+        "Sunrise",
+        "Playing with Reds",
+        "Ukraine",
+        "Curiosity blue",
+        "Between Night and Day",
+        "Timber",
+        "Passion",
+        "Master Card",
+        "Green and Blue",
+        "Inbox",
+        "Little Leaf",
+        "Alihossein",
+        "Endless River",
+        "Kyoto",
+        "Twitch"
+    ]
+    var lastSelectedIndexPath = IndexPath(row: 0, section: 0)
+    var gradientDirection = Direction.vertical
     @IBOutlet var pageControl: UIPageControl!
     
     @IBOutlet var floorPlanCarouselView: UIScrollView!
@@ -27,12 +51,18 @@ class FloorPlanViewController: UIViewController, UIScrollViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       UIApplication.shared.statusBarStyle = .lightContent
         carArray = [car1, car2]
         
         self.startDownloadingFloorImagesData()
         print("self.levelsArray - ",self.levelsArray.count)
+        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
     }
+    func setGradientBarWithIndexPath(indexPath: IndexPath, onBar: UINavigationBar) {
+        TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
+    }
+
     
     
     func loadCarouselImages(){
