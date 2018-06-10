@@ -204,6 +204,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+        
+        self.navigationController?.isNavigationBarHidden = true
        
    }
 
@@ -220,7 +222,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
 }
 
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
