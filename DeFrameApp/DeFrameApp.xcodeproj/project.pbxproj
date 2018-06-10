@@ -16,7 +16,6 @@
 		3544613420748B9200FA1CBF /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544613220748B9200FA1CBF /* ListTableViewController.swift */; };
 		35488E5120101F9900A2858A /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 35488E5020101F9800A2858A /* images.png */; };
 		35490F22201ADCDD00429192 /* artHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */; };
-		3552EC8D209F8F2D00D1C29D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552EC8C209F8F2D00D1C29D /* AppDelegate.swift */; };
 		3552EC90209FB9A500D1C29D /* MAP.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC8F209FB9A500D1C29D /* MAP.png */; };
 		3552EC92209FB9EB00D1C29D /* display.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC91209FB9E200D1C29D /* display.png */; };
 		3552EC94209FD43900D1C29D /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC93209FD3DE00D1C29D /* compass.png */; };
@@ -90,7 +89,7 @@
 		35D0DAF42082D07B0067A5BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47029F91A7F27DB00E30A3C /* Main.storyboard */; };
 		35DCB61E20791E9A00224480 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = 35DCB61D20791E9800224480 /* library.png */; };
 		35DCB61F20791E9A00224480 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = 35DCB61D20791E9800224480 /* library.png */; };
-		35E948D720AA9321000D68F5 /* pinMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E948D620AA9320000D68F5 /* pinMap.png */; };
+		580C106A20CDCB2D004D5619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C106920CDCB2D004D5619 /* AppDelegate.swift */; };
 		581F70CD1F4287040064496C /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581F70CC1F4287040064496C /* ArtViewController.swift */; };
 		581F719A1F5B24610064496C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581F71991F5B24610064496C /* LoginViewController.swift */; };
 		581F719C1F6993E70064496C /* FloorPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581F719B1F6993E70064496C /* FloorPlanViewController.swift */; };
@@ -162,8 +161,6 @@
 		3544613220748B9200FA1CBF /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		35488E5020101F9800A2858A /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
-		3552EC8C209F8F2D00D1C29D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../AppDelegate.swift; sourceTree = "<group>"; };
-		3552EC8E209F8F3300D1C29D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../AppDelegate.swift; sourceTree = "<group>"; };
 		3552EC8F209FB9A500D1C29D /* MAP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAP.png; sourceTree = "<group>"; };
 		3552EC91209FB9E200D1C29D /* display.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = display.png; sourceTree = "<group>"; };
 		3552EC93209FD3DE00D1C29D /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
@@ -205,7 +202,7 @@
 		35C6CEE720A0076700E3E220 /* robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robot.png; sourceTree = "<group>"; };
 		35CFAB182083052900054444 /* MuseumViewControllerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumViewControllerList.swift; sourceTree = "<group>"; };
 		35DCB61D20791E9800224480 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
-		35E948D620AA9320000D68F5 /* pinMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pinMap.png; path = ../../../pinMap.png; sourceTree = "<group>"; };
+		580C106920CDCB2D004D5619 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		581F70CC1F4287040064496C /* ArtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
 		581F71991F5B24610064496C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		581F719B1F6993E70064496C /* FloorPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorPlanViewController.swift; sourceTree = "<group>"; };
@@ -303,7 +300,7 @@
 		A058F37B1FC40AA3001FC901 /* MuseumScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3552EC8C209F8F2D00D1C29D /* AppDelegate.swift */,
+				580C106920CDCB2D004D5619 /* AppDelegate.swift */,
 				582037B71F369CCA00C0F384 /* CarouselView.swift */,
 				A058F37E1FC40B03001FC901 /* PrivacyScreen */,
 				58F68F191F7A0AF5006F7510 /* MuseumDetailsView.swift */,
@@ -311,7 +308,6 @@
 				F491E7521A7F7DF20026528E /* MapViewController.swift */,
 				582037B31F33E82900C0F384 /* MuseumViewController.swift */,
 				581F70CC1F4287040064496C /* ArtViewController.swift */,
-				35E948D620AA9320000D68F5 /* pinMap.png */,
 				3552EC91209FB9E200D1C29D /* display.png */,
 				3552EC95209FD51700D1C29D /* avatar.png */,
 				35C6CEE720A0076700E3E220 /* robot.png */,
@@ -452,7 +448,6 @@
 				A058F37D1FC40AF0001FC901 /* FeedbackScreen */,
 				A058F37A1FC40A95001FC901 /* Login */,
 				A058F37B1FC40AA3001FC901 /* MuseumScreen */,
-				3552EC8E209F8F3300D1C29D /* AppDelegate.swift */,
 				A058F37C1FC40AB5001FC901 /* MenuScreen */,
 				586B948E1F1305DF00F89AE8 /* SampleMuseum.json */,
 				F47029FE1A7F27DB00E30A3C /* LaunchScreen.xib */,
@@ -544,7 +539,6 @@
 				F47029ED1A7F27DB00E30A3C /* Frameworks */,
 				F47029EE1A7F27DB00E30A3C /* Resources */,
 				32ACFF2876E54B036C882144 /* [CP] Embed Pods Frameworks */,
-				4D1CC72C284052EDB4F76BA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -564,7 +558,6 @@
 				F4702A021A7F27DC00E30A3C /* Frameworks */,
 				F4702A031A7F27DC00E30A3C /* Resources */,
 				E65C640B1A68DE0435E5B33E /* [CP] Embed Pods Frameworks */,
-				D78747A72728F6EE58E650F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -598,7 +591,9 @@
 					};
 					F4702A041A7F27DC00E30A3C = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = J42C78J3VY;
 						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 						TestTargetID = F47029EF1A7F27DB00E30A3C;
 					};
 				};
@@ -665,7 +660,6 @@
 				35C6CEE820A0076900E3E220 /* robot.png in Resources */,
 				586B948F1F1305DF00F89AE8 /* SampleMuseum.json in Resources */,
 				3552EC96209FD54200D1C29D /* avatar.png in Resources */,
-				35E948D720AA9321000D68F5 /* pinMap.png in Resources */,
 				3557CEE820685E9B00548D99 /* userPic5.png in Resources */,
 				3557CEEE20685E9B00548D99 /* userPic7.png in Resources */,
 				3557CEE620685E9B00548D99 /* userPic4.png in Resources */,
@@ -767,21 +761,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4D1CC72C284052EDB4F76BA2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A28D34889E5925A4053CCF74 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -816,21 +795,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D78747A72728F6EE58E650F1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E65C640B1A68DE0435E5B33E /* [CP] Embed Pods Frameworks */ = {
@@ -915,12 +879,12 @@
 				581F719C1F6993E70064496C /* FloorPlanViewController.swift in Sources */,
 				58F68F131F759BA6006F7510 /* ArtView.swift in Sources */,
 				586B94921F144D4500F89AE8 /* locationAnnotation.swift in Sources */,
+				580C106A20CDCB2D004D5619 /* AppDelegate.swift in Sources */,
 				F4702A181A7F351C00E30A3C /* MenuController.swift in Sources */,
 				586B948C1F11E09100F89AE8 /* Museum.swift in Sources */,
 				3544613320748B9200FA1CBF /* ListTableViewController.swift in Sources */,
 				3556093620635E3300621E4F /* loginedUser.xcdatamodeld in Sources */,
 				A058F3791FC3C0F7001FC901 /* Constants.swift in Sources */,
-				3552EC8D209F8F2D00D1C29D /* AppDelegate.swift in Sources */,
 				F491E74C1A7F4C630026528E /* NewsTableViewCell.swift in Sources */,
 				35A25EB1204DF9720023A77D /* UploadProfilePicViewController.swift in Sources */,
 				F491E7531A7F7DF20026528E /* MapViewController.swift in Sources */,
@@ -1104,7 +1068,7 @@
 					"$(PROJECT_DIR)/Pods",
 				);
 				INFOPLIST_FILE = SidebarMenu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-objC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DeFrame.DeFrameApp;
@@ -1129,7 +1093,7 @@
 					"$(PROJECT_DIR)/Pods",
 				);
 				INFOPLIST_FILE = SidebarMenu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-objC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DeFrame.DeFrameApp;
@@ -1145,6 +1109,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J42C78J3VY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1157,6 +1124,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeFrameApp.app/DeFrameApp";
 			};
@@ -1168,6 +1136,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J42C78J3VY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1176,6 +1147,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeFrameApp.app/DeFrameApp";
 			};

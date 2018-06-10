@@ -29,7 +29,6 @@ class FloorPlanViewController: UIViewController, UIScrollViewDelegate{
         super.viewDidLoad()
         
         carArray = [car1, car2]
-        
         self.startDownloadingFloorImagesData()
         print("self.levelsArray - ",self.levelsArray.count)
     }
