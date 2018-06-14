@@ -12,9 +12,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
         <array key="TimesNewRoman.ttf">
             <string>TimesNewRomanPSMT</string>
         </array>
@@ -116,37 +113,22 @@
                                                         <constraint firstItem="AQ7-Mj-tFo" firstAttribute="height" secondItem="AdO-fS-Cfm" secondAttribute="height" multiplier="0.35" id="uhX-dZ-eth"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRJ-51-xif">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                    <state key="normal">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="DetailsActionOnClick:" destination="Sa9-w8-DOw" eventType="touchUpInside" id="ZEm-gC-mHe"/>
-                                                        <segue destination="5Gc-MC-eZj" kind="show" identifier="museumInfo" id="8d3-bQ-AUm"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="BRJ-51-xif" secondAttribute="trailing" id="6EC-lQ-0Rg"/>
                                                 <constraint firstItem="AdO-fS-Cfm" firstAttribute="leading" secondItem="Iw0-8y-t4s" secondAttribute="leading" constant="10" id="G3T-03-WD8"/>
                                                 <constraint firstItem="AdO-fS-Cfm" firstAttribute="top" secondItem="Iw0-8y-t4s" secondAttribute="top" constant="10" id="UYF-7w-VRU"/>
                                                 <constraint firstAttribute="trailing" secondItem="AdO-fS-Cfm" secondAttribute="trailing" constant="10" id="mW7-jS-lJq"/>
-                                                <constraint firstItem="BRJ-51-xif" firstAttribute="leading" secondItem="Iw0-8y-t4s" secondAttribute="leading" id="oqC-Fj-nIS"/>
                                                 <constraint firstAttribute="bottom" secondItem="AdO-fS-Cfm" secondAttribute="bottom" constant="10" id="ppJ-ib-sOL"/>
-                                                <constraint firstAttribute="bottom" secondItem="BRJ-51-xif" secondAttribute="bottom" id="shn-7B-jyA"/>
-                                                <constraint firstItem="BRJ-51-xif" firstAttribute="top" secondItem="Iw0-8y-t4s" secondAttribute="top" id="wKl-VX-06l"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="address" destination="8sA-yO-kvH" id="wSf-2k-qRt"/>
                                             <outlet property="coverView" destination="Iw0-8y-t4s" id="pRR-Mw-Xyv"/>
-                                            <outlet property="detailsAction" destination="BRJ-51-xif" id="BEm-xw-nQP"/>
                                             <outlet property="imageM" destination="afQ-qE-hW7" id="cmC-40-X40"/>
                                             <outlet property="infoView" destination="AdO-fS-Cfm" id="Vku-nb-cQ4"/>
                                             <outlet property="titleMuseum" destination="XdA-KU-Ne7" id="sO7-lt-WXr"/>
+                                            <segue destination="5Gc-MC-eZj" kind="show" identifier="museumInfo" id="5bQ-cI-Rx8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -9428,6 +9410,6 @@ AAbotQAG6LgABujKAAbozQAG6NIAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAAAbo1A
     <inferredMetricsTieBreakers>
         <segue reference="kFb-Uj-P5h"/>
         <segue reference="UZh-Ym-JJe"/>
-        <segue reference="3p1-Mz-F30"/>
+        <segue reference="5bQ-cI-Rx8"/>
     </inferredMetricsTieBreakers>
 </document>
