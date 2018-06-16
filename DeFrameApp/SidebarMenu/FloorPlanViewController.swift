@@ -67,7 +67,7 @@ class FloorPlanViewController: UIViewController, UIScrollViewDelegate{
     func loadCarouselImages(){
         floorPlanCarouselView.isPagingEnabled = true
         floorPlanCarouselView.frame = CGRect(x: 0, y: 0, width:view.frame.width, height: view.frame.height)
-        floorPlanCarouselView.contentSize = CGSize(width:self.view.bounds.width * CGFloat(floorPageImageURLsArray.count), height:view.bounds.height)
+        floorPlanCarouselView.contentSize = CGSize(width:self.view.bounds.width * CGFloat(floorPageImageURLsArray.count), height:view.bounds.height * 0.75)
         floorPlanCarouselView.showsHorizontalScrollIndicator = false
         
         floorPlanCarouselView.maximumZoomScale = 5.0

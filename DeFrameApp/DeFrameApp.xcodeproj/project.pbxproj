@@ -300,7 +300,6 @@
 		A058F37B1FC40AA3001FC901 /* MuseumScreen */ = {
 			isa = PBXGroup;
 			children = (
-				580C106920CDCB2D004D5619 /* AppDelegate.swift */,
 				582037B71F369CCA00C0F384 /* CarouselView.swift */,
 				A058F37E1FC40B03001FC901 /* PrivacyScreen */,
 				58F68F191F7A0AF5006F7510 /* MuseumDetailsView.swift */,
@@ -439,9 +438,11 @@
 		F47029F21A7F27DB00E30A3C /* DeFrame */ = {
 			isa = PBXGroup;
 			children = (
+				F47029F41A7F27DB00E30A3C /* Info.plist */,
+				F47029F91A7F27DB00E30A3C /* Main.storyboard */,
+				580C106920CDCB2D004D5619 /* AppDelegate.swift */,
 				A0C8B2D5208D950900205612 /* FloorPlanScreen */,
 				A0C8B2D4208D940A00205612 /* RegisterUserScreen */,
-				F47029F91A7F27DB00E30A3C /* Main.storyboard */,
 				A058F38A1FCFA76C001FC901 /* ChatBotScreen */,
 				A058F3841FC40B64001FC901 /* TermsandconditionScreen */,
 				A058F37F1FC40B0E001FC901 /* Utils */,
@@ -482,7 +483,6 @@
 				35488E5020101F9800A2858A /* images.png */,
 				A083563D1FEAFB1600850FAA /* Bot Button@2x.png */,
 				35B0DA89208ECE640005272C /* Info.plist */,
-				F47029F41A7F27DB00E30A3C /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
