@@ -97,7 +97,6 @@ class FloorPlanViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func startDownloadingFloorImagesData(){
-        
         let url : String = "http://deframe-test-api.us-east-1.elasticbeanstalk.com/museums/"+self.floorPageMuseumId!+"/floorplan"
         print("in  start download prediction callback ")
         downloadFloorImageData(url) { (array) in
