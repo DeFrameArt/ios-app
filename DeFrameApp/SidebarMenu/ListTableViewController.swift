@@ -150,13 +150,14 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "museumInfo" {
-      
-    
+        let cell1 = sender as! UITableViewCell
+        let index1 = tableView.indexPath(for: cell1)
+        indexP=(index1?.row)!
     let museum1: Museum
     if isFiltering() {
-    museum1 = filteredCandies[indexP]
+        museum1 = filteredCandies[indexP]
     } else {
-    museum1 = museum[indexP]
+        museum1 = museum[indexP]
     }
     let navVC = segue.destination as? UINavigationController
        
@@ -173,13 +174,13 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     // controller1.detailCandy = museum
    
     
+    
     }
     }
-  
     var indexP=0
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
+    //indexP=indexPath.row
     }
 
     
@@ -224,7 +225,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cellMuseum", for: indexPath as IndexPath) as! MuseumTableViewCell
-        cell.infoView.dropShadow()
+     //   cell.infoView.dropShadow()
     let museums: Museum
     
         let modelName = UIDevice.current.modelName2
