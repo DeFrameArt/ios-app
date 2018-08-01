@@ -64,7 +64,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+  
         UIApplication.shared.statusBarStyle = .lightContent
 
        self.navigationController?.isNavigationBarHidden = false
@@ -115,8 +115,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 160.0; // set to whatever your "average" cell height is
-        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
-        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
+        
         
         tableView.reloadWithAnimation()
     }
@@ -130,6 +129,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          UIApplication.shared.statusBarStyle = .lightContent
+        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
     }
     override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
@@ -282,98 +283,5 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     
 }
 
-public extension UIDevice {
-    
-    
-    var modelName2: String {
-        #if (arch(i386) || arch(x86_64)) && os(iOS)
-            let DEVICE_IS_SIMULATOR = true
-        #else
-            let DEVICE_IS_SIMULATOR = false
-        #endif
-        
-        var machineString : String = ""
-        
-        if DEVICE_IS_SIMULATOR == true
-        {
-            
-            if let dir = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] {
-                machineString = dir
-            }
-        }
-        else {
-            var systemInfo = utsname()
-            uname(&systemInfo)
-            let machineMirror = Mirror(reflecting: systemInfo.machine)
-            machineString = machineMirror.children.reduce("") { identifier, element in
-                guard let value = element.value as? Int8, value != 0 else { return identifier }
-                return identifier + String(UnicodeScalar(UInt8(value)))
-            }
-        }
-        switch machineString {
-        case "iPod5,1":                                 return "iPod Touch 5"
-        case "iPod7,1":                                 return "iPod Touch 6"
-        case "iPhone3,1", "iPhone3,2", "iPhone3,3":     return "iPhone 4"
-        case "iPhone4,1":                               return "iPhone 4s"
-        case "iPhone5,1", "iPhone5,2":                  return "iPhone 5"
-        case "iPhone5,3", "iPhone5,4":                  return "iPhone 5c"
-        case "iPhone6,1", "iPhone6,2":                  return "iPhone 5s"
-        case "iPhone7,2":                               return "iPhone 6"
-        case "iPhone7,1":                               return "iPhone 6 Plus"
-        case "iPhone8,1":                               return "iPhone 6s"
-        case "iPhone8,2":                               return "iPhone 6s Plus"
-        case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2"
-        case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad 3"
-        case "iPad3,4", "iPad3,5", "iPad3,6":           return "iPad 4"
-        case "iPad4,1", "iPad4,2", "iPad4,3":           return "iPad Air"
-        case "iPad5,3", "iPad5,4":                      return "iPad Air 2"
-        case "iPad2,5", "iPad2,6", "iPad2,7":           return "iPad Mini"
-        case "iPad4,4", "iPad4,5", "iPad4,6":           return "iPad Mini 2"
-        case "iPad4,7", "iPad4,8", "iPad4,9":           return "iPad Mini 3"
-        case "iPad5,1", "iPad5,2":                      return "iPad Mini 4"
-        case "iPad6,7", "iPad6,8":                      return "iPad Pro"
-        case "AppleTV5,3":                              return "Apple TV"
-        default:                                        return machineString
-        }
-    }
-}
 
-extension UIView
-{
-    func addBlurEffect()
-    {
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = self.bounds
-        
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
-        self.addSubview(blurEffectView)
-    }
-    
-    func removeBlurEffect() {
-        let blurredEffectViews = self.subviews.filter{$0 is UIVisualEffectView}
-        blurredEffectViews.forEach{ blurView in
-            blurView.removeFromSuperview()
-        }
-    }
-    
-}
-extension UITableView {
-    func reloadWithAnimation() {
-        self.reloadData()
-        let tableViewHeight = self.bounds.size.height
-        let cells = self.visibleCells
-        var delayCounter = 0
-        for cell in cells {
-            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
-        }
-        for cell in cells {
-            //UIView.animate(withDuration: 1.6, delay: 0.1 * Double(delayCounter),usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                UIView.animate(withDuration: 1, delay: 0.2 * Double(delayCounter), options: [.curveEaseInOut], animations: {
-                
-                cell.transform = CGAffineTransform.identity
-            }, completion: nil)
-            delayCounter += 1
-        }
-    }
-}
+

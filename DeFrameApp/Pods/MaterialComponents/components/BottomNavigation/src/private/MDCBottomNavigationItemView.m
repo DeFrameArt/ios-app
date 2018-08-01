@@ -203,11 +203,11 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
 - (void)layoutSubviews {
   [super layoutSubviews];
 
-  CGSize labelSize = [self.title boundingRectWithSize:self.bounds.size
-                                              options:NSStringDrawingUsesLineFragmentOrigin
-                                           attributes:@{ NSFontAttributeName:self.label.font }
-                                              context:nil].size;
-  self.label.frame = CGRectMake(0, 0, labelSize.width, labelSize.height);
+  [self.label sizeToFit];
+  CGSize labelSize = CGSizeMake(CGRectGetWidth(self.label.bounds),
+                                CGRectGetHeight(self.label.bounds));
+  CGFloat maxWidth = CGRectGetWidth(self.bounds);
+  self.label.frame = CGRectMake(0, 0, MIN(maxWidth, labelSize.width), labelSize.height);
   self.inkView.maxRippleRadius =
       (CGFloat)(MDCHypot(CGRectGetHeight(self.bounds), CGRectGetWidth(self.bounds)) / 2);
   [self centerLayoutAnimated:NO];
@@ -363,8 +363,8 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
   if (!self.selected) {
     self.iconImageView.tintColor = self.unselectedItemTintColor;
     self.label.textColor = self.unselectedItemTintColor;
-    CGFloat alpha = MDCBottomNavigationItemViewInkOpacity;
-    self.inkView.inkColor = [self.unselectedItemTintColor colorWithAlphaComponent:alpha];
+    self.inkView.inkColor =
+        [self.selectedItemTintColor colorWithAlphaComponent:MDCBottomNavigationItemViewInkOpacity];
   }
 }
 

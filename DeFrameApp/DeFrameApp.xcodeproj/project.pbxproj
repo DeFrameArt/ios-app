@@ -16,6 +16,26 @@
 		3544613420748B9200FA1CBF /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544613220748B9200FA1CBF /* ListTableViewController.swift */; };
 		35488E5120101F9900A2858A /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 35488E5020101F9800A2858A /* images.png */; };
 		35490F22201ADCDD00429192 /* artHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */; };
+		354B59232106D48600A30A8B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59222106D48600A30A8B /* UIView+Extension.swift */; };
+		354B59242106D48600A30A8B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59222106D48600A30A8B /* UIView+Extension.swift */; };
+		354B59262106D50700A30A8B /* MapViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59252106D50700A30A8B /* MapViewController+Extension.swift */; };
+		354B59272106D50700A30A8B /* MapViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59252106D50700A30A8B /* MapViewController+Extension.swift */; };
+		354B59292106D68600A30A8B /* MapViewControllerCarousel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59282106D68600A30A8B /* MapViewControllerCarousel+Extension.swift */; };
+		354B592A2106D68600A30A8B /* MapViewControllerCarousel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59282106D68600A30A8B /* MapViewControllerCarousel+Extension.swift */; };
+		354B592C2107F33200A30A8B /* TableViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B592B2107F33200A30A8B /* TableViewController+Extension.swift */; };
+		354B592D2107F33200A30A8B /* TableViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B592B2107F33200A30A8B /* TableViewController+Extension.swift */; };
+		354B592F2107F37000A30A8B /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B592E2107F37000A30A8B /* DeviceViewController.swift */; };
+		354B59302107F37000A30A8B /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B592E2107F37000A30A8B /* DeviceViewController.swift */; };
+		354B59322107F3FC00A30A8B /* NewMuseumViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59312107F3FC00A30A8B /* NewMuseumViewController+Extension.swift */; };
+		354B59332107F3FC00A30A8B /* NewMuseumViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59312107F3FC00A30A8B /* NewMuseumViewController+Extension.swift */; };
+		354B59352107F43C00A30A8B /* ArtViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59342107F43C00A30A8B /* ArtViewController+Extension.swift */; };
+		354B59362107F43C00A30A8B /* ArtViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59342107F43C00A30A8B /* ArtViewController+Extension.swift */; };
+		354B59382107F49B00A30A8B /* MuseumViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59372107F49B00A30A8B /* MuseumViewController+Extension.swift */; };
+		354B59392107F49B00A30A8B /* MuseumViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59372107F49B00A30A8B /* MuseumViewController+Extension.swift */; };
+		354B593C2107FBE500A30A8B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B593B2107FBE500A30A8B /* DataStore.swift */; };
+		354B593D2107FBE500A30A8B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B593B2107FBE500A30A8B /* DataStore.swift */; };
+		354B5942210972AD00A30A8B /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5941210972AD00A30A8B /* CarouselCollectionViewCell.swift */; };
+		354B5943210972AD00A30A8B /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5941210972AD00A30A8B /* CarouselCollectionViewCell.swift */; };
 		3552EC90209FB9A500D1C29D /* MAP.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC8F209FB9A500D1C29D /* MAP.png */; };
 		3552EC92209FB9EB00D1C29D /* display.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC91209FB9E200D1C29D /* display.png */; };
 		3552EC94209FD43900D1C29D /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 3552EC93209FD3DE00D1C29D /* compass.png */; };
@@ -44,6 +64,10 @@
 		3557CEF820685F2C00548D99 /* userPic8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3557CEF220685F2700548D99 /* userPic8.png */; };
 		3557CEFA206868A400548D99 /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557CEF9206868A400548D99 /* GuestCell.swift */; };
 		3557CEFB206868A400548D99 /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557CEF9206868A400548D99 /* GuestCell.swift */; };
+		355A8EDE20ED587B0032C569 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A8EDD20ED587B0032C569 /* TabViewController.swift */; };
+		355A8EDF20ED587B0032C569 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A8EDD20ED587B0032C569 /* TabViewController.swift */; };
+		355A8EE420EF1D080032C569 /* Frida.png in Resources */ = {isa = PBXBuildFile; fileRef = 355A8EE320EF1D070032C569 /* Frida.png */; };
+		355A8EE520EF1D080032C569 /* Frida.png in Resources */ = {isa = PBXBuildFile; fileRef = 355A8EE320EF1D070032C569 /* Frida.png */; };
 		356813A7201AD3C40094B16E /* NewMuseumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356813A6201AD3C40094B16E /* NewMuseumViewController.swift */; };
 		3569731F20A2AA55006340EC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3569731E20A2AA55006340EC /* AccountViewController.swift */; };
 		3569732020A2AA55006340EC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3569731E20A2AA55006340EC /* AccountViewController.swift */; };
@@ -89,6 +113,10 @@
 		35D0DAF42082D07B0067A5BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47029F91A7F27DB00E30A3C /* Main.storyboard */; };
 		35DCB61E20791E9A00224480 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = 35DCB61D20791E9800224480 /* library.png */; };
 		35DCB61F20791E9A00224480 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = 35DCB61D20791E9800224480 /* library.png */; };
+		35E92AAF210FECC5006C13B7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E92AAE210FECC4006C13B7 /* NavigationViewController.swift */; };
+		35E92AB0210FECC5006C13B7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E92AAE210FECC4006C13B7 /* NavigationViewController.swift */; };
+		35E92AB221114D67006C13B7 /* UITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E92AB121114D67006C13B7 /* UITabBarViewController.swift */; };
+		35E92AB321114D67006C13B7 /* UITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E92AB121114D67006C13B7 /* UITabBarViewController.swift */; };
 		580C106A20CDCB2D004D5619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C106920CDCB2D004D5619 /* AppDelegate.swift */; };
 		581F70CD1F4287040064496C /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581F70CC1F4287040064496C /* ArtViewController.swift */; };
 		581F719A1F5B24610064496C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581F71991F5B24610064496C /* LoginViewController.swift */; };
@@ -161,6 +189,16 @@
 		3544613220748B9200FA1CBF /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		35488E5020101F9800A2858A /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		354B59222106D48600A30A8B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		354B59252106D50700A30A8B /* MapViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Extension.swift"; sourceTree = "<group>"; };
+		354B59282106D68600A30A8B /* MapViewControllerCarousel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewControllerCarousel+Extension.swift"; sourceTree = "<group>"; };
+		354B592B2107F33200A30A8B /* TableViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController+Extension.swift"; sourceTree = "<group>"; };
+		354B592E2107F37000A30A8B /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		354B59312107F3FC00A30A8B /* NewMuseumViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewMuseumViewController+Extension.swift"; sourceTree = "<group>"; };
+		354B59342107F43C00A30A8B /* ArtViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtViewController+Extension.swift"; sourceTree = "<group>"; };
+		354B59372107F49B00A30A8B /* MuseumViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MuseumViewController+Extension.swift"; sourceTree = "<group>"; };
+		354B593B2107FBE500A30A8B /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		354B5941210972AD00A30A8B /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		3552EC8F209FB9A500D1C29D /* MAP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAP.png; sourceTree = "<group>"; };
 		3552EC91209FB9E200D1C29D /* display.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = display.png; sourceTree = "<group>"; };
 		3552EC93209FD3DE00D1C29D /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
@@ -177,6 +215,8 @@
 		3557CEF120685F2100548D99 /* userPic9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPic9.png; sourceTree = "<group>"; };
 		3557CEF220685F2700548D99 /* userPic8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPic8.png; sourceTree = "<group>"; };
 		3557CEF9206868A400548D99 /* GuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCell.swift; sourceTree = "<group>"; };
+		355A8EDD20ED587B0032C569 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		355A8EE320EF1D070032C569 /* Frida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frida.png; sourceTree = "<group>"; };
 		356813A6201AD3C40094B16E /* NewMuseumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMuseumViewController.swift; sourceTree = "<group>"; };
 		3569731E20A2AA55006340EC /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		357E908B20688FDA00B595D5 /* userPic11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPic11.png; sourceTree = "<group>"; };
@@ -202,6 +242,8 @@
 		35C6CEE720A0076700E3E220 /* robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robot.png; sourceTree = "<group>"; };
 		35CFAB182083052900054444 /* MuseumViewControllerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumViewControllerList.swift; sourceTree = "<group>"; };
 		35DCB61D20791E9800224480 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
+		35E92AAE210FECC4006C13B7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		35E92AB121114D67006C13B7 /* UITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarViewController.swift; sourceTree = "<group>"; };
 		580C106920CDCB2D004D5619 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		581F70CC1F4287040064496C /* ArtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
 		581F71991F5B24610064496C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +331,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		354B59212106D45E00A30A8B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				354B59222106D48600A30A8B /* UIView+Extension.swift */,
+				354B59252106D50700A30A8B /* MapViewController+Extension.swift */,
+				354B59282106D68600A30A8B /* MapViewControllerCarousel+Extension.swift */,
+				354B592B2107F33200A30A8B /* TableViewController+Extension.swift */,
+				354B592E2107F37000A30A8B /* DeviceViewController.swift */,
+				354B59312107F3FC00A30A8B /* NewMuseumViewController+Extension.swift */,
+				354B59342107F43C00A30A8B /* ArtViewController+Extension.swift */,
+				354B59372107F49B00A30A8B /* MuseumViewController+Extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		354B593A2107FBC200A30A8B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				354B593B2107FBE500A30A8B /* DataStore.swift */,
+				35E92AAE210FECC4006C13B7 /* NavigationViewController.swift */,
+				35E92AB121114D67006C13B7 /* UITabBarViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		A058F37A1FC40A95001FC901 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,7 +384,9 @@
 				35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */,
 				3544612F20748B2300FA1CBF /* MuseumTableViewCell.swift */,
 				3544613220748B9200FA1CBF /* ListTableViewController.swift */,
+				355A8EDD20ED587B0032C569 /* TabViewController.swift */,
 				35CFAB182083052900054444 /* MuseumViewControllerList.swift */,
+				354B5941210972AD00A30A8B /* CarouselCollectionViewCell.swift */,
 			);
 			name = MuseumScreen;
 			sourceTree = "<group>";
@@ -438,6 +507,8 @@
 		F47029F21A7F27DB00E30A3C /* DeFrame */ = {
 			isa = PBXGroup;
 			children = (
+				354B593A2107FBC200A30A8B /* Classes */,
+				354B59212106D45E00A30A8B /* Extension */,
 				F47029F41A7F27DB00E30A3C /* Info.plist */,
 				F47029F91A7F27DB00E30A3C /* Main.storyboard */,
 				580C106920CDCB2D004D5619 /* AppDelegate.swift */,
@@ -459,6 +530,7 @@
 				F47029FC1A7F27DB00E30A3C /* Images.xcassets */,
 				35A25EB9204DFA7C0023A77D /* Logo.png */,
 				35A25EB6204DF9930023A77D /* Background.png */,
+				355A8EE320EF1D070032C569 /* Frida.png */,
 			);
 			name = DeFrame;
 			path = SidebarMenu;
@@ -539,6 +611,7 @@
 				F47029ED1A7F27DB00E30A3C /* Frameworks */,
 				F47029EE1A7F27DB00E30A3C /* Resources */,
 				32ACFF2876E54B036C882144 /* [CP] Embed Pods Frameworks */,
+				C0FDB7BA45C2515CB19515C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -558,6 +631,7 @@
 				F4702A021A7F27DC00E30A3C /* Frameworks */,
 				F4702A031A7F27DC00E30A3C /* Resources */,
 				E65C640B1A68DE0435E5B33E /* [CP] Embed Pods Frameworks */,
+				DD62E4214B5BC404A134D35D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -664,6 +738,7 @@
 				3557CEEE20685E9B00548D99 /* userPic7.png in Resources */,
 				3557CEE620685E9B00548D99 /* userPic4.png in Resources */,
 				A083563F1FEAFB1900850FAA /* Bot Button@2x.png in Resources */,
+				355A8EE420EF1D080032C569 /* Frida.png in Resources */,
 				359615D82079BCF000B6760D /* secure-file (1).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,6 +767,7 @@
 				359615CB2079B52000B6760D /* info.png in Resources */,
 				359615D02079B5E500B6760D /* feedback.png in Resources */,
 				3557CEED20685E9B00548D99 /* UserProfile.png in Resources */,
+				355A8EE520EF1D080032C569 /* Frida.png in Resources */,
 				35B0DA8B208ECE650005272C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,6 +792,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingTabBar/FoldingTabBar.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -727,6 +804,7 @@
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRaisedTab/SwiftRaisedTab.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Tamamushi/Tamamushi.framework",
 			);
@@ -742,6 +820,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingTabBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -753,6 +832,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRaisedTab.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tamamushi.framework",
 			);
@@ -779,6 +859,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C0FDB7BA45C2515CB19515C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D1D10C2BB9F58FED3D3B2158 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -795,6 +890,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD62E4214B5BC404A134D35D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E65C640B1A68DE0435E5B33E /* [CP] Embed Pods Frameworks */ = {
@@ -814,6 +924,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingTabBar/FoldingTabBar.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -825,6 +936,7 @@
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRaisedTab/SwiftRaisedTab.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Tamamushi/Tamamushi.framework",
 			);
@@ -840,6 +952,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingTabBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -851,6 +964,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRaisedTab.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tamamushi.framework",
 			);
@@ -867,23 +981,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				581F70CD1F4287040064496C /* ArtViewController.swift in Sources */,
+				355A8EDE20ED587B0032C569 /* TabViewController.swift in Sources */,
 				F4D750181BD38F0C009E1003 /* SWRevealViewController.m in Sources */,
 				3544613020748B2300FA1CBF /* MuseumTableViewCell.swift in Sources */,
 				3557CEFA206868A400548D99 /* GuestCell.swift in Sources */,
 				58FED4C31F40DC6800239CBC /* artCollectionViewCell.swift in Sources */,
 				357E908E206890C600B595D5 /* GuestViewHeader.swift in Sources */,
+				354B592C2107F33200A30A8B /* TableViewController+Extension.swift in Sources */,
+				354B592F2107F37000A30A8B /* DeviceViewController.swift in Sources */,
 				35CFAB192083052900054444 /* MuseumViewControllerList.swift in Sources */,
 				3557CEDF20675B4B00548D99 /* GuestViewSetUp.swift in Sources */,
 				A0533DDC1FBF8D1200452BF9 /* FeedbackViewController.swift in Sources */,
 				581F719A1F5B24610064496C /* LoginViewController.swift in Sources */,
 				581F719C1F6993E70064496C /* FloorPlanViewController.swift in Sources */,
+				354B59232106D48600A30A8B /* UIView+Extension.swift in Sources */,
 				58F68F131F759BA6006F7510 /* ArtView.swift in Sources */,
 				586B94921F144D4500F89AE8 /* locationAnnotation.swift in Sources */,
 				580C106A20CDCB2D004D5619 /* AppDelegate.swift in Sources */,
 				F4702A181A7F351C00E30A3C /* MenuController.swift in Sources */,
+				354B59262106D50700A30A8B /* MapViewController+Extension.swift in Sources */,
+				35E92AB221114D67006C13B7 /* UITabBarViewController.swift in Sources */,
 				586B948C1F11E09100F89AE8 /* Museum.swift in Sources */,
 				3544613320748B9200FA1CBF /* ListTableViewController.swift in Sources */,
+				354B59352107F43C00A30A8B /* ArtViewController+Extension.swift in Sources */,
 				3556093620635E3300621E4F /* loginedUser.xcdatamodeld in Sources */,
+				35E92AAF210FECC5006C13B7 /* NavigationViewController.swift in Sources */,
+				354B59382107F49B00A30A8B /* MuseumViewController+Extension.swift in Sources */,
 				A058F3791FC3C0F7001FC901 /* Constants.swift in Sources */,
 				F491E74C1A7F4C630026528E /* NewsTableViewCell.swift in Sources */,
 				35A25EB1204DF9720023A77D /* UploadProfilePicViewController.swift in Sources */,
@@ -894,12 +1017,16 @@
 				35A25EAE204DF9590023A77D /* RegistrationViewController.swift in Sources */,
 				3569731F20A2AA55006340EC /* AccountViewController.swift in Sources */,
 				35A25EAB204DF9460023A77D /* UserNamePasswordViewController.swift in Sources */,
+				354B59292106D68600A30A8B /* MapViewControllerCarousel+Extension.swift in Sources */,
 				58F68F1B1F7A0AF5006F7510 /* MuseumDetailsView.swift in Sources */,
+				354B59322107F3FC00A30A8B /* NewMuseumViewController+Extension.swift in Sources */,
 				586B94951F14A8C900F89AE8 /* AnnotationView.swift in Sources */,
+				354B5942210972AD00A30A8B /* CarouselCollectionViewCell.swift in Sources */,
 				35490F22201ADCDD00429192 /* artHeaderCollectionReusableView.swift in Sources */,
 				F491E74A1A7F4B300026528E /* NewsTableViewController.swift in Sources */,
 				35A25EB4204DF9820023A77D /* NewUser.swift in Sources */,
 				582037B81F369CCA00C0F384 /* CarouselView.swift in Sources */,
+				354B593C2107FBE500A30A8B /* DataStore.swift in Sources */,
 				A058F38C1FCFA7B0001FC901 /* ChatBotViewController.swift in Sources */,
 				F491E7551A7F7E010026528E /* TermsAndConditionViewController.swift in Sources */,
 			);
@@ -910,31 +1037,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				A058F3801FC40B3A001FC901 /* ArtView.swift in Sources */,
+				354B592A2106D68600A30A8B /* MapViewControllerCarousel+Extension.swift in Sources */,
 				35CFAB1A2083052900054444 /* MuseumViewControllerList.swift in Sources */,
+				35E92AB321114D67006C13B7 /* UITabBarViewController.swift in Sources */,
 				3569732020A2AA55006340EC /* AccountViewController.swift in Sources */,
+				354B59302107F37000A30A8B /* DeviceViewController.swift in Sources */,
 				35A25EAC204DF9460023A77D /* UserNamePasswordViewController.swift in Sources */,
+				354B592D2107F33200A30A8B /* TableViewController+Extension.swift in Sources */,
 				3557CEFB206868A400548D99 /* GuestCell.swift in Sources */,
+				35E92AB0210FECC5006C13B7 /* NavigationViewController.swift in Sources */,
 				3544613420748B9200FA1CBF /* ListTableViewController.swift in Sources */,
+				354B5943210972AD00A30A8B /* CarouselCollectionViewCell.swift in Sources */,
 				A058F3871FC40B89001FC901 /* ArtViewController.swift in Sources */,
 				3557CEE020675B4B00548D99 /* GuestViewSetUp.swift in Sources */,
 				F4702A0C1A7F27DC00E30A3C /* SidebarMenuTests.swift in Sources */,
 				35A25EB2204DF9720023A77D /* UploadProfilePicViewController.swift in Sources */,
 				586B94961F14A8C900F89AE8 /* AnnotationView.swift in Sources */,
 				586B94931F144D4500F89AE8 /* locationAnnotation.swift in Sources */,
+				354B59332107F3FC00A30A8B /* NewMuseumViewController+Extension.swift in Sources */,
 				35A25EB5204DF9820023A77D /* NewUser.swift in Sources */,
 				A058F3851FC40B82001FC901 /* MapViewController.swift in Sources */,
 				A058F3821FC40B47001FC901 /* CarouselView.swift in Sources */,
 				35A25EAF204DF9590023A77D /* RegistrationViewController.swift in Sources */,
 				A058F3891FC40B9B001FC901 /* Constants.swift in Sources */,
 				A058F3861FC40B86001FC901 /* FloorPlanViewController.swift in Sources */,
+				354B59362107F43C00A30A8B /* ArtViewController+Extension.swift in Sources */,
 				A058F3881FC40B8C001FC901 /* MuseumViewController.swift in Sources */,
 				357E90902068A4EB00B595D5 /* GuestViewHeader.swift in Sources */,
+				354B593D2107FBE500A30A8B /* DataStore.swift in Sources */,
 				35A4BAD7201B870200FA1786 /* artHeaderCollectionReusableView.swift in Sources */,
 				3555AF9F201E8A2B00202931 /* NewMuseumViewController.swift in Sources */,
+				354B59242106D48600A30A8B /* UIView+Extension.swift in Sources */,
 				A058F3811FC40B3D001FC901 /* artCollectionViewCell.swift in Sources */,
+				354B59272106D50700A30A8B /* MapViewController+Extension.swift in Sources */,
 				586B948D1F11E09100F89AE8 /* Museum.swift in Sources */,
+				355A8EDF20ED587B0032C569 /* TabViewController.swift in Sources */,
 				A058F3831FC40B4A001FC901 /* MuseumDetailsView.swift in Sources */,
 				3544613120748B2300FA1CBF /* MuseumTableViewCell.swift in Sources */,
+				354B59392107F49B00A30A8B /* MuseumViewController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

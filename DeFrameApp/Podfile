@@ -20,6 +20,8 @@ target 'DeFrameApp' do
       pod 'DGRunkeeperSwitch', '~> 1.1.4'
       pod 'ScalingCarousel', '= 2.2'
       pod 'Tamamushi'
+      pod 'SwiftRaisedTab'
+      pod 'FoldingTabBar', '~> 1.2.1'
      target 'DeFrameAppTests' do
 
    end

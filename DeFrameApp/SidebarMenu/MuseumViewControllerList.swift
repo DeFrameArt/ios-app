@@ -346,15 +346,9 @@ extension MuseumViewController{
             
             task.resume()
         }
-        
-        
-        
-        
+ 
     }
-    
-    
-    
-    
+
     
 }
 
