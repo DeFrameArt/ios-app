@@ -113,7 +113,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     override func viewDidLoad() {
         super.viewDidLoad()
      
-     
+   
         carousel.prefetchDataSource = self
          self.tabBarController?.delegate = self
       
@@ -283,7 +283,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         self.navigationController?.isNavigationBarHidden = true
        
    }
-
+    
    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -303,6 +303,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    func imageTapped(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            print("Image Tapped")
+            self.performSegue(withIdentifier: "museumToFloorSegue", sender: self)
+            // self.prepare(for: <#T##UIStoryboardSegue#>, sender: <#T##Any?#>)
+            //Here you can initiate your new ViewController
+            
+        }
+    }
+    
     let transition = BubbleTransition()
     @IBOutlet weak var actionListMuseum: UIBarButtonItem!
     
@@ -314,34 +327,26 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         if segue.identifier == "mapToMuseumSegue"{
             
             let navVC = segue.destination as? UINavigationController
+            let cell = sender as! UICollectionViewCell
+            let indexPath = carousel.indexPath(for: cell)
             
-            // let  museumViewController = segue.destination as! MuseumViewController
+             //let  museumViewController = segue.destination as! MuseumViewController
             let museumViewController = navVC?.viewControllers.first as! MuseumViewController
             
-            if(self.isAnyMuseumSelected){
-                museumViewController.museumbannerURL = self.museumpagebannerURL
-                museumViewController.museumStreetLabel = self.museumpagestreetLabel!
-                museumViewController.museumCityStateZipLabel = self.museumpageCityStateZipLabel!
-                museumViewController.museumCountryLabel = self.museumpageCountryLabel!
-                museumViewController.museumPageMuseumId = self.museumId
-                museumViewController.museumLabel = self.museumpageNameLabel!
-                museumViewController.logoURL = self.museumPagelogoURL
+       
+                museumViewController.museumbannerURL = loadedmusuems![(indexPath?.row)!].bannerURL
+                    //loadedmusuems[indexPath.row]
+            museumViewController.museumStreetLabel = loadedmusuems![(indexPath?.row)!].street!
+                
+            museumViewController.museumCityStateZipLabel = loadedmusuems![(indexPath?.row)!].zip!
+                museumViewController.museumCountryLabel = loadedmusuems![(indexPath?.row)!].country
+                
+            museumViewController.museumPageMuseumId = loadedmusuems![(indexPath?.row)!].id
+                museumViewController.museumLabel = loadedmusuems![(indexPath?.row)!].name
+                museumViewController.logoURL =  loadedmusuems![(indexPath?.row)!].logoURL
                 
                 print("using segue")
-                
-            }
-            else{
-                museumViewController.museumbannerURL = self.museumpagebannerURL
-                museumViewController.museumStreetLabel = "465 Huntington Ave"
-                museumViewController.museumCityStateZipLabel = "Boston MA, 02115"
-                museumViewController.museumCountryLabel = "United States"
-                museumViewController.museumPageMuseumId = "1"
-                museumViewController.museumLabel = "Museum of Fine Arts"
-                museumViewController.logoURL = self.museumPagelogoURL
-                //   navVC!.pushViewController(museumViewController, animated: true)
-                //  self.navigationController!.present(museumViewController, animated: false, completion: nil)
-            }
-            
+
         }
         
         
@@ -349,6 +354,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
             let museumListViewController = segue.destination as! ListTableViewController
             museumListViewController.museum=allMuseums
         }
+        
+        
         
     }
   

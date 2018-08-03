@@ -19,8 +19,8 @@ import Tamamushi
 import ScalingCarousel
 
 extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate,UICollectionViewDataSourcePrefetching {
-    
    
+
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
      
@@ -40,7 +40,7 @@ extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scrolling", for: indexPath) as! CarouselCollectionViewCell
-        
+      
         if let img = loadedmusuems {
             cell.museumCity.text=img[indexPath.row].city
             cell.museumName.text=img[indexPath.row].name
@@ -66,6 +66,7 @@ extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegat
             cell.museumStreet.font = MDCTypography.captionFont()
             cell.museumStreet.alpha = MDCTypography.body1FontOpacity()
             cell.museumStreet.sizeToFit()
+            //cell.museumImage.addGestureRecognizer(tapGesture)
         }
         else {
             requestImage(forIndex: indexPath)

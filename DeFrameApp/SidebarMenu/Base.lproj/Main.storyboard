@@ -248,6 +248,7 @@
                                                     <outlet property="museumImage" destination="jav-Ua-fij" id="AXk-p0-cmm"/>
                                                     <outlet property="museumName" destination="HGJ-vN-g7v" id="u9t-Ew-IGy"/>
                                                     <outlet property="museumStreet" destination="6uW-zg-auS" id="0Sg-Wj-4Nq"/>
+                                                    <segue destination="5Gc-MC-eZj" kind="show" identifier="mapToMuseumSegue" id="1oW-TG-gqt"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -9409,5 +9410,6 @@ AAbotQAG6LgABujKAAbozQAG6NIAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAAAbo1A
     <inferredMetricsTieBreakers>
         <segue reference="kFb-Uj-P5h"/>
         <segue reference="b5X-y9-Gxm"/>
+        <segue reference="1oW-TG-gqt"/>
     </inferredMetricsTieBreakers>
 </document>
