@@ -8,6 +8,8 @@
 
 import UIKit
 import FacebookCore
+import SwiftyJSON
+import FBSDKCoreKit
 import FBSDKLoginKit
 import CoreLocation
 import MapKit
@@ -21,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     //////
     var window: UIWindow?
     var locManager: CLLocationManager!
-
+    var tasks = [URLSessionDataTask?]()
+    var baseUrl = URL(string: "http://deframe-test-api.us-east-1.elasticbeanstalk.com/museums")!
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
         // Override point for customization after application launch.
@@ -33,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         configuration.clientAccessToken = "ce43ad2bcd2e4be294f87b30460e50f7"
         let apiai = ApiAI.shared()
         apiai?.configuration = configuration
-        
+       
       //  setupYALTabBarController()
         return true
         
@@ -142,7 +145,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             }
         }
     }
-
+    
+    
+  
+    
+    
 
 }
 

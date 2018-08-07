@@ -24,6 +24,8 @@ import ScalingCarousel
     //code for the requirements of this protocole
   //  func addMusuem(_ item:SelectedMuseum)
 //}
+var allMuseums:[Museum] = [Museum]()
+var loadedmusuems:[Museum]?
 protocol AddItemProtocol {
     //code for the requirements of this protocole
     func addItemtoCheckList(_ item:[Museum])
@@ -48,7 +50,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     @IBOutlet var streetLabel: UILabel!
     
     @IBOutlet var cityStateZipLabel: UILabel!
-    
+    let regionRadius: CLLocationDistance = 1000
     @IBOutlet var countryLabel: UILabel!
     
     @IBOutlet weak var map: MKMapView!
@@ -63,8 +65,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     @IBOutlet var mapDetailSubView: UIView!
     
     typealias DownloadComplete = () -> ()
-    var allMuseums:[Museum] = [Museum]()
-    var loadedmusuems:[Museum]?
+   
+    var number=1
     var downloadedMuseums:[Museum] = [Museum]()
     var locationManager: CLLocationManager = CLLocationManager()
     var userLocation:CLLocation?
@@ -158,6 +160,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         task = getTask(forIndex: forIndex)
         
         task.resume()
+       
     }
     
     func getTask(forIndex: IndexPath) -> URLSessionDataTask {
@@ -202,18 +205,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
                                 
                                 
                                 let newMuseum = Museum(id:id, name: name, acronym:acronym, street:street, city:city, state:state, country:country, zip:zip, lat: lat, lon: lon, bannerURL: bannerURL, logoURL:logoURL )
-                                self.allMuseums.append(newMuseum)
-                                self.loadedmusuems=self.allMuseums
+                                allMuseums.append(newMuseum)
+                                loadedmusuems =  allMuseums
+                               
                                 DispatchQueue.main.async(execute: {
                                  //   completion(self.allMuseums)
-                                    self.map.addAnnotations(self.allMuseums)
+                                    self.map.addAnnotations(allMuseums)
                                     //self.addMuseumList(self.allMuseums)
-                                    let navController = self.tabBarController?.viewControllers![2] as! UINavigationController
-                                    let vc = navController.topViewController as! ListTableViewController
+                               //     let navController = self.tabBarController?.viewControllers![2] as! UINavigationController
+                                 //   let vc = navController.topViewController as! ListTableViewController
                                     
                                     
                                     
-                                    vc.museum = self.allMuseums
+                                   // vc.museum = allMuseums
                                     self.carousel.reloadItems(at: [forIndex])
                                 })
                                 
@@ -229,11 +233,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
                     }
              
             }
-            
-            
-        }
-    }
 
+        }
+        
+    }
+    
    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
       
@@ -251,12 +255,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         UIApplication.shared.statusBarStyle = .default
-        
-        
-        
   
-
-         
       guard let appDelegate =
        UIApplication.shared.delegate as? AppDelegate else {
           return
@@ -354,9 +353,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
             let museumListViewController = segue.destination as! ListTableViewController
             museumListViewController.museum=allMuseums
         }
-        
-        
-        
+
     }
   
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

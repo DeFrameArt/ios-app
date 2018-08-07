@@ -28,9 +28,9 @@ extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegat
             requestImage(forIndex: indexPath)
         }
     }
-    
+   
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-     
         return 4
     }
    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -71,6 +71,8 @@ extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegat
         else {
             requestImage(forIndex: indexPath)
         }
+        //let row = indexPath.row
+        //self.mapView.selectAnnotation(self.mapView.annotations[row], animated: true)
         return cell
     }
     

@@ -57,7 +57,13 @@ extension MapViewController: MKMapViewDelegate{
         }
     }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let museumAnnotation = view.annotation as! Museum
+        
+    }
+
+    
+   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         
         if annotation is MKUserLocation
@@ -68,7 +74,7 @@ extension MapViewController: MKMapViewDelegate{
         
         var annotationView = map.dequeueReusableAnnotationView(withIdentifier: "Pin")
         if annotationView == nil{
-            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+            annotationView = AnnotationView(annotation: annotation.title as? MKAnnotation, reuseIdentifier: "Pin")
             annotationView?.canShowCallout = false
         }
             
@@ -84,55 +90,7 @@ extension MapViewController: MKMapViewDelegate{
         return annotationView
         
     }
-    
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
-        
-        if view.annotation is MKUserLocation
-        {
-            // Don't proceed with custom callout
-            return
-        }
-        
-        if(view.annotation is Museum){
-            
-            self.isAnyMuseumSelected = true
-            
-            let museumAnnotation = view.annotation as! Museum
-            
-            //self.museumImageView.image = UIImage(named: "Logo_update")
-            //self.museumImageView.sd_setImage(with: URL(string: museumAnnotation.imageName!))
-            
-            
-            self.museumNameLabel.text = museumAnnotation.name
-            self.musemImageViewButton.sd_setImage(with: URL(string: museumAnnotation.bannerURL!), for: .normal)
-            self.streetLabel.text = museumAnnotation.street
-            self.cityStateZipLabel.text = museumAnnotation.city!+" "+museumAnnotation.state!+", "+museumAnnotation.zip!
-            // self.countryLabel.text = museumAnnotation.country
-            self.museumId = museumAnnotation.id!
-            self.museumPagelogoURL = museumAnnotation.logoURL!
-            UserDefaults.standard.setValue(museumAnnotation.id, forKey: "selected_museumId")
-            
-            
-            self.museumpagebannerURL = museumAnnotation.bannerURL!
-            self.museumpageNameLabel = museumAnnotation.name
-            self.museumpagestreetLabel = self.streetLabel.text
-            self.museumpageCityStateZipLabel = self.cityStateZipLabel.text
-            self.museumpageCountryLabel = self.countryLabel.text
-        }
-        
-    }
-    
-    
-    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        if view.isKind(of: AnnotationView.self)
-        {
-            for subview in view.subviews
-            {
-                subview.removeFromSuperview()
-            }
-        }
-    }
+
     
     func askForLocationAuthorization(){
         if(CLLocationManager.authorizationStatus() == .notDetermined){
@@ -140,21 +98,10 @@ extension MapViewController: MKMapViewDelegate{
             locManager.requestWhenInUseAuthorization()
         }
         map.addAnnotations(downloadedMuseums)
+       // map.showAnnotations(downloadedMuseums, animated: true)
         map.delegate = self
     }
-    
-    func addGeolocation()
-    {
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        map.showsUserLocation = true
-        
-    }
-    
+
     func setRegion(){
         
         print(locationManager.location?.coordinate)
@@ -186,28 +133,8 @@ extension MapViewController: MKMapViewDelegate{
             print(userLocation)
             
         }
-        
+       
     }
     
-    func addMap() {
-        
-        let annotations = allMuseums.map { museum -> MKAnnotation in
-            
-            let museumName =  museum.name!
-            
-            let annotation = MKPointAnnotation()
-            //annotation.title = "Next Station" + location.tripHeadsign!
-            annotation.title = museumName
-            
-            annotation.coordinate = CLLocationCoordinate2D(latitude: museum.lat!, longitude: museum.lon!)
-            
-            return annotation
-        }
-        //arrayannotations = annotations
-        map.addAnnotations(annotations)
-        
-    }
-    
- 
    
 }
