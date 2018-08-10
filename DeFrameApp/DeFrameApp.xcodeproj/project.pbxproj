@@ -101,6 +101,8 @@
 		35A25EBA204DFA7D0023A77D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A25EB9204DFA7C0023A77D /* Logo.png */; };
 		35A25EBB204DFA7D0023A77D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A25EB9204DFA7C0023A77D /* Logo.png */; };
 		35A4BAD7201B870200FA1786 /* artHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */; };
+		35A56BB521195B1100D1BF1D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A56BB421195B1100D1BF1D /* MainTableViewController.swift */; };
+		35A56BB621195B1100D1BF1D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A56BB421195B1100D1BF1D /* MainTableViewController.swift */; };
 		35B0DA8A208ECE650005272C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35B0DA89208ECE640005272C /* Info.plist */; };
 		35B0DA8B208ECE650005272C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35B0DA89208ECE640005272C /* Info.plist */; };
 		35BCA31F2079D7C20068E899 /* bank (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA31E2079D7BD0068E899 /* bank (1).png */; };
@@ -244,6 +246,7 @@
 		35A25EB3204DF9820023A77D /* NewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		35A25EB6204DF9930023A77D /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		35A25EB9204DFA7C0023A77D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		35A56BB421195B1100D1BF1D /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		35B0DA89208ECE640005272C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BCA31E2079D7BD0068E899 /* bank (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank (1).png"; sourceTree = "<group>"; };
 		35BCA3202079DAD40068E899 /* secure-file (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secure-file (2).png"; sourceTree = "<group>"; };
@@ -407,6 +410,7 @@
 				35E569042117D443007223E9 /* CollectionViewCellMainPage.swift */,
 				35E569072117D6CC007223E9 /* CollectionReusableViewMainPage.swift */,
 				35E5690A2117DAC7007223E9 /* MainPageViewViewController.swift */,
+				35A56BB421195B1100D1BF1D /* MainTableViewController.swift */,
 			);
 			name = MuseumScreen;
 			sourceTree = "<group>";
@@ -1033,6 +1037,7 @@
 				35A25EB1204DF9720023A77D /* UploadProfilePicViewController.swift in Sources */,
 				35E569022117D3D8007223E9 /* CollectionViewControllerMainPage.swift in Sources */,
 				F491E7531A7F7DF20026528E /* MapViewController.swift in Sources */,
+				35A56BB521195B1100D1BF1D /* MainTableViewController.swift in Sources */,
 				356813A7201AD3C40094B16E /* NewMuseumViewController.swift in Sources */,
 				A0CBDFC91FB7F13700D36FAD /* PrivacyViewController.swift in Sources */,
 				582037B41F33E82900C0F384 /* MuseumViewController.swift in Sources */,
@@ -1074,6 +1079,7 @@
 				3544613420748B9200FA1CBF /* ListTableViewController.swift in Sources */,
 				354B5943210972AD00A30A8B /* CarouselCollectionViewCell.swift in Sources */,
 				A058F3871FC40B89001FC901 /* ArtViewController.swift in Sources */,
+				35A56BB621195B1100D1BF1D /* MainTableViewController.swift in Sources */,
 				3557CEE020675B4B00548D99 /* GuestViewSetUp.swift in Sources */,
 				F4702A0C1A7F27DC00E30A3C /* SidebarMenuTests.swift in Sources */,
 				35A25EB2204DF9720023A77D /* UploadProfilePicViewController.swift in Sources */,

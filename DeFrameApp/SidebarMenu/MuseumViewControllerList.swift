@@ -240,7 +240,7 @@ extension MuseumViewController{
     
     func startDownloadingImagesData(){
         
-        
+        print(museumPageMuseumId)
         var url1 : String = "http://deframe-test-api.us-east-1.elasticbeanstalk.com/museums/"+self.museumPageMuseumId!+"/featuredimages"
         
         print("in  start download prediction callback ")
