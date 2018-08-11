@@ -22,11 +22,12 @@ var indexP=0
 
 class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var headerView: UIView!
     
-    var categories = [""]
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return categories[section]
-    }
+  var categories = [""]
+   // func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+     //   return categories[section]
+   // }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return categories.count
@@ -43,8 +44,23 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
     }
     
  var gradient: CAGradientLayer!
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.1
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+       
+      
+       // self.mainTable.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        
+        backGroundColor.layer.shadowOpacity = 0.5
+        backGroundColor.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
+        backGroundColor.layer.shadowRadius = 5.0
+        backGroundColor.layer.shadowColor = UIColor.black.cgColor
+        
+      //  setGradientBackground(name: headerView)
       // self.mainTable.reloadData()
      //  self.mainTable.rowHeight = UITableViewAutomaticDimension
          UIApplication.shared.statusBarStyle = .lightContent
@@ -54,22 +70,17 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
     }
    // @IBOutlet weak var mainTable: UITableView!
     override func viewDidLayoutSubviews() {
-        let gradient = CAGradientLayer()
-        gradient.frame.size = self.view.bounds.size
-        //gradient.frame = view.bounds
-        gradient.frame.size = self.view.bounds.size
-        gradient.colors = [UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0).cgColor,UIColor(red:0.80, green:0.26, blue:0.48, alpha:1.0).cgColor,UIColor(red:0.75, green:0.26, blue:0.48, alpha:1.0).cgColor, UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0).cgColor]
-        
-        view.layer.insertSublayer(gradient, at: 0)
+      
         
         
     }
+    @IBOutlet weak var backGroundColor: UIImageView!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIApplication.shared.statusBarStyle = .lightContent
         self.navigationController?.isNavigationBarHidden = true
     }
-    @IBOutlet weak var headerView: UIView!
+   // @IBOutlet weak var headerView: UIView!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -84,54 +95,16 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
         gradientLayer.frame = self.view.bounds
         name.layer.addSublayer(gradientLayer)
     }
-
-    @IBOutlet weak var collectionCities: UICollectionView!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-  
-    
    
-    
-    
+   
+    @IBOutlet weak var collectionCities: UICollectionView!
+
     
     var indexP=0
     
     
     @IBOutlet weak var mainTable: UITableView!
     @IBOutlet weak var mainCollection: UICollectionView!
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "museumDetails" {
-       
-            
-            
-            
-          //  indexP=(index2?.row)!
-         
-            let navVC = segue.destination as? UINavigationController
-            
-            
-            let museumViewController = navVC?.viewControllers.first as! MuseumViewController
-            
-            
-           // museumViewController.museum=allMuseums
-            museumViewController.museumbannerURL = allMuseums[indexP].bannerURL
-            museumViewController.museumStreetLabel = allMuseums[indexP].street!
-            museumViewController.museumCityStateZipLabel = allMuseums[indexP].zip!
-            museumViewController.museumCountryLabel = allMuseums[indexP].country
-            museumViewController.museumPageMuseumId = allMuseums[indexP].id
-            museumViewController.museumLabel = allMuseums[indexP].name
-            museumViewController.logoURL = allMuseums[indexP].logoURL
-            print(museumViewController.museumPageMuseumId as Any)
-            print(allMuseums[indexP].id as Any)
-        }
-    }
+ 
 
 }

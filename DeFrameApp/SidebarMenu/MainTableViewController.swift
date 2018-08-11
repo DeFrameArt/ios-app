@@ -143,26 +143,41 @@ return 4
         }
     }
     
-   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = indexPath.item
-        indexP=cell
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        
+        //valueToPass = myArray[indexPath.row]
+        //print("In \(#function), valueToPass = \(valueToPass)")
+        // self.performSegue(withIdentifier: "museumDetails",sender: self)
     }
+
+
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
+    func imageTapped(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        
+    }
     
+    func buttonPressed(indexPath: IndexPath){
+        
+    }
     
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainPageCell", for: indexPath) as! CollectionViewCellMainPage
         
         if let img = loadedmusuems {
+           
+          //  let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
             
             cell.imageViewMain.sd_setImage(with: URL(string: img[indexPath.row].bannerURL!))
-            
+            //cell.addGestureRecognizer(tapGesture)
+           // cell.tapButton=buttonPressed(indexPath: indexPath)
         }
         else {
             requestImage(forIndex: indexPath)

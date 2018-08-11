@@ -47,13 +47,13 @@ extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegat
             cell.museumStreet.text=img[indexPath.row].street
             cell.museumImage.sd_setImage(with: URL(string: img[indexPath.row].bannerURL!))
            
-            cell.museumName.font = MDCTypography.subheadFont()
+            cell.museumName.font = MDCTypography.captionFont()
             /// titleFont()
             cell.museumName.alpha = MDCTypography.titleFontOpacity()
             
             // If using autolayout, the following line is unnecessary as long
             // as all constraints are valid.
-                cell.museumName.sizeToFit()
+            //    cell.museumName.sizeToFit()
             
             
             cell.museumCity.font = MDCTypography.captionFont()
@@ -61,11 +61,11 @@ extension MapViewController: UICollectionViewDataSource, UICollectionViewDelegat
             
             // If using autolayout, the following line is unnecessary as long
             // as all constraints are valid.
-            cell.museumCity.sizeToFit()
+        //    cell.museumCity.sizeToFit()
             
             cell.museumStreet.font = MDCTypography.captionFont()
             cell.museumStreet.alpha = MDCTypography.body1FontOpacity()
-            cell.museumStreet.sizeToFit()
+          //  cell.museumStreet.sizeToFit()
             //cell.museumImage.addGestureRecognizer(tapGesture)
         }
         else {
