@@ -11,36 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Loading Data View Controller-->
-        <scene sceneID="Mah-dp-6vO">
-            <objects>
-                <viewController id="u2g-FC-SfJ" customClass="LoadingDataViewController" customModule="DeFrameApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="n3p-qH-ETz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="BeP-4A-YBo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="zpD-84-1B3">
-                                <rect key="frame" x="150" y="274" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.69296759366989136" green="0.25713396072387695" blue="0.47981017827987671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="BeP-4A-YBo" firstAttribute="top" secondItem="n3p-qH-ETz" secondAttribute="top" id="X25-Wd-0S8"/>
-                            <constraint firstItem="BeP-4A-YBo" firstAttribute="leading" secondItem="voA-Vk-CE6" secondAttribute="leading" id="X8z-8t-yPl"/>
-                            <constraint firstItem="voA-Vk-CE6" firstAttribute="bottom" secondItem="BeP-4A-YBo" secondAttribute="bottom" id="amQ-oY-9wO"/>
-                            <constraint firstItem="voA-Vk-CE6" firstAttribute="trailing" secondItem="BeP-4A-YBo" secondAttribute="trailing" id="vmL-cL-tza"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="voA-Vk-CE6"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dtI-Wj-EfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-349" y="-2065"/>
-        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -184,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0z-kg-iXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2492" y="-3044"/>
+            <point key="canvasLocation" x="7380" y="-4156"/>
         </scene>
         <!--Museums-->
         <scene sceneID="MMi-W1-KaJ">
@@ -961,6 +931,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVO-En-Vit">
                                                     <rect key="frame" x="246" y="5" width="59" height="30"/>
                                                     <state key="normal" title="Show All"/>
+                                                    <connections>
+                                                        <segue destination="YVt-gE-xTf" kind="show" identifier="LocationList" id="0vl-ck-tSD"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -999,18 +972,18 @@
                             <constraint firstItem="Xkw-UW-rhD" firstAttribute="width" secondItem="Psq-Co-qHZ" secondAttribute="width" id="OtY-cN-uFH"/>
                             <constraint firstItem="Xkw-UW-rhD" firstAttribute="height" secondItem="Psq-Co-qHZ" secondAttribute="height" multiplier="0.7" id="d7O-t6-JPF"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="edQ-Wa-dsV"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="sbu-Uw-nmM"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backGroundColor" destination="23o-lv-hhX" id="ZrP-om-UUZ"/>
-                        <outlet property="headerView" destination="E88-eT-N6c" id="aOV-Z4-zqV"/>
                         <outlet property="mainTable" destination="Xkw-UW-rhD" id="hvY-OH-hkN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6C-qE-0P5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6547.5" y="-3225"/>
+            <point key="canvasLocation" x="6176" y="-3246"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="r99-Nq-cC7">
