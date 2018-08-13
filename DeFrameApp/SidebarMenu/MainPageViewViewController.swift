@@ -24,7 +24,7 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
     
     @IBOutlet weak var headerView: UIView!
     
-  var categories = [""]
+  var categories = ["Boston","Moscow","Boston","Moscow"]
    // func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
      //   return categories[section]
    // }
@@ -55,10 +55,10 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
       
        // self.mainTable.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         
-        backGroundColor.layer.shadowOpacity = 0.5
+       /* backGroundColor.layer.shadowOpacity = 0.5
         backGroundColor.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
         backGroundColor.layer.shadowRadius = 5.0
-        backGroundColor.layer.shadowColor = UIColor.black.cgColor
+        backGroundColor.layer.shadowColor = UIColor.black.cgColor */
         
       //  setGradientBackground(name: headerView)
       // self.mainTable.reloadData()
@@ -76,7 +76,9 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
     }
    
     @IBOutlet weak var logoImage: UIImageView!
-    let maxHeaderHeight: CGFloat = 88;
+    
+  
+    let maxHeaderHeight: CGFloat = 100
     @IBOutlet weak var titleDeframe: UILabel!
     let minHeaderHeight: CGFloat = 44;
     @IBOutlet weak var backGroundColor: UIImageView!
@@ -86,10 +88,10 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
         UIApplication.shared.statusBarStyle = .lightContent
         self.navigationController?.isNavigationBarHidden = true
        // self.headerHeightConstraint.constant = 0
-     //  self.headerHeightConstraint.constant = self.maxHeaderHeight
-      //  updateHeader()
+     self.headerHeightConstraint.constant = self.maxHeaderHeight
+       updateHeader()
     }
-   /*
+  
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
         
@@ -177,8 +179,8 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
         let percentage = openAmount / range
         
         //self.titleTopConstraint.constant = -openAmount + 10
-        self.logoImage.alpha = percentage
-    } */
+      //  self.logoImage.alpha = percentage
+    }
     
    // @IBOutlet weak var headerView: UIView!
     override func didReceiveMemoryWarning() {
