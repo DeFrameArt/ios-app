@@ -22,7 +22,7 @@ var indexP=0
 
 class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var headerView: UIView!
+  // @IBOutlet weak var headerView: UIView!
     
   var categories = ["Boston","Moscow","Boston","Moscow"]
    // func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -51,7 +51,10 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
        
-       
+        let modelName = UIDevice.current.modelName2
+        if(modelName=="iPhone 5s"){
+            maxHeaderHeight = 300
+        }
       
        // self.mainTable.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         
@@ -65,7 +68,7 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
      //  self.mainTable.rowHeight = UITableViewAutomaticDimension
          UIApplication.shared.statusBarStyle = .lightContent
         //  self.navigationController?.isNavigationBarHidden = false
-   // setGradientBackground(name:headerView)
+  //  setGradientBackground(name:headerView)
         // Do any additional setup after loading the view.
     }
    // @IBOutlet weak var mainTable: UITableView!
@@ -77,8 +80,10 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
    
     @IBOutlet weak var logoImage: UIImageView!
     
-  
-    let maxHeaderHeight: CGFloat = 100
+    @IBOutlet weak var background: UIImageView!
+    
+    @IBOutlet weak var logo: UIImageView!
+    var maxHeaderHeight: CGFloat = 170
     @IBOutlet weak var titleDeframe: UILabel!
     let minHeaderHeight: CGFloat = 44;
     @IBOutlet weak var backGroundColor: UIImageView!
@@ -88,7 +93,15 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
         UIApplication.shared.statusBarStyle = .lightContent
         self.navigationController?.isNavigationBarHidden = true
        // self.headerHeightConstraint.constant = 0
-     self.headerHeightConstraint.constant = self.maxHeaderHeight
+      let modelName = UIDevice.current.modelName2
+        if(modelName=="iPhone 6s"){
+            maxHeaderHeight = 200
+        }
+        if(modelName=="iPhone 5s"){
+            maxHeaderHeight = 170
+        }
+        
+        self.headerHeightConstraint.constant = self.maxHeaderHeight
        updateHeader()
     }
   
@@ -107,8 +120,10 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
             var newHeight = self.headerHeightConstraint.constant
             if isScrollingDown {
                 newHeight = max(self.minHeaderHeight, self.headerHeightConstraint.constant - abs(scrollDiff))
+                //logo.isHidden = true
             } else if isScrollingUp {
                 newHeight = min(self.maxHeaderHeight, self.headerHeightConstraint.constant + abs(scrollDiff))
+                //logo.isHidden = false
             }
             
             // Header needs to animate LocationList
@@ -177,12 +192,20 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
         let range = self.maxHeaderHeight - self.minHeaderHeight
         let openAmount = self.headerHeightConstraint.constant - self.minHeaderHeight
         let percentage = openAmount / range
-        
+        if (self.headerHeightConstraint.constant == minHeaderHeight){
+            logo.isHidden=true
+            background.isHidden=true
+        }
+        else{
+            logo.isHidden=false
+            background.isHidden=false
+        }
         //self.titleTopConstraint.constant = -openAmount + 10
       //  self.logoImage.alpha = percentage
     }
     
-   // @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var DefreameTitle: UILabel!
+    @IBOutlet weak var headerView: UIView!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -192,8 +215,8 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
         let colorBottom = UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0).cgColor
         
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.colors = [colorTop, colorBottom];
+        gradientLayer.locations = [0.0, 0.4]
         gradientLayer.frame = self.view.bounds
         name.layer.addSublayer(gradientLayer)
     }
