@@ -31,7 +31,7 @@ class GuestViewSetUp:UIViewController,UICollectionViewDataSource, UICollectionVi
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(true)
-       
+        self.navigationController?.isNavigationBarHidden = false
        // NickUserText = MDCTextField()
         NickUserText.layer.borderColor = (UIColor(red: 193/255, green: 77/255, blue: 121/255, alpha: 1)).cgColor
        

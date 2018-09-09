@@ -68,6 +68,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         UIApplication.shared.statusBarStyle = .lightContent
 
        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem.te
     self.resultSearchController = ({
     ///search br
     controller.searchResultsUpdater = self

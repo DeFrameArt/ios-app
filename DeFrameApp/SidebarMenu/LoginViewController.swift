@@ -90,15 +90,15 @@ class LoginViewController: UIViewController{
         
         
         let myColor = UIColor.white
-        userNameText.layer.borderColor = myColor.cgColor
-        passwordText.layer.borderColor = myColor.cgColor
+      //  userNameText.layer.borderColor = myColor.cgColor
+        //passwordText.layer.borderColor = myColor.cgColor
         
-        userNameText.layer.borderWidth = 1
-        passwordText.layer.borderWidth = 1
-        userNameText.layer.cornerRadius = 5.0
-        passwordText.layer.cornerRadius = 5.0
+        ///userNameText.layer.borderWidth = 1
+        ///passwordText.layer.borderWidth = 1
+       /// userNameText.layer.cornerRadius = 5.0
+       /// passwordText.layer.cornerRadius = 5.0
         
-        let modelName = UIDevice.current.modelName
+    /*    let modelName = UIDevice.current.modelName
         if(modelName=="iPhone 5s"){
             let line2 = CAShapeLayer()
             let line = CAShapeLayer()
@@ -151,24 +151,24 @@ class LoginViewController: UIViewController{
             label.text = "OR"
             label.textColor=UIColor.white
             self.view.addSubview(label)
-        }
-        navigationController?.navigationBar.barTintColor = UIColor(red: 200/255.0, green: 31/255.0, blue: 97/255.0, alpha:1.0)
-        
+        }*/
+ 
       //  loginButton.delegate = self
        // loginButton.readPermissions = ["public_profile","email","user_friends"]
         
-        view.backgroundColor=UIColor(red: 253/255, green: 158/255, blue: 50/255, alpha: 1)
+    
         // Do any additional setup after loading the view.
-        userNameText.setborder()
-        passwordText.setborder()
-        self.addToolBar(textField: userNameText)
-        self.addToolBar(textField: passwordText)
+       // userNameText.setborder()
+        //passwordText.setborder()
+        //self.addToolBar(textField: userNameText)
+        //self.addToolBar(textField: passwordText)
  }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+       
         super.viewWillAppear(true)
          createGradientLayer()
+         self.navigationController?.isNavigationBarHidden = true
         // When relaunching the screen, allow user to sign without showing facebook login page
         if(FBSDKAccessToken.current() != nil) {
             let deviceScale = Int(UIScreen.main.scale)
