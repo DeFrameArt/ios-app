@@ -10,7 +10,7 @@ import UIKit
 
 class CollectionViewCellMainPage: UICollectionViewCell {
     @IBOutlet weak var tapButton: UIButton!
-    
+    var index=0
     @IBOutlet weak var imageViewMain: UIImageView!
     func set(image: UIImage?) {
        imageViewMain.image = image

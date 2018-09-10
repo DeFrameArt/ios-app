@@ -222,11 +222,15 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+       
+        
+        
         if(segue.identifier == "LocationList"){
             let museumListViewController = segue.destination as! ListTableViewController
             museumListViewController.museum=allMuseums
-        
+            
         }
+        
     }
     
    
