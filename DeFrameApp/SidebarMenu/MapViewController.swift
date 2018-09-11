@@ -114,11 +114,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-   
+
         carousel.prefetchDataSource = self
-         self.tabBarController?.delegate = self
-      
+        self.tabBarController?.delegate = self
+        
         if revealViewController() != nil {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -133,12 +132,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         locManager = CLLocationManager()
         locManager.delegate = self
         
-
         map.showsUserLocation = true
 
   
 
     }
+    
+    
+    
     
     @IBOutlet weak var carouselUIView: UIView!
    
