@@ -7,10 +7,11 @@
 //
 
 import UIKit
-
+import MapKit
 class artHeaderCollectionReusableView: UICollectionReusableView {
    
     
+    @IBOutlet weak var addressMap: MKMapView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cityStateZipLabel: UILabel!
     @IBOutlet weak var streetLabel: UILabel!

@@ -343,6 +343,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
             museumViewController.museumPageMuseumId = loadedmusuems![(indexPath?.row)!].id
                 museumViewController.museumLabel = loadedmusuems![(indexPath?.row)!].name
                 museumViewController.logoURL =  loadedmusuems![(indexPath?.row)!].logoURL
+             museumViewController.museumLat=loadedmusuems![(indexPath?.row)!].lat
+             museumViewController.museumLon=loadedmusuems![(indexPath?.row)!].lon
                 
                 print("using segue")
 

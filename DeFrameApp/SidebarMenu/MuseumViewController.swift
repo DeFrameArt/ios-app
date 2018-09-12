@@ -9,12 +9,34 @@
 import Foundation
 import SDWebImage
 import SwiftyJSON
+import MapKit
 import MaterialComponents.MaterialTypography
 import Tamamushi
+
+class MuseumCoordinate: NSObject, MKAnnotation {
+    let title: String?
+    let locationName: String
+    let discipline: String
+    let coordinate: CLLocationCoordinate2D
+    
+    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
+        self.title = title
+        self.locationName = locationName
+        self.discipline = discipline
+        self.coordinate = coordinate
+        
+        super.init()
+    }
+    
+    var subtitle: String? {
+        return locationName
+    }
+}
 
 class MuseumViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     @IBOutlet weak var backBtn: UIBarButtonItem!
     
+ //   @IBOutlet weak var addressMap: MKMapView!
     @IBOutlet weak var navBar: UINavigationBar!
     
     
@@ -54,6 +76,8 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     var headingsArray = [String]()
     var museumbannerURL: String?
     var museumLabel: String?
+    var museumLat:Double?
+    var museumLon:Double?
     var museumStreetLabel="Error"
     var museumCityStateZipLabel="Error"
     @IBAction func backModalBtn(_ sender: Any) {
@@ -98,12 +122,17 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
     }
   
+    let regionRadius: CLLocationDistance = 1000
+ 
+  
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        //let initialLocation = CLLocation(latitude: museumLat!, longitude: museumLon!)
      //navBar.backgroundColor=UIColor.black
         UIApplication.shared.statusBarStyle = .lightContent
+      //  centerMapOnLocation(location: initialLocation)
 
         self.navigationController?.isNavigationBarHidden = false
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
@@ -195,12 +224,25 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         return cell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let commentView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "artHeaderCollectionReusableView", for: indexPath) as! artHeaderCollectionReusableView
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
         let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
+       
+        let initialLocation = CLLocation(latitude: museumLat!, longitude: museumLon!)
+       
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(initialLocation.coordinate,
+                                                                  regionRadius, regionRadius)
+        commentView.addressMap.setRegion(coordinateRegion, animated: true)
+        
+        let museumAnnotation = MuseumCoordinate(title: museumLabel!,
+                                       locationName: museumLabel!,
+                                       discipline: museumLabel!,
+                                       coordinate: CLLocationCoordinate2D(latitude: museumLat!, longitude: museumLon!))
+       commentView.addressMap.addAnnotation(museumAnnotation)
         commentView.mueumNameLagel.text=museumLabel
         
         commentView.mueumNameLagel.font = MDCTypography.body2Font()
