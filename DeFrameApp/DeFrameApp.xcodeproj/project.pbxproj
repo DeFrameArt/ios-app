@@ -16,6 +16,20 @@
 		3544613420748B9200FA1CBF /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544613220748B9200FA1CBF /* ListTableViewController.swift */; };
 		35488E5120101F9900A2858A /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 35488E5020101F9800A2858A /* images.png */; };
 		35490F22201ADCDD00429192 /* artHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */; };
+		354A1664214A106C005EFBCE /* NotoSerifJP-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A165D214A105D005EFBCE /* NotoSerifJP-Medium.otf */; };
+		354A1665214A106C005EFBCE /* NotoSerifJP-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A165D214A105D005EFBCE /* NotoSerifJP-Medium.otf */; };
+		354A1666214A106C005EFBCE /* NotoSerifJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A165E214A1060005EFBCE /* NotoSerifJP-Bold.otf */; };
+		354A1667214A106C005EFBCE /* NotoSerifJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A165E214A1060005EFBCE /* NotoSerifJP-Bold.otf */; };
+		354A1668214A106C005EFBCE /* NotoSerifJP-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A165F214A1062005EFBCE /* NotoSerifJP-Light.otf */; };
+		354A1669214A106C005EFBCE /* NotoSerifJP-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A165F214A1062005EFBCE /* NotoSerifJP-Light.otf */; };
+		354A166A214A106C005EFBCE /* NotoSerifJP-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A1660214A1064005EFBCE /* NotoSerifJP-ExtraLight.otf */; };
+		354A166B214A106C005EFBCE /* NotoSerifJP-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A1660214A1064005EFBCE /* NotoSerifJP-ExtraLight.otf */; };
+		354A166C214A106C005EFBCE /* NotoSerifJP-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A1661214A1066005EFBCE /* NotoSerifJP-SemiBold.otf */; };
+		354A166D214A106C005EFBCE /* NotoSerifJP-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A1661214A1066005EFBCE /* NotoSerifJP-SemiBold.otf */; };
+		354A166E214A106C005EFBCE /* NotoSerifJP-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A1662214A1069005EFBCE /* NotoSerifJP-Black.otf */; };
+		354A166F214A106C005EFBCE /* NotoSerifJP-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A1662214A1069005EFBCE /* NotoSerifJP-Black.otf */; };
+		354A1670214A106C005EFBCE /* NotoSerifJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A1663214A106B005EFBCE /* NotoSerifJP-Regular.otf */; };
+		354A1671214A106C005EFBCE /* NotoSerifJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 354A1663214A106B005EFBCE /* NotoSerifJP-Regular.otf */; };
 		354B59232106D48600A30A8B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59222106D48600A30A8B /* UIView+Extension.swift */; };
 		354B59242106D48600A30A8B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59222106D48600A30A8B /* UIView+Extension.swift */; };
 		354B59262106D50700A30A8B /* MapViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B59252106D50700A30A8B /* MapViewController+Extension.swift */; };
@@ -201,6 +215,13 @@
 		3544613220748B9200FA1CBF /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		35488E5020101F9800A2858A /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		354A165D214A105D005EFBCE /* NotoSerifJP-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifJP-Medium.otf"; sourceTree = "<group>"; };
+		354A165E214A1060005EFBCE /* NotoSerifJP-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifJP-Bold.otf"; sourceTree = "<group>"; };
+		354A165F214A1062005EFBCE /* NotoSerifJP-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifJP-Light.otf"; sourceTree = "<group>"; };
+		354A1660214A1064005EFBCE /* NotoSerifJP-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifJP-ExtraLight.otf"; sourceTree = "<group>"; };
+		354A1661214A1066005EFBCE /* NotoSerifJP-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifJP-SemiBold.otf"; sourceTree = "<group>"; };
+		354A1662214A1069005EFBCE /* NotoSerifJP-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifJP-Black.otf"; sourceTree = "<group>"; };
+		354A1663214A106B005EFBCE /* NotoSerifJP-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifJP-Regular.otf"; sourceTree = "<group>"; };
 		354B59222106D48600A30A8B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		354B59252106D50700A30A8B /* MapViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Extension.swift"; sourceTree = "<group>"; };
 		354B59282106D68600A30A8B /* MapViewControllerCarousel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewControllerCarousel+Extension.swift"; sourceTree = "<group>"; };
@@ -347,6 +368,20 @@
 				78AB8B821B75E8AD250BDC34 /* Pods-DeFrameApp-DeFrameAppTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		354A165C214A1028005EFBCE /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				354A1662214A1069005EFBCE /* NotoSerifJP-Black.otf */,
+				354A165E214A1060005EFBCE /* NotoSerifJP-Bold.otf */,
+				354A1660214A1064005EFBCE /* NotoSerifJP-ExtraLight.otf */,
+				354A165F214A1062005EFBCE /* NotoSerifJP-Light.otf */,
+				354A165D214A105D005EFBCE /* NotoSerifJP-Medium.otf */,
+				354A1663214A106B005EFBCE /* NotoSerifJP-Regular.otf */,
+				354A1661214A1066005EFBCE /* NotoSerifJP-SemiBold.otf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 		354B59212106D45E00A30A8B /* Extension */ = {
@@ -531,6 +566,7 @@
 		F47029F21A7F27DB00E30A3C /* DeFrame */ = {
 			isa = PBXGroup;
 			children = (
+				354A165C214A1028005EFBCE /* Font */,
 				354B593A2107FBC200A30A8B /* Classes */,
 				354B59212106D45E00A30A8B /* Extension */,
 				F47029F41A7F27DB00E30A3C /* Info.plist */,
@@ -726,14 +762,18 @@
 				58233A761F219462008D125F /* CraftARResourcesODIR.bundle in Resources */,
 				3552EC92209FB9EB00D1C29D /* display.png in Resources */,
 				351B5D942067357400F3D6E8 /* UrlImage.png in Resources */,
+				354A1666214A106C005EFBCE /* NotoSerifJP-Bold.otf in Resources */,
 				35A25EB7204DF9960023A77D /* Background.png in Resources */,
+				354A1668214A106C005EFBCE /* NotoSerifJP-Light.otf in Resources */,
 				3552EC94209FD43900D1C29D /* compass.png in Resources */,
 				357E908C20688FDA00B595D5 /* userPic11.png in Resources */,
 				359615D62079BCF000B6760D /* info (1).png in Resources */,
 				3557CEF720685F2C00548D99 /* userPic8.png in Resources */,
+				354A166A214A106C005EFBCE /* NotoSerifJP-ExtraLight.otf in Resources */,
 				35BCA3232079DB1A0068E899 /* info (2).png in Resources */,
 				359615CF2079B5E500B6760D /* feedback.png in Resources */,
 				35BCA3252079DB870068E899 /* feedback (2).png in Resources */,
+				354A166E214A106C005EFBCE /* NotoSerifJP-Black.otf in Resources */,
 				3555AF9E201E6C6700202931 /* Main.storyboard in Resources */,
 				35488E5120101F9900A2858A /* images.png in Resources */,
 				3557CEF520685F2C00548D99 /* userPic9.png in Resources */,
@@ -754,6 +794,7 @@
 				35B0DA8A208ECE650005272C /* Info.plist in Resources */,
 				359615DB2079BD4A00B6760D /* bank.png in Resources */,
 				F4702A001A7F27DC00E30A3C /* LaunchScreen.xib in Resources */,
+				354A166C214A106C005EFBCE /* NotoSerifJP-SemiBold.otf in Resources */,
 				F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */,
 				35C6CEE820A0076900E3E220 /* robot.png in Resources */,
 				586B948F1F1305DF00F89AE8 /* SampleMuseum.json in Resources */,
@@ -761,9 +802,11 @@
 				3557CEE820685E9B00548D99 /* userPic5.png in Resources */,
 				3557CEEE20685E9B00548D99 /* userPic7.png in Resources */,
 				3557CEE620685E9B00548D99 /* userPic4.png in Resources */,
+				354A1664214A106C005EFBCE /* NotoSerifJP-Medium.otf in Resources */,
 				A083563F1FEAFB1900850FAA /* Bot Button@2x.png in Resources */,
 				355A8EE420EF1D080032C569 /* Frida.png in Resources */,
 				359615D82079BCF000B6760D /* secure-file (1).png in Resources */,
+				354A1670214A106C005EFBCE /* NotoSerifJP-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,23 +817,30 @@
 				35D0DAF42082D07B0067A5BA /* Main.storyboard in Resources */,
 				35A25EBB204DFA7D0023A77D /* Logo.png in Resources */,
 				3557CEF820685F2C00548D99 /* userPic8.png in Resources */,
+				354A1671214A106C005EFBCE /* NotoSerifJP-Regular.otf in Resources */,
 				359615D72079BCF000B6760D /* info (1).png in Resources */,
 				3557CEF420685F2C00548D99 /* UserProfile.png in Resources */,
 				3557CEEF20685E9B00548D99 /* userPic7.png in Resources */,
 				3557CEEB20685E9B00548D99 /* userPic3.png in Resources */,
 				586B94901F1305DF00F89AE8 /* SampleMuseum.json in Resources */,
+				354A1665214A106C005EFBCE /* NotoSerifJP-Medium.otf in Resources */,
 				3557CEE920685E9B00548D99 /* userPic5.png in Resources */,
 				35DCB61F20791E9A00224480 /* library.png in Resources */,
 				3557CEE720685E9B00548D99 /* userPic4.png in Resources */,
+				354A1667214A106C005EFBCE /* NotoSerifJP-Bold.otf in Resources */,
 				3557CEF620685F2C00548D99 /* userPic9.png in Resources */,
 				359615D32079B6DA00B6760D /* feedback (1).png in Resources */,
 				359615DC2079BD4A00B6760D /* bank.png in Resources */,
 				359615D92079BCF000B6760D /* secure-file (1).png in Resources */,
+				354A166F214A106C005EFBCE /* NotoSerifJP-Black.otf in Resources */,
+				354A1669214A106C005EFBCE /* NotoSerifJP-Light.otf in Resources */,
 				359615CD2079B52000B6760D /* secure-file.png in Resources */,
+				354A166B214A106C005EFBCE /* NotoSerifJP-ExtraLight.otf in Resources */,
 				35A25EB8204DF9960023A77D /* Background.png in Resources */,
 				359615CB2079B52000B6760D /* info.png in Resources */,
 				359615D02079B5E500B6760D /* feedback.png in Resources */,
 				3557CEED20685E9B00548D99 /* UserProfile.png in Resources */,
+				354A166D214A106C005EFBCE /* NotoSerifJP-SemiBold.otf in Resources */,
 				355A8EE520EF1D080032C569 /* Frida.png in Resources */,
 				35B0DA8B208ECE650005272C /* Info.plist in Resources */,
 			);

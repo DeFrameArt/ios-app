@@ -68,7 +68,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         UIApplication.shared.statusBarStyle = .lightContent
 
        self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationBar.backItem?.backBarButtonItem
+      self.navigationController?.navigationBar.tintColor = .white
     self.resultSearchController = ({
     ///search br
     controller.searchResultsUpdater = self
@@ -114,8 +114,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     })()
         
         
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 160.0; // set to whatever your "average" cell height is
+   // self.tableView.rowHeight = UITableViewAutomaticDimension;
+   // self.tableView.estimatedRowHeight = 380.0; // set to whatever your "average" cell height is
         
         
         tableView.reloadWithAnimation()
@@ -219,7 +219,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     {
    
       
-        return 200 //Not expanded
+        return 380 //Not expanded
         
     }
      var viewLad=true
