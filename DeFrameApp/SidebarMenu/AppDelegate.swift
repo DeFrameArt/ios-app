@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         let configuration: AIConfiguration = AIDefaultConfiguration()
-        configuration.clientAccessToken = "ce43ad2bcd2e4be294f87b30460e50f7"
+        configuration.clientAccessToken = "2b4cf0614aed45d28422a28ceaa439e9"
         let apiai = ApiAI.shared()
         apiai?.configuration = configuration
         return true
