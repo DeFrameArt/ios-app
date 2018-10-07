@@ -161,10 +161,10 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     } else {
         museum1 = museum[indexP]
     }
-    let navVC = segue.destination as? UINavigationController
+    //let navVC = segue.destination as? UINavigationController
        
 
-    let museumViewController = navVC?.viewControllers.first as! MuseumViewController
+    let museumViewController = segue.destination as! MuseumViewController
      
     museumViewController.museumbannerURL = museum1.bannerURL
     museumViewController.museumStreetLabel = museum1.street!

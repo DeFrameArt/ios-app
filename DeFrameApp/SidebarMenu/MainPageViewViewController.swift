@@ -80,13 +80,17 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
    
     @IBOutlet weak var logoImage: UIImageView!
     
-    @IBOutlet weak var background: UIImageView!
+  //  @IBOutlet weak var background: UIImageView!
     
+    @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var logo: UIImageView!
+    // @IBOutlet weak var logo: UIImageView!
+ //   @IBOutlet weak var logo: UIImageView!
     var maxHeaderHeight: CGFloat = 170
     @IBOutlet weak var titleDeframe: UILabel!
     let minHeaderHeight: CGFloat = 44;
     @IBOutlet weak var backGroundColor: UIImageView!
+   // @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -244,8 +248,10 @@ class MainPageViewViewController: UIViewController,UITableViewDelegate, UITableV
    
     var indexP=0
     
-    
+  //  @IBOutlet weak var mainTable: UITableView!
     @IBOutlet weak var mainTable: UITableView!
+    
+    //@IBOutlet weak var mainTable: UITableView!
     @IBOutlet weak var mainCollection: UICollectionView!
  
 

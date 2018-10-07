@@ -325,12 +325,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         
         if segue.identifier == "mapToMuseumSegue"{
             
-            let navVC = segue.destination as? UINavigationController
+           // let navVC = segue.destination as? UINavigationController
             let cell = sender as! UICollectionViewCell
             let indexPath = carousel.indexPath(for: cell)
             
-             //let  museumViewController = segue.destination as! MuseumViewController
-            let museumViewController = navVC?.viewControllers.first as! MuseumViewController
+            let  museumViewController = segue.destination as! MuseumViewController
+          //  let museumViewController = navVC?.viewControllers.first as! MuseumViewController
             
        
                 museumViewController.museumbannerURL = loadedmusuems![(indexPath?.row)!].bannerURL

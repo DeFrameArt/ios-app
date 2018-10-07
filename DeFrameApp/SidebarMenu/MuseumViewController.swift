@@ -41,32 +41,16 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
 
-    //let transition = BubbleTransition()
-    //@IBOutlet var carouselView: UIScrollView!
     
     @IBOutlet var museumImageView: UIImageView!
-    
-   // @IBOutlet weak var botButton: UIImageView!
+
     
     @IBOutlet var carouselViewPageControl: UIPageControl!
     
     @IBOutlet var collectionViewTapGesture: UIImageView!
     
     @IBOutlet var galleryCollectionView: UICollectionView!
-    
-   // @IBOutlet var collectionsLabel: UILabel!
-    
-   // @IBOutlet var museumNameLabel: UILabel!
-    
-   // @IBOutlet var streetLabel: UILabel!
-    
-   // @IBOutlet var cityStateZipLabel: UILabel!
-    
-    //@IBOutlet var countryLabel: UILabel!
-    
-   // @IBOutlet var directoryImageView: UIImageView!
-    
-  //  @IBOutlet var museumLogoImageView: UIImageView!
+
     
     
     let car1 = ["image":"Logo_update"]
@@ -133,10 +117,11 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
      //navBar.backgroundColor=UIColor.black
         UIApplication.shared.statusBarStyle = .lightContent
       //  centerMapOnLocation(location: initialLocation)
-
+        self.navigationController?.navigationBar.topItem?.title = "Back"
+self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.isNavigationBarHidden = false
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
-        let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
+       // let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
+       // let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
 
         self.startDownloadingImagesData()
         TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
@@ -150,10 +135,10 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     override func viewWillAppear(_ animated: Bool) {
         
-       
+    
        self.navigationController?.isNavigationBarHidden = false
          UIApplication.shared.statusBarStyle = .lightContent
-        print(self.museumPageMuseumId)
+        //print(self.museumPageMuseumId)
         
         print("In will appear")
     }
@@ -230,7 +215,7 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         let commentView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "artHeaderCollectionReusableView", for: indexPath) as! artHeaderCollectionReusableView
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
-        let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
+       // let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
        
         let initialLocation = CLLocation(latitude: museumLat!, longitude: museumLon!)
        
@@ -285,16 +270,16 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         
         commentView.museumImageView.sd_setImage(with: URL(string:museumbannerURL! ))
-        commentView.museumLogoImageView.sd_setImage(with:URL(string:logoURL!))
+       // commentView.museumLogoImageView.sd_setImage(with:URL(string:logoURL!))
         
         commentView.directoryImageView.addGestureRecognizer(tapGesture)
-        commentView.botButton.addGestureRecognizer(tapGestureBotButton)
+       // commentView.botButton.addGestureRecognizer(tapGestureBotButton)
         
         // make sure imageView can be interacted with by user
         
         
         commentView.directoryImageView.isUserInteractionEnabled = true
-         commentView.botButton.isUserInteractionEnabled = true
+     //    commentView.botButton.isUserInteractionEnabled = true
       return commentView
         
     }
