@@ -54,26 +54,26 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
         self.headingLabel.font = MDCTypography.titleFont()
         self.headingLabel.alpha = MDCTypography.titleFontOpacity()
         
-      self.descriptionTextView.sizeToFit()
+   //   self.descriptionTextView.sizeToFit()
 
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
-        self.headingLabel.sizeToFit()
+     //   self.headingLabel.sizeToFit()
         
         self.authorLabel.font = MDCTypography.subheadFont()
         self.authorLabel.alpha = MDCTypography.subheadFontOpacity()
         
         
-        self.authorLabel.sizeToFit()
+      //  self.authorLabel.sizeToFit()
         
         self.yearLabel.font = MDCTypography.subheadFont()
         self.yearLabel.alpha = MDCTypography.subheadFontOpacity()
         
        
         
-        self.yearLabel.sizeToFit()
+      //  self.yearLabel.sizeToFit()
         
         
         self.startDownloadingArtImagesData()
@@ -193,7 +193,7 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
       
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
-        self.headingLabel.sizeToFit()
+    //    self.headingLabel.sizeToFit()
         
         self.authorLabel.font = MDCTypography.subheadFont()
         self.authorLabel.alpha = MDCTypography.subheadFontOpacity()
@@ -201,14 +201,14 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
         self.authorLabel.text=self.artPageAuthorArray[indexPath.row]
         
        
-         self.authorLabel.sizeToFit()
+      //   self.authorLabel.sizeToFit()
         
         self.yearLabel.font = MDCTypography.subheadFont()
         self.yearLabel.alpha = MDCTypography.subheadFontOpacity()
         
         self.yearLabel.text=self.artPageYear[indexPath.row]
     
-        self.yearLabel.sizeToFit()
+       // self.yearLabel.sizeToFit()
     }
     
     
