@@ -111,8 +111,8 @@ extension ArtViewController{
                                         DispatchQueue.main.async(execute: {
                                             
                                             completion(self.allArts)
-                                            
-                                            self.artImageView.sd_setImage(with: URL(string: self.artPageImageURLsArray[0]))
+                                            self.artImageView.sd_setBackgroundImage(with: URL(string:self.artPageImageURLsArray[0]), for: .normal)
+                                         //   self.artImageView.imageView?.sd_setImage(with: URL(string: self.artPageImageURLsArray[0]))
                                             
                                             self.descriptionTextView.text = self.artPageDescriptionArray[0]
                                             self.headingLabel.text = self.artPageHeadingsArray[0]

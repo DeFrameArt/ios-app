@@ -14,11 +14,12 @@ import MaterialComponents.MaterialTypography
 class ArtViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate{
     
 
+    @IBOutlet weak var artImageView: UIButton!
     @IBOutlet var galleryCarouselView: UIScrollView!
     
     @IBOutlet var artViewPageController: UIPageControl!
     
-    @IBOutlet var artImageView: UIImageView!
+  //  @IBOutlet var artImageView: UIImageView!
     
     @IBOutlet var artCollectionView: UICollectionView!
     
@@ -111,9 +112,7 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
             
             
         }
-        
-        
-        
+    
     }
     
 
@@ -142,12 +141,12 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "artCollectionViewCell", for: indexPath) as! artCollectionViewCell
-        let artImageView = cell.viewWithTag(1) as! UIImageView
+       // let artImageView = cell.viewWithTag(1) as! UIImageView
         
         print(artPageImageURLsArray[indexPath.row])
-  
-        artImageView.sd_setImage(with: URL(string: artPageImageURLsArray[indexPath.row]))
-        
+         self.artImageView.sd_setBackgroundImage(with: URL(string:self.artPageImageURLsArray[indexPath.row]), for: .normal)
+       // artImageView.sd_setImage(with: URL(string: artPageImageURLsArray[indexPath.row]))
+       //  imageURL=artPageImageURLsArray[indexPath.row]
         
         return cell
     }
@@ -161,13 +160,13 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
             
         }
     }
-    
+    var imageURL:String?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "artCollectionViewCell", for: indexPath) as! artCollectionViewCell
-        
-        self.artImageView.sd_setImage(with: URL(string: self.artPageImageURLsArray[indexPath.row]))
-        
+        self.artImageView.sd_setBackgroundImage(with: URL(string:self.artPageImageURLsArray[indexPath.row]), for: .normal)
+       // self.artImageView.imageView?.sd_setImage(with: URL(string: self.artPageImageURLsArray[indexPath.row]))
+       // imageURL=indexPath.row
         self.descriptionTextView.text = self.artPageDescriptionArray[indexPath.row]
         
         self.descriptionTextView.font = MDCTypography.captionFont()
@@ -211,6 +210,12 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
             
             print("using segue")
         }
+        if(segue.identifier == "fullImage"){
+             let artViewController = segue.destination as! MuseumImageViewController
+          
+ 
+        }
+        //fullImage
  
     }
 

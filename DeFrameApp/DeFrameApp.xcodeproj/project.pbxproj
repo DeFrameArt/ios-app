@@ -123,6 +123,8 @@
 		35BCA3212079DAD90068E899 /* secure-file (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3202079DAD40068E899 /* secure-file (2).png */; };
 		35BCA3232079DB1A0068E899 /* info (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3222079DB160068E899 /* info (2).png */; };
 		35BCA3252079DB870068E899 /* feedback (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3242079DB830068E899 /* feedback (2).png */; };
+		35C10C112175725900E0D6A3 /* MuseumImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C10C102175725900E0D6A3 /* MuseumImageViewController.swift */; };
+		35C10C122175725900E0D6A3 /* MuseumImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C10C102175725900E0D6A3 /* MuseumImageViewController.swift */; };
 		35C6CEE820A0076900E3E220 /* robot.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C6CEE720A0076700E3E220 /* robot.png */; };
 		35CFAB192083052900054444 /* MuseumViewControllerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CFAB182083052900054444 /* MuseumViewControllerList.swift */; };
 		35CFAB1A2083052900054444 /* MuseumViewControllerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CFAB182083052900054444 /* MuseumViewControllerList.swift */; };
@@ -273,6 +275,7 @@
 		35BCA3202079DAD40068E899 /* secure-file (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secure-file (2).png"; sourceTree = "<group>"; };
 		35BCA3222079DB160068E899 /* info (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info (2).png"; sourceTree = "<group>"; };
 		35BCA3242079DB830068E899 /* feedback (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback (2).png"; sourceTree = "<group>"; };
+		35C10C102175725900E0D6A3 /* MuseumImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumImageViewController.swift; sourceTree = "<group>"; };
 		35C6CEE720A0076700E3E220 /* robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robot.png; sourceTree = "<group>"; };
 		35CFAB182083052900054444 /* MuseumViewControllerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumViewControllerList.swift; sourceTree = "<group>"; };
 		35DCB61D20791E9800224480 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
@@ -446,6 +449,7 @@
 				35E569072117D6CC007223E9 /* CollectionReusableViewMainPage.swift */,
 				35E5690A2117DAC7007223E9 /* MainPageViewViewController.swift */,
 				35A56BB421195B1100D1BF1D /* MainTableViewController.swift */,
+				35C10C102175725900E0D6A3 /* MuseumImageViewController.swift */,
 			);
 			name = MuseumScreen;
 			sourceTree = "<group>";
@@ -1094,6 +1098,7 @@
 				35A25EAE204DF9590023A77D /* RegistrationViewController.swift in Sources */,
 				35E5690B2117DAC7007223E9 /* MainPageViewViewController.swift in Sources */,
 				3569731F20A2AA55006340EC /* AccountViewController.swift in Sources */,
+				35C10C112175725900E0D6A3 /* MuseumImageViewController.swift in Sources */,
 				35A25EAB204DF9460023A77D /* UserNamePasswordViewController.swift in Sources */,
 				354B59292106D68600A30A8B /* MapViewControllerCarousel+Extension.swift in Sources */,
 				35E569052117D443007223E9 /* CollectionViewCellMainPage.swift in Sources */,
@@ -1122,6 +1127,7 @@
 				35E92AB321114D67006C13B7 /* UITabBarViewController.swift in Sources */,
 				3569732020A2AA55006340EC /* AccountViewController.swift in Sources */,
 				354B59302107F37000A30A8B /* DeviceViewController.swift in Sources */,
+				35C10C122175725900E0D6A3 /* MuseumImageViewController.swift in Sources */,
 				35A25EAC204DF9460023A77D /* UserNamePasswordViewController.swift in Sources */,
 				354B592D2107F33200A30A8B /* TableViewController+Extension.swift in Sources */,
 				3557CEFB206868A400548D99 /* GuestCell.swift in Sources */,
