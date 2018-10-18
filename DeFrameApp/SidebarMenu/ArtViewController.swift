@@ -13,6 +13,10 @@ import MaterialComponents.MaterialTypography
 class ArtViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate{
     
 
+   // @IBAction func tapMainImage(_ sender: Any) {
+     //   self.performSegue(withIdentifier: "imageView", sender: self)
+   // }
+   
     @IBOutlet var galleryCarouselView: UIScrollView!
     
     @IBOutlet var artViewPageController: UIPageControl!
@@ -116,6 +120,9 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
 
+    @IBAction func viewImageBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "imageView", sender: self)
+    }
     
     override func didReceiveMemoryWarning(){
         
@@ -215,9 +222,19 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if(segue.identifier == "museumToArtSegue"){
+        if(segue.identifier == "imageView"){
+           
+             let artViewController = segue.destination as! ImageViewController
+            print(artImageView.image)
+            if artImageView.image != nil {
+               print("Image Good")
+            }
+            else{
+                print("null")
+            }
+            artViewController.newImage=artImageView.image
             
-            print("using segue")
+           // print("using segue")
         }
         
         
