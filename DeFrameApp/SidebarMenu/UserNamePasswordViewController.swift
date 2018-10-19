@@ -74,36 +74,7 @@ class UserNamePasswordViewController: UIViewController {
     
     
     @IBAction func passwordCheck(_ sender: Any) {
-        if(self.passwordText.text?.isValidPasswordNumber())!{
-            NumberPassword.textColor=UIColor.green
-            
-        }
-        if(self.passwordText.text?.isValidPasswordSpecialCharacter())!{
-            SpecialCharacter.textColor=UIColor.green
-        }
-        if(self.passwordText.text?.isValidPasswordCapital())!{
-            LowerUpperCase.textColor=UIColor.green
-        }
-        if(self.passwordText.text?.isValidPasswordLower())!{
-            charactersPassword.textColor=UIColor.green
-        }
-        
-        if(!((self.passwordText.text?.isValidPasswordNumber())!)){
-            NumberPassword.textColor=UIColor.white
-            
-        }
-        if(!(self.passwordText.text?.isValidPasswordSpecialCharacter())!){
-            SpecialCharacter.textColor=UIColor.white
-        }
-        if(!(self.passwordText.text?.isValidPasswordCapital())!){
-            LowerUpperCase.textColor=UIColor.white
-        }
-        if(!(self.passwordText.text?.isValidPasswordLower())!){
-            
-            charactersPassword.textColor=UIColor.white
-        }
-        
-        
+
     }
 }
 

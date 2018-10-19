@@ -981,7 +981,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-ex-0N9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="239"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GHj-Ku-RYj">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GHj-Ku-RYj">
                                         <rect key="frame" x="87" y="46" width="146" height="146"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="146" id="7lE-dY-6ix"/>
@@ -1757,15 +1757,12 @@ Contact Us If you have any questions or suggestions about our Terms and Conditio
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-Fb-fkL">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password (8+ characters, (0-9), and (!@#$%&amp;))" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-Fb-fkL">
                                 <rect key="frame" x="20" y="211" width="374" height="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="passwordCheck:" destination="oY7-wQ-mjR" eventType="editingDidEnd" id="Eg2-5s-40p"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUV-9d-orz">
                                 <rect key="frame" x="20" y="258" width="374" height="17"/>
@@ -1774,58 +1771,6 @@ Contact Us If you have any questions or suggestions about our Terms and Conditio
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rfe-6b-bdW">
-                                <rect key="frame" x="0.0" y="314" width="414" height="182"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contain at least 1 special character (!@#$%^&amp;*)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-ah-5pv">
-                                        <rect key="frame" x="20" y="77" width="270" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contain at least 1 lowercase and 1 uppercase letter." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uJ-Uh-7jf">
-                                        <rect key="frame" x="20" y="31" width="290" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contain at least 1 number (0–9)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fj-pL-kru">
-                                        <rect key="frame" x="20" y="54" width="178" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be at least 8 characters in length." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yO6-kg-Jrk">
-                                        <rect key="frame" x="20" y="8" width="191" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzJ-Y6-3ce">
-                                        <rect key="frame" x="161" y="131" width="92" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="REGISTER">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="registerAction:" destination="oY7-wQ-mjR" eventType="touchUpInside" id="SNS-iF-5V2"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="9Fj-pL-kru" firstAttribute="top" secondItem="Rfe-6b-bdW" secondAttribute="top" constant="54" id="1aN-E9-GWx"/>
-                                    <constraint firstItem="9Fj-pL-kru" firstAttribute="top" secondItem="7uJ-Uh-7jf" secondAttribute="bottom" constant="8" id="31C-6f-UOn"/>
-                                    <constraint firstItem="7uJ-Uh-7jf" firstAttribute="leading" secondItem="Rfe-6b-bdW" secondAttribute="leading" constant="20" id="Gpw-QC-ZDl"/>
-                                    <constraint firstItem="9Fj-pL-kru" firstAttribute="leading" secondItem="Rfe-6b-bdW" secondAttribute="leading" constant="20" id="HC2-aE-2vo"/>
-                                    <constraint firstItem="yO6-kg-Jrk" firstAttribute="leading" secondItem="Rfe-6b-bdW" secondAttribute="leading" constant="20" id="Neq-5O-G5J"/>
-                                    <constraint firstItem="7uJ-Uh-7jf" firstAttribute="top" secondItem="yO6-kg-Jrk" secondAttribute="bottom" constant="8" id="UU9-co-FL1"/>
-                                    <constraint firstItem="MJs-ah-5pv" firstAttribute="top" secondItem="9Fj-pL-kru" secondAttribute="bottom" constant="8" id="WvF-4p-5L7"/>
-                                    <constraint firstItem="BzJ-Y6-3ce" firstAttribute="centerX" secondItem="Rfe-6b-bdW" secondAttribute="centerX" id="l9y-5P-Hmr"/>
-                                    <constraint firstItem="MJs-ah-5pv" firstAttribute="leading" secondItem="Rfe-6b-bdW" secondAttribute="leading" constant="20" id="oay-6A-MSY"/>
-                                    <constraint firstItem="BzJ-Y6-3ce" firstAttribute="top" secondItem="MJs-ah-5pv" secondAttribute="bottom" constant="39" id="rpR-oQ-1Dw"/>
-                                </constraints>
-                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioy-8L-SZH">
                                 <rect key="frame" x="193" y="164" width="166" height="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1833,6 +1778,16 @@ Contact Us If you have any questions or suggestions about our Terms and Conditio
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzJ-Y6-3ce">
+                                <rect key="frame" x="161" y="387" width="92" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="REGISTER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerAction:" destination="oY7-wQ-mjR" eventType="touchUpInside" id="SNS-iF-5V2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82007837299999997" green="0.25944250819999998" blue="0.47712522750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1840,18 +1795,16 @@ Contact Us If you have any questions or suggestions about our Terms and Conditio
                             <constraint firstItem="6X7-h8-Pux" firstAttribute="leading" secondItem="3AT-aX-XW3" secondAttribute="leading" constant="20" id="D3E-Z3-zXy"/>
                             <constraint firstItem="tbF-Fb-fkL" firstAttribute="top" secondItem="6X7-h8-Pux" secondAttribute="bottom" constant="30" id="FAD-4w-L4n"/>
                             <constraint firstItem="6X7-h8-Pux" firstAttribute="width" secondItem="edi-Dr-aoe" secondAttribute="width" multiplier="0.4" id="HSB-4q-9C5"/>
-                            <constraint firstItem="Rfe-6b-bdW" firstAttribute="centerY" secondItem="3AT-aX-XW3" secondAttribute="centerY" id="IPw-2Q-0du"/>
                             <constraint firstItem="3AT-aX-XW3" firstAttribute="trailing" secondItem="pUV-9d-orz" secondAttribute="trailing" constant="20" id="NkQ-6U-FZk"/>
                             <constraint firstItem="pUV-9d-orz" firstAttribute="leading" secondItem="3AT-aX-XW3" secondAttribute="leading" constant="20" id="P2D-8y-ub5"/>
                             <constraint firstItem="6X7-h8-Pux" firstAttribute="top" secondItem="3AT-aX-XW3" secondAttribute="top" constant="100" id="UFl-Q7-fzi"/>
-                            <constraint firstItem="Rfe-6b-bdW" firstAttribute="leading" secondItem="3AT-aX-XW3" secondAttribute="leading" id="Zpe-c7-lFk"/>
                             <constraint firstItem="ioy-8L-SZH" firstAttribute="width" secondItem="edi-Dr-aoe" secondAttribute="width" multiplier="0.4" id="alk-hU-OFd"/>
                             <constraint firstItem="tbF-Fb-fkL" firstAttribute="leading" secondItem="3AT-aX-XW3" secondAttribute="leading" constant="20" id="b9Q-IL-ZiB"/>
-                            <constraint firstItem="Rfe-6b-bdW" firstAttribute="top" secondItem="pUV-9d-orz" secondAttribute="bottom" constant="39" id="cgs-tP-ubm"/>
                             <constraint firstItem="ioy-8L-SZH" firstAttribute="top" secondItem="3AT-aX-XW3" secondAttribute="top" constant="100" id="duL-pA-Shb"/>
                             <constraint firstItem="ioy-8L-SZH" firstAttribute="leading" secondItem="6X7-h8-Pux" secondAttribute="trailing" constant="7.5" id="eGv-9A-yYG"/>
                             <constraint firstItem="pUV-9d-orz" firstAttribute="top" secondItem="tbF-Fb-fkL" secondAttribute="bottom" constant="30" id="ueg-IE-NfP"/>
-                            <constraint firstItem="Rfe-6b-bdW" firstAttribute="trailing" secondItem="3AT-aX-XW3" secondAttribute="trailing" id="xFu-21-INn"/>
+                            <constraint firstItem="BzJ-Y6-3ce" firstAttribute="centerY" secondItem="3AT-aX-XW3" secondAttribute="centerY" id="x2y-a5-L4m"/>
+                            <constraint firstItem="BzJ-Y6-3ce" firstAttribute="centerX" secondItem="3AT-aX-XW3" secondAttribute="centerX" id="xJ3-Pm-QOq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3AT-aX-XW3"/>
                     </view>
@@ -1865,15 +1818,10 @@ Contact Us If you have any questions or suggestions about our Terms and Conditio
                     </navigationItem>
                     <size key="freeformSize" width="414" height="746"/>
                     <connections>
-                        <outlet property="LowerUpperCase" destination="7uJ-Uh-7jf" id="VZU-Z8-E8c"/>
-                        <outlet property="NumberPassword" destination="9Fj-pL-kru" id="Xap-Wz-7Zu"/>
-                        <outlet property="SpecialCharacter" destination="MJs-ah-5pv" id="g6T-VQ-R7u"/>
-                        <outlet property="charactersPassword" destination="yO6-kg-Jrk" id="zmF-5P-YFW"/>
                         <outlet property="confirmPasswordText" destination="pUV-9d-orz" id="Tnq-O9-iqn"/>
                         <outlet property="firstNameText" destination="6X7-h8-Pux" id="SGq-P3-rAl"/>
                         <outlet property="lastNameText" destination="ioy-8L-SZH" id="gA1-El-Rj1"/>
                         <outlet property="passwordText" destination="tbF-Fb-fkL" id="74y-y9-zQs"/>
-                        <outlet property="viewCheck" destination="Rfe-6b-bdW" id="i70-EV-L5N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9R-7w-Yp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -9451,6 +9399,7 @@ AAbotQAG6LgABujKAAbozQAG6NIAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAAAbo1A
         <image name="secure-file (1).png" width="32" height="32"/>
         <image name="show-more-button-with-three-dots (1).png" width="24" height="24"/>
         <image name="userPic11.png" width="1051" height="1248"/>
+        <image name="user_icon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kFb-Uj-P5h"/>
