@@ -115,7 +115,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
         
         
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 160.0; // set to whatever your "average" cell height is
+   // self.tableView.estimatedRowHeight = 250; // set to whatever your "average" cell height is
         TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
         setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
         
@@ -221,7 +221,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     {
    
       
-        return 200 //Not expanded
+        return 250 //Not expanded
         
     }
      var viewLad=true
@@ -243,7 +243,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     let urlImage=museums.logoURL
     cell.titleMuseum.text = museums.name
         if(modelName=="iPhone 5s"){
-            cell.titleMuseum.font = MDCTypography.subheadFont()
+        
+        cell.titleMuseum.font = MDCTypography.subheadFont()
             cell.titleMuseum.alpha = MDCTypography.display1FontOpacity()
             
             // If using autolayout, the following line is unnecessary as long
@@ -259,12 +260,17 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
             temp="\(museums.street ?? ""), \(museums.city ?? ""), \(museums.zip ?? "")"
             cell.address.text = temp
              cell.address.font = MDCTypography.subheadFont()
-             cell.address.alpha = MDCTypography.subheadFontOpacity()
+            cell.address.alpha = MDCTypography.subheadFontOpacity()
             
             // If using autolayout, the following line is unnecessary as long
             // as all constraints are valid.
            cell.address.sizeToFit()
-    
+       
+          cell.infoView.layer.shadowOpacity = 0.5
+        cell.infoView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+         cell.infoView.layer.shadowRadius = 1.0
+        cell.infoView.layer.shadowColor = UIColor.lightGray.cgColor
+        
     return cell
     }
     @IBOutlet weak var CellViewContent: UIView!
