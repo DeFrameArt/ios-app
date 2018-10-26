@@ -155,7 +155,7 @@ extension ChatBotViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-         UIApplication.shared.statusBarStyle = .lightContent
+       
          self.navigationController?.topViewController?.title="Ask Frida"
         //To remove attachment buutton on the leftof input text field
         
@@ -174,20 +174,20 @@ extension ChatBotViewController {
         self.senderDisplayName = currentUser.name
         
         self.messages = getMessages()
-      //  let navigationBarHeight = 66
-      //  let bottomTabBarHeight = 66
-    //    self.view.frame=CGRect(x:0, y: 0, width:self.view.frame.width, height:self.view.frame.height - CGFloat(bottomTabBarHeight) - CGFloat(navigationBarHeight))
-       // self.view.addSubview(messageView.view)
+ 
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+        if(self.navigationController?.isNavigationBarHidden==true){
+            self.navigationController?.isNavigationBarHidden = false
+             UIApplication.shared.statusBarStyle = .lightContent
+        }
        // self.navigationController?.navigationItem.title="Frida"
         //  let messageView = JSQMessagesViewController()
-        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
-        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
+      TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+      setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
         self.navigationController?.navigationBar.tintColor = UIColor.white
     
     }

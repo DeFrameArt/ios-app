@@ -53,7 +53,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
    
     
     func addItemtoCheckList(_ item:[Museum]){
-        museum=item
+      //  museum=item
         //tableView.reloadData()
     }
     
@@ -64,6 +64,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         museum=allMuseums
        
         UIApplication.shared.statusBarStyle = .lightContent
 
@@ -130,6 +131,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          UIApplication.shared.statusBarStyle = .lightContent
+      
+          //startDownloadingMuseums()
     }
     override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
@@ -159,11 +162,11 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     } else {
         museum1 = museum[indexP]
     }
-    let navVC = segue.destination as? UINavigationController
+  //  let navVC = segue.destination as? UINavigationController
        
 
-    let museumViewController = navVC?.viewControllers.first as! MuseumViewController
-     
+   // let museumViewController = navVC?.viewControllers.first as! MuseumViewController
+      let  museumViewController = segue.destination as! MuseumViewController
     museumViewController.museumbannerURL = museum1.bannerURL
     museumViewController.museumStreetLabel = museum1.street!
     museumViewController.museumCityStateZipLabel = museum1.zip!
@@ -179,9 +182,10 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     }
     var indexP=0
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  //  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     //indexP=indexPath.row
-    }
+        
+  //  }
 
     
  
@@ -226,7 +230,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cellMuseum", for: indexPath as IndexPath) as! MuseumTableViewCell
      //   cell.infoView.dropShadow()
-    let museums: Museum
+      
+        let museums: Museum
     
         let modelName = UIDevice.current.modelName2
         
@@ -279,6 +284,7 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     let searchBarScopeIsFiltering = controller.searchBar.selectedScopeButtonIndex != 0
     return controller.isActive && (!searchBarIsEmpty() || searchBarScopeIsFiltering)
     }
+ 
     
 }
 

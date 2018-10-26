@@ -19,6 +19,7 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
 
+   
     //let transition = BubbleTransition()
     //@IBOutlet var carouselView: UIScrollView!
     
@@ -104,14 +105,13 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
      //navBar.backgroundColor=UIColor.black
         UIApplication.shared.statusBarStyle = .lightContent
-
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+       // self.navigationController?.isNavigationBarHidden = false
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
         let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
 
         self.startDownloadingImagesData()
-        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
-        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
+       
         
     }
     
@@ -124,8 +124,9 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
        
        self.navigationController?.isNavigationBarHidden = false
          UIApplication.shared.statusBarStyle = .lightContent
-        print(self.museumPageMuseumId)
-        
+      
+      //  TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+       // setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
         print("In will appear")
     }
     
@@ -213,18 +214,40 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         
         
-        commentView.countryLabel.text=museumCountryLabel
+      /*  commentView.countryLabel.text=museumCountryLabel
         commentView.countryLabel.font = MDCTypography.body1Font()
         commentView.countryLabel.alpha = MDCTypography.body1FontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
-        commentView.countryLabel.sizeToFit()
+        commentView.countryLabel.sizeToFit()*/
         
         
         commentView.streetLabel.text=museumStreetLabel
         
-       
+        commentView.botView.layer.shadowOpacity = 0.5
+        commentView.botView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        commentView.botView.layer.shadowRadius = 1.0
+        commentView.botView.layer.shadowColor = UIColor.lightGray.cgColor
+        
+        
+        commentView.bottomView.layer.shadowOpacity = 0.5
+        commentView.bottomView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        commentView.bottomView.layer.shadowRadius = 1.0
+        commentView.bottomView.layer.shadowColor = UIColor.lightGray.cgColor
+        
+        
+        
+        commentView.infoView.layer.shadowOpacity = 0.5
+        commentView.infoView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        commentView.infoView.layer.shadowRadius = 1.0
+        commentView.infoView.layer.shadowColor = UIColor.lightGray.cgColor
+        
+        
+        commentView.mapView.layer.shadowOpacity = 0.5
+        commentView.mapView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        commentView.mapView.layer.shadowRadius = 1.0
+        commentView.mapView.layer.shadowColor = UIColor.lightGray.cgColor
          commentView.streetLabel.font = MDCTypography.body1Font()
          commentView.streetLabel.alpha = MDCTypography.body1FontOpacity()
         
@@ -232,7 +255,8 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         // as all constraints are valid.
          commentView.streetLabel.sizeToFit()
         
-        commentView.cityStateZipLabel.text=museumCityStateZipLabel
+        
+        commentView.cityStateZipLabel.text = museumCityStateZipLabel
         
         commentView.cityStateZipLabel.font = MDCTypography.body1Font()
         commentView.cityStateZipLabel.alpha = MDCTypography.body1FontOpacity()

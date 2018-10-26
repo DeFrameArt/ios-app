@@ -21,11 +21,14 @@ import Tamamushi
     //code for the requirements of this protocole
   //  func addMusuem(_ item:SelectedMuseum)
 //}
+
+
 protocol AddItemProtocol {
     //code for the requirements of this protocole
     func addItemtoCheckList(_ item:[Museum])
 }
-
+var allMuseums:[Museum] = [Museum]()
+var downloadedMuseums:[Museum] = [Museum]()
 class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewControllerTransitioningDelegate,UITabBarControllerDelegate {
     // var delegate:AddItemProtocol?
     @IBOutlet weak var menuButton:UIBarButtonItem!
@@ -50,8 +53,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     @IBOutlet var mapDetailSubView: UIView!
     
     typealias DownloadComplete = () -> ()
-    var allMuseums:[Museum] = [Museum]()
-    var downloadedMuseums:[Museum] = [Museum]()
+   // var allMuseums:[Museum] = [Museum]()
+    //var downloadedMuseums:[Museum] = [Museum]()
     var locationManager: CLLocationManager = CLLocationManager()
     var userLocation:CLLocation?
     var museumpagebannerURL: String = "https://s3.amazonaws.com/deframe-musuem-gallery/musuem-1/banner/mfa-banner.jpg"
@@ -321,10 +324,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         
         if segue.identifier == "mapToMuseumSegue"{
             
-            let navVC = segue.destination as? UINavigationController
+        //    let navVC = segue.destination as? UINavigationController
             
-            // let  museumViewController = segue.destination as! MuseumViewController
-            let museumViewController = navVC?.viewControllers.first as! MuseumViewController
+            let  museumViewController = segue.destination as! MuseumViewController
+            //let museumViewController = navVC?.viewControllers.first as! MuseumViewController
 
             if(self.isAnyMuseumSelected){
                 
@@ -532,18 +535,18 @@ func startDownloadingMuseums(){
                                     
                                     
                                     let newMuseum = Museum(id:id, name: name, acronym:acronym, street:street, city:city, state:state, country:country, zip:zip, lat: lat, lon: lon, bannerURL: bannerURL, logoURL:logoURL )
-                                    self.allMuseums.append(newMuseum)
+                                    allMuseums.append(newMuseum)
                                     
                                     DispatchQueue.main.async(execute: {
-                                        completion(self.allMuseums)
-                                        self.map.addAnnotations(self.allMuseums)
+                                        completion(allMuseums)
+                                        self.map.addAnnotations(allMuseums)
                                         //self.addMuseumList(self.allMuseums)
-                                        let navController = self.tabBarController?.viewControllers![2] as! UINavigationController
-                                        let vc = navController.topViewController as! ListTableViewController
+                                       // let navController = self.tabBarController?.viewControllers![2] as! UINavigationController
+                                       // let vc = navController.topViewController as! ListTableViewController
                                     
                                         
                                       
-                                        vc.museum = self.allMuseums
+                                      //  vc.museum = self.allMuseums
                                     })
                                     
                                 }

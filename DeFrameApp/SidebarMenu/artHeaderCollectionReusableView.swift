@@ -11,6 +11,11 @@ import UIKit
 class artHeaderCollectionReusableView: UICollectionReusableView {
    
     
+    @IBOutlet weak var bottomView: UIView!
+    
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var botView: UIView!
+    @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cityStateZipLabel: UILabel!
     @IBOutlet weak var streetLabel: UILabel!

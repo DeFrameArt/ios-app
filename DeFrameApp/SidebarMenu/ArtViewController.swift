@@ -54,7 +54,7 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
 
         self.descriptionTextView.font = MDCTypography.captionFont()
         self.descriptionTextView.alpha = MDCTypography.captionFontOpacity()
-        self.descriptionTextView.sizeThatFits(CGSize(width: self.descriptionTextView.frame.size.width, height:  self.descriptionTextView.frame.size.height))
+       // self.descriptionTextView.sizeThatFits(CGSize(width: self.descriptionTextView.frame.size.width, height:  self.descriptionTextView.frame.size.height))
         self.headingLabel.font = MDCTypography.titleFont()
         self.headingLabel.alpha = MDCTypography.titleFontOpacity()
         
