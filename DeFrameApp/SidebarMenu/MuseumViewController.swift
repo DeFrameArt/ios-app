@@ -216,14 +216,14 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         
         
-        
-      /*  commentView.countryLabel.text=museumCountryLabel
-        commentView.countryLabel.font = MDCTypography.body1Font()
-        commentView.countryLabel.alpha = MDCTypography.body1FontOpacity()
+        //
+       // commentView.countryLabel.text=museumCountryLabel
+       // commentView.countryLabel.font = MDCTypography.body1Font()
+      //  commentView.countryLabel.alpha = MDCTypography.body1FontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
-        commentView.countryLabel.sizeToFit()*/
+      //  commentView.countryLabel.sizeToFit()*/
         
         
         commentView.streetLabel.text=museumStreetLabel
