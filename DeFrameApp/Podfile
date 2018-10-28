@@ -20,6 +20,8 @@ target 'DeFrameApp' do
       pod 'DGRunkeeperSwitch', '~> 1.1.4'
       pod 'ScalingCarousel', '= 2.2'
       pod 'Tamamushi'
+      pod 'FontAwesomeKit'
+      pod 'ChameleonFramework/Swift'
      target 'DeFrameAppTests' do
 
    end

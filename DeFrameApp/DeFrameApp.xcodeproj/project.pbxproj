@@ -90,6 +90,42 @@
 		35C10C1D2178285200E0D6A3 /* Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C10C1C2178285200E0D6A3 /* Dismiss.swift */; };
 		35C10C1E2178285200E0D6A3 /* Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C10C1C2178285200E0D6A3 /* Dismiss.swift */; };
 		35C6CEE820A0076900E3E220 /* robot.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C6CEE720A0076700E3E220 /* robot.png */; };
+		35C9C3F92185499A00110F46 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3E72185493D00110F46 /* Lato-Medium.ttf */; };
+		35C9C3FA2185499A00110F46 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3E72185493D00110F46 /* Lato-Medium.ttf */; };
+		35C9C3FB2185499A00110F46 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3E82185494200110F46 /* Lato-SemiboldItalic.ttf */; };
+		35C9C3FC2185499A00110F46 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3E82185494200110F46 /* Lato-SemiboldItalic.ttf */; };
+		35C9C3FD2185499A00110F46 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3E92185494700110F46 /* Lato-HairlineItalic.ttf */; };
+		35C9C3FE2185499A00110F46 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3E92185494700110F46 /* Lato-HairlineItalic.ttf */; };
+		35C9C3FF2185499A00110F46 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EA2185494D00110F46 /* Lato-Regular.ttf */; };
+		35C9C4002185499A00110F46 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EA2185494D00110F46 /* Lato-Regular.ttf */; };
+		35C9C4012185499A00110F46 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EB2185495200110F46 /* Lato-LightItalic.ttf */; };
+		35C9C4022185499A00110F46 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EB2185495200110F46 /* Lato-LightItalic.ttf */; };
+		35C9C4032185499A00110F46 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EC2185495700110F46 /* Lato-Bold.ttf */; };
+		35C9C4042185499A00110F46 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EC2185495700110F46 /* Lato-Bold.ttf */; };
+		35C9C4052185499A00110F46 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3ED2185495C00110F46 /* Lato-ThinItalic.ttf */; };
+		35C9C4062185499A00110F46 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3ED2185495C00110F46 /* Lato-ThinItalic.ttf */; };
+		35C9C4072185499A00110F46 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EE2185496100110F46 /* Lato-Italic.ttf */; };
+		35C9C4082185499A00110F46 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EE2185496100110F46 /* Lato-Italic.ttf */; };
+		35C9C4092185499A00110F46 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EF2185496700110F46 /* Lato-Heavy.ttf */; };
+		35C9C40A2185499A00110F46 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3EF2185496700110F46 /* Lato-Heavy.ttf */; };
+		35C9C40B2185499A00110F46 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F02185496C00110F46 /* Lato-Light.ttf */; };
+		35C9C40C2185499A00110F46 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F02185496C00110F46 /* Lato-Light.ttf */; };
+		35C9C40D2185499A00110F46 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F12185497100110F46 /* Lato-Black.ttf */; };
+		35C9C40E2185499A00110F46 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F12185497100110F46 /* Lato-Black.ttf */; };
+		35C9C40F2185499A00110F46 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F22185497500110F46 /* Lato-HeavyItalic.ttf */; };
+		35C9C4102185499A00110F46 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F22185497500110F46 /* Lato-HeavyItalic.ttf */; };
+		35C9C4112185499A00110F46 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F32185497B00110F46 /* Lato-Thin.ttf */; };
+		35C9C4122185499A00110F46 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F32185497B00110F46 /* Lato-Thin.ttf */; };
+		35C9C4132185499A00110F46 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F42185498000110F46 /* Lato-Semibold.ttf */; };
+		35C9C4142185499A00110F46 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F42185498000110F46 /* Lato-Semibold.ttf */; };
+		35C9C4152185499A00110F46 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F52185498500110F46 /* Lato-MediumItalic.ttf */; };
+		35C9C4162185499A00110F46 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F52185498500110F46 /* Lato-MediumItalic.ttf */; };
+		35C9C4172185499A00110F46 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F62185498B00110F46 /* Lato-BoldItalic.ttf */; };
+		35C9C4182185499A00110F46 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F62185498B00110F46 /* Lato-BoldItalic.ttf */; };
+		35C9C4192185499A00110F46 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F72185499000110F46 /* Lato-Hairline.ttf */; };
+		35C9C41A2185499A00110F46 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F72185499000110F46 /* Lato-Hairline.ttf */; };
+		35C9C41B2185499A00110F46 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F82185499400110F46 /* Lato-BlackItalic.ttf */; };
+		35C9C41C2185499A00110F46 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35C9C3F82185499400110F46 /* Lato-BlackItalic.ttf */; };
 		35CFAB192083052900054444 /* MuseumViewControllerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CFAB182083052900054444 /* MuseumViewControllerList.swift */; };
 		35CFAB1A2083052900054444 /* MuseumViewControllerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CFAB182083052900054444 /* MuseumViewControllerList.swift */; };
 		35D0DAF42082D07B0067A5BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47029F91A7F27DB00E30A3C /* Main.storyboard */; };
@@ -209,6 +245,24 @@
 		35C10C192178278400E0D6A3 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		35C10C1C2178285200E0D6A3 /* Dismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismiss.swift; sourceTree = "<group>"; };
 		35C6CEE720A0076700E3E220 /* robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robot.png; sourceTree = "<group>"; };
+		35C9C3E72185493D00110F46 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		35C9C3E82185494200110F46 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		35C9C3E92185494700110F46 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		35C9C3EA2185494D00110F46 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		35C9C3EB2185495200110F46 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		35C9C3EC2185495700110F46 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		35C9C3ED2185495C00110F46 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		35C9C3EE2185496100110F46 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		35C9C3EF2185496700110F46 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		35C9C3F02185496C00110F46 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		35C9C3F12185497100110F46 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		35C9C3F22185497500110F46 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		35C9C3F32185497B00110F46 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		35C9C3F42185498000110F46 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		35C9C3F52185498500110F46 /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		35C9C3F62185498B00110F46 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		35C9C3F72185499000110F46 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		35C9C3F82185499400110F46 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		35CFAB182083052900054444 /* MuseumViewControllerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumViewControllerList.swift; sourceTree = "<group>"; };
 		35DCB61D20791E9800224480 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
 		580C106920CDCB2D004D5619 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -296,6 +350,31 @@
 				78AB8B821B75E8AD250BDC34 /* Pods-DeFrameApp-DeFrameAppTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		35C9C3E62185491D00110F46 /* Font Lato */ = {
+			isa = PBXGroup;
+			children = (
+				35C9C3F12185497100110F46 /* Lato-Black.ttf */,
+				35C9C3F82185499400110F46 /* Lato-BlackItalic.ttf */,
+				35C9C3EC2185495700110F46 /* Lato-Bold.ttf */,
+				35C9C3F62185498B00110F46 /* Lato-BoldItalic.ttf */,
+				35C9C3F72185499000110F46 /* Lato-Hairline.ttf */,
+				35C9C3E92185494700110F46 /* Lato-HairlineItalic.ttf */,
+				35C9C3EF2185496700110F46 /* Lato-Heavy.ttf */,
+				35C9C3F22185497500110F46 /* Lato-HeavyItalic.ttf */,
+				35C9C3EE2185496100110F46 /* Lato-Italic.ttf */,
+				35C9C3F02185496C00110F46 /* Lato-Light.ttf */,
+				35C9C3EB2185495200110F46 /* Lato-LightItalic.ttf */,
+				35C9C3E72185493D00110F46 /* Lato-Medium.ttf */,
+				35C9C3F52185498500110F46 /* Lato-MediumItalic.ttf */,
+				35C9C3EA2185494D00110F46 /* Lato-Regular.ttf */,
+				35C9C3F42185498000110F46 /* Lato-Semibold.ttf */,
+				35C9C3E82185494200110F46 /* Lato-SemiboldItalic.ttf */,
+				35C9C3F32185497B00110F46 /* Lato-Thin.ttf */,
+				35C9C3ED2185495C00110F46 /* Lato-ThinItalic.ttf */,
+			);
+			name = "Font Lato";
 			sourceTree = "<group>";
 		};
 		A058F37A1FC40A95001FC901 /* Login */ = {
@@ -450,6 +529,7 @@
 		F47029F21A7F27DB00E30A3C /* DeFrame */ = {
 			isa = PBXGroup;
 			children = (
+				35C9C3E62185491D00110F46 /* Font Lato */,
 				F47029F41A7F27DB00E30A3C /* Info.plist */,
 				F47029F91A7F27DB00E30A3C /* Main.storyboard */,
 				580C106920CDCB2D004D5619 /* AppDelegate.swift */,
@@ -551,6 +631,7 @@
 				F47029ED1A7F27DB00E30A3C /* Frameworks */,
 				F47029EE1A7F27DB00E30A3C /* Resources */,
 				32ACFF2876E54B036C882144 /* [CP] Embed Pods Frameworks */,
+				C5A86615BF84D6769E95C198 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -570,6 +651,7 @@
 				F4702A021A7F27DC00E30A3C /* Frameworks */,
 				F4702A031A7F27DC00E30A3C /* Resources */,
 				E65C640B1A68DE0435E5B33E /* [CP] Embed Pods Frameworks */,
+				23E3BB5C33BD330735D9A194 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -634,11 +716,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C9C4032185499A00110F46 /* Lato-Bold.ttf in Resources */,
+				35C9C40B2185499A00110F46 /* Lato-Light.ttf in Resources */,
+				35C9C41B2185499A00110F46 /* Lato-BlackItalic.ttf in Resources */,
+				35C9C4072185499A00110F46 /* Lato-Italic.ttf in Resources */,
 				35DCB61E20791E9A00224480 /* library.png in Resources */,
 				35A25EBA204DFA7D0023A77D /* Logo.png in Resources */,
+				35C9C40F2185499A00110F46 /* Lato-HeavyItalic.ttf in Resources */,
 				3557CEEA20685E9B00548D99 /* userPic3.png in Resources */,
 				58233A761F219462008D125F /* CraftARResourcesODIR.bundle in Resources */,
 				3552EC92209FB9EB00D1C29D /* display.png in Resources */,
+				35C9C4112185499A00110F46 /* Lato-Thin.ttf in Resources */,
+				35C9C3FB2185499A00110F46 /* Lato-SemiboldItalic.ttf in Resources */,
+				35C9C4052185499A00110F46 /* Lato-ThinItalic.ttf in Resources */,
 				351B5D942067357400F3D6E8 /* UrlImage.png in Resources */,
 				35A25EB7204DF9960023A77D /* Background.png in Resources */,
 				3552EC94209FD43900D1C29D /* compass.png in Resources */,
@@ -653,30 +743,40 @@
 				3557CEF520685F2C00548D99 /* userPic9.png in Resources */,
 				359615CA2079B52000B6760D /* info.png in Resources */,
 				35BCA31F2079D7C20068E899 /* bank (1).png in Resources */,
+				35C9C4192185499A00110F46 /* Lato-Hairline.ttf in Resources */,
 				A0B6CCAF2088496D001060BE /* show-more-button-with-three-dots (1).png in Resources */,
 				35BCA3212079DAD90068E899 /* secure-file (2).png in Resources */,
 				351B5D982067577000F3D6E8 /* userPic2.png in Resources */,
 				3557CEEC20685E9B00548D99 /* UserProfile.png in Resources */,
+				35C9C40D2185499A00110F46 /* Lato-Black.ttf in Resources */,
+				35C9C4152185499A00110F46 /* Lato-MediumItalic.ttf in Resources */,
 				A08356401FEAFB1A00850FAA /* Directory button@2x.png in Resources */,
 				58F68F1A1F7A0AF5006F7510 /* MuseumDetails.xib in Resources */,
+				35C9C3FD2185499A00110F46 /* Lato-HairlineItalic.ttf in Resources */,
+				35C9C3F92185499A00110F46 /* Lato-Medium.ttf in Resources */,
 				582037B61F33E8A300C0F384 /* CarouselView.xib in Resources */,
 				3552EC90209FB9A500D1C29D /* MAP.png in Resources */,
 				3557CEF320685F2C00548D99 /* UserProfile.png in Resources */,
 				359615D22079B6DA00B6760D /* feedback (1).png in Resources */,
 				359615CC2079B52000B6760D /* secure-file.png in Resources */,
+				35C9C4092185499A00110F46 /* Lato-Heavy.ttf in Resources */,
 				A0FE6279208D672F00948CDD /* Podfile in Resources */,
 				35B0DA8A208ECE650005272C /* Info.plist in Resources */,
 				359615DB2079BD4A00B6760D /* bank.png in Resources */,
 				F4702A001A7F27DC00E30A3C /* LaunchScreen.xib in Resources */,
 				F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */,
 				35C6CEE820A0076900E3E220 /* robot.png in Resources */,
+				35C9C4172185499A00110F46 /* Lato-BoldItalic.ttf in Resources */,
+				35C9C3FF2185499A00110F46 /* Lato-Regular.ttf in Resources */,
 				586B948F1F1305DF00F89AE8 /* SampleMuseum.json in Resources */,
 				3552EC96209FD54200D1C29D /* avatar.png in Resources */,
 				3557CEE820685E9B00548D99 /* userPic5.png in Resources */,
+				35C9C4012185499A00110F46 /* Lato-LightItalic.ttf in Resources */,
 				3557CEEE20685E9B00548D99 /* userPic7.png in Resources */,
 				3557CEE620685E9B00548D99 /* userPic4.png in Resources */,
 				A083563F1FEAFB1900850FAA /* Bot Button@2x.png in Resources */,
 				359615D82079BCF000B6760D /* secure-file (1).png in Resources */,
+				35C9C4132185499A00110F46 /* Lato-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,33 +784,66 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C9C4142185499A00110F46 /* Lato-Semibold.ttf in Resources */,
+				35C9C40A2185499A00110F46 /* Lato-Heavy.ttf in Resources */,
 				35D0DAF42082D07B0067A5BA /* Main.storyboard in Resources */,
+				35C9C4062185499A00110F46 /* Lato-ThinItalic.ttf in Resources */,
 				35A25EBB204DFA7D0023A77D /* Logo.png in Resources */,
+				35C9C41C2185499A00110F46 /* Lato-BlackItalic.ttf in Resources */,
+				35C9C4182185499A00110F46 /* Lato-BoldItalic.ttf in Resources */,
+				35C9C40E2185499A00110F46 /* Lato-Black.ttf in Resources */,
+				35C9C3FE2185499A00110F46 /* Lato-HairlineItalic.ttf in Resources */,
 				3557CEF820685F2C00548D99 /* userPic8.png in Resources */,
+				35C9C3FA2185499A00110F46 /* Lato-Medium.ttf in Resources */,
+				35C9C4162185499A00110F46 /* Lato-MediumItalic.ttf in Resources */,
 				359615D72079BCF000B6760D /* info (1).png in Resources */,
 				3557CEF420685F2C00548D99 /* UserProfile.png in Resources */,
 				3557CEEF20685E9B00548D99 /* userPic7.png in Resources */,
+				35C9C4122185499A00110F46 /* Lato-Thin.ttf in Resources */,
 				3557CEEB20685E9B00548D99 /* userPic3.png in Resources */,
 				586B94901F1305DF00F89AE8 /* SampleMuseum.json in Resources */,
 				3557CEE920685E9B00548D99 /* userPic5.png in Resources */,
+				35C9C3FC2185499A00110F46 /* Lato-SemiboldItalic.ttf in Resources */,
+				35C9C4082185499A00110F46 /* Lato-Italic.ttf in Resources */,
+				35C9C41A2185499A00110F46 /* Lato-Hairline.ttf in Resources */,
+				35C9C4102185499A00110F46 /* Lato-HeavyItalic.ttf in Resources */,
 				35DCB61F20791E9A00224480 /* library.png in Resources */,
 				3557CEE720685E9B00548D99 /* userPic4.png in Resources */,
 				3557CEF620685F2C00548D99 /* userPic9.png in Resources */,
 				359615D32079B6DA00B6760D /* feedback (1).png in Resources */,
+				35C9C4042185499A00110F46 /* Lato-Bold.ttf in Resources */,
 				359615DC2079BD4A00B6760D /* bank.png in Resources */,
+				35C9C4002185499A00110F46 /* Lato-Regular.ttf in Resources */,
 				359615D92079BCF000B6760D /* secure-file (1).png in Resources */,
+				35C9C40C2185499A00110F46 /* Lato-Light.ttf in Resources */,
 				359615CD2079B52000B6760D /* secure-file.png in Resources */,
 				35A25EB8204DF9960023A77D /* Background.png in Resources */,
 				359615CB2079B52000B6760D /* info.png in Resources */,
 				359615D02079B5E500B6760D /* feedback.png in Resources */,
 				3557CEED20685E9B00548D99 /* UserProfile.png in Resources */,
 				35B0DA8B208ECE650005272C /* Info.plist in Resources */,
+				35C9C4022185499A00110F46 /* Lato-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		23E3BB5C33BD330735D9A194 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		32ACFF2876E54B036C882144 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -721,6 +854,7 @@
 				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -728,6 +862,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -747,6 +882,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGRunkeeperSwitch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -754,6 +890,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -791,6 +928,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C5A86615BF84D6769E95C198 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D1D10C2BB9F58FED3D3B2158 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -819,6 +971,7 @@
 				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -826,6 +979,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -845,6 +999,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGRunkeeperSwitch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -852,6 +1007,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",

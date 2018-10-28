@@ -103,8 +103,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
          self.tabBarController?.delegate = self
        // navigationController?.navigationBar.tintColor = UIColor.white
         
-      /*  TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
-        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)*/
+    TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
         
         if revealViewController() != nil {
             menuButton.target = revealViewController()
@@ -163,12 +163,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
       
     }
     
-   /* override func viewWillDisappear(_ animated: Bool) {
+   override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-      
-        let vc = self.tabBarController?.viewControllers![2] as! ListTableViewController
-        vc.museum = allMuseums
-    }*/
+        self.navigationController?.isNavigationBarHidden = false
+    TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+    setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
+       //let vc = self.tabBarController?.viewControllers![2] as! ListTableViewController
+       // vc.museum = allMuseums
+    }
     
     @IBAction func switchValueDidChange(sender: DGRunkeeperSwitch!) {
         print("valueChanged: \(sender.selectedIndex)")
