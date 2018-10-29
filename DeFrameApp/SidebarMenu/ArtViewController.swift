@@ -64,7 +64,7 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
      //   self.headingLabel.sizeToFit()
         
         
-       
+         self.descriptionTextView.sizeThatFits(CGSize(width: self.descriptionTextView.frame.size.width, height: self.descriptionTextView.frame.size.height))
         
       //  self.yearLabel.sizeToFit()
         
@@ -183,7 +183,7 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
         
         self.headingLabel.text = self.artPageHeadingsArray[indexPath.row]
         
-   
+  self.descriptionTextView.sizeThatFits(CGSize(width: self.descriptionTextView.frame.size.width, height: self.descriptionTextView.frame.size.height))
 
         self.authorLabel.text=self.artPageAuthorArray[indexPath.row]
         
