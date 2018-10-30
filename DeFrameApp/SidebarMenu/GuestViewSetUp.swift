@@ -14,10 +14,40 @@ import MapKit
 import CoreLocation
 import FBSDKCoreKit
 import CoreData
+import Tamamushi
 import MaterialComponents.MaterialTextFields
 
 class GuestViewSetUp:UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     @IBOutlet weak var NickUserText: UITextField!
+    let colorNames = [
+        "SoundCloud",
+        "Facebook Messenger",
+        "Flickr",
+        "Vine",
+        "YouTube",
+        "Pinky",
+        "Sunrise",
+        "Playing with Reds",
+        "Ukraine",
+        "Curiosity blue",
+        "Between Night and Day",
+        "Timber",
+        "Passion",
+        "Master Card",
+        "Green and Blue",
+        "Inbox",
+        "Little Leaf",
+        "Alihossein",
+        "Endless River",
+        "Kyoto",
+        "Twitch"
+    ]
+    
+    var lastSelectedIndexPath = IndexPath(row: 0, section: 0)
+    var gradientDirection = Direction.vertical
+    func setGradientBarWithIndexPath(indexPath: IndexPath, onBar: UINavigationBar) {
+        TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
+    }
     var listOFImages=["userPic3.png","userPic4.png","userPic8.png","userPic9.png","userPic11.png","userPic5.png","userPic7.png","userPic2.png","UserProfile.png"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +62,9 @@ class GuestViewSetUp:UIViewController,UICollectionViewDataSource, UICollectionVi
         
         super.viewWillAppear(true)
        
+        self.navigationController?.isNavigationBarHidden = false
+        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
        // NickUserText = MDCTextField()
         NickUserText.layer.borderColor = (UIColor(red: 193/255, green: 77/255, blue: 121/255, alpha: 1)).cgColor
        
