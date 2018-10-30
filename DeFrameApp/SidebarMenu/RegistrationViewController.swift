@@ -21,6 +21,9 @@ class RegistrationViewController: UIViewController, UIBarPositioningDelegate {
         navigationController?.navigationBar.tintColor = .white
         // Do any additional setup after loading the view.
         self.addToolBar(textField: emailText)
+        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,6 +36,9 @@ class RegistrationViewController: UIViewController, UIBarPositioningDelegate {
         createGradientLayer()
     }
     
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
