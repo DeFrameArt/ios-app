@@ -150,13 +150,15 @@ extension String {
 
 extension RegistrationViewController: UITextFieldDelegate{
     func addToolBar(textField: UITextField){
-        var toolBar = UIToolbar()
+        let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
+        
         //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.tintColor = UIColor(red: 200/255.0, green: 31/255.0, blue: 97/255.0, alpha:1.0)
-        var doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: "donePressed")
-        toolBar.setItems([doneButton], animated: false)
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(RegistrationViewController.donePressed))
+        toolBar.items = [flexBarButton, doneButton]
         toolBar.isUserInteractionEnabled = true
         toolBar.sizeToFit()
         
