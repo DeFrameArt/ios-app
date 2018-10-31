@@ -53,7 +53,23 @@ class GuestViewSetUp:UIViewController,UICollectionViewDataSource, UICollectionVi
         super.viewDidLoad()
         UIApplication.shared.statusBarStyle = .lightContent
         navigationController?.navigationBar.tintColor = .white
+        
+        viewPart1.layer.shadowOpacity = 0.5
+        viewPart1.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        viewPart1.layer.shadowRadius = 1.0
+       viewPart1.layer.shadowColor = UIColor.lightGray.cgColor
+        
+        viewPart2.layer.shadowOpacity = 0.5
+        viewPart2.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        viewPart2.layer.shadowRadius = 1.0
+        viewPart2.layer.shadowColor = UIColor.lightGray.cgColor
+        
+        var gradient:CAGradientLayer = CAGradientLayer()
+        gradient.frame = self.toolBarGuest.bounds
+        gradient.colors = [UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0).cgColor,UIColor(red:0.80, green:0.26, blue:0.48, alpha:1.0).cgColor,UIColor(red:0.75, green:0.26, blue:0.48, alpha:1.0).cgColor, UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0).cgColor]
+        self.toolBarGuest.layer.insertSublayer(gradient, at: 0)
     }
+    @IBOutlet weak var toolBarGuest: UIToolbar!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -80,7 +96,9 @@ class GuestViewSetUp:UIViewController,UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listOFImages.count
     }
+    @IBOutlet weak var viewPart1: UIView!
     
+    @IBOutlet weak var viewPart2: UIView!
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width/3 - 6, height: collectionView.frame.size.width/3 - 6)
     }
