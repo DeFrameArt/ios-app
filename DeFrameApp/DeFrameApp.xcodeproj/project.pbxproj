@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C1D9F9BE02BB981F93AB80E /* Pods_DeFrameApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CD2666E740BAE932E3FA5D /* Pods_DeFrameApp.framework */; };
 		351B5D942067357400F3D6E8 /* UrlImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 351B5D932067357300F3D6E8 /* UrlImage.png */; };
 		351B5D982067577000F3D6E8 /* userPic2.png in Resources */ = {isa = PBXBuildFile; fileRef = 351B5D962067576A00F3D6E8 /* userPic2.png */; };
 		3544613020748B2300FA1CBF /* MuseumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544612F20748B2300FA1CBF /* MuseumTableViewCell.swift */; };
@@ -96,9 +95,6 @@
 		582037B41F33E82900C0F384 /* MuseumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582037B31F33E82900C0F384 /* MuseumViewController.swift */; };
 		582037B61F33E8A300C0F384 /* CarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582037B51F33E8A300C0F384 /* CarouselView.xib */; };
 		582037B81F369CCA00C0F384 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582037B71F369CCA00C0F384 /* CarouselView.swift */; };
-		58233A761F219462008D125F /* CraftARResourcesODIR.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58233A751F219462008D125F /* CraftARResourcesODIR.bundle */; };
-		58233A7A1F21A68D008D125F /* CraftAROnDeviceRecognitionSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58233A791F21A68D008D125F /* CraftAROnDeviceRecognitionSDK.framework */; };
-		58233A7C1F21A6A0008D125F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58233A7B1F21A6A0008D125F /* Pods.framework */; };
 		582BBD7D1F412DE600CDD73E /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582BBD7C1F412DE600CDD73E /* SDWebImage.framework */; };
 		586B948C1F11E09100F89AE8 /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586B948B1F11E09100F89AE8 /* Museum.swift */; };
 		586B948D1F11E09100F89AE8 /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586B948B1F11E09100F89AE8 /* Museum.swift */; };
@@ -112,7 +108,6 @@
 		58F68F1A1F7A0AF5006F7510 /* MuseumDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F68F181F7A0AF5006F7510 /* MuseumDetails.xib */; };
 		58F68F1B1F7A0AF5006F7510 /* MuseumDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F68F191F7A0AF5006F7510 /* MuseumDetailsView.swift */; };
 		58FED4C31F40DC6800239CBC /* artCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FED4C21F40DC6800239CBC /* artCollectionViewCell.swift */; };
-		64F69AB6FC7476B2A0C4EF27 /* Pods_DeFrameApp_DeFrameAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D587A9E509B42E717AC93DC6 /* Pods_DeFrameApp_DeFrameAppTests.framework */; };
 		A0533DDC1FBF8D1200452BF9 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0533DDB1FBF8D1100452BF9 /* FeedbackViewController.swift */; };
 		A058F3791FC3C0F7001FC901 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058F3781FC3C0F7001FC901 /* Constants.swift */; };
 		A058F3801FC40B3A001FC901 /* ArtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F68F121F759BA6006F7510 /* ArtView.swift */; };
@@ -140,6 +135,8 @@
 		F491E7531A7F7DF20026528E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491E7521A7F7DF20026528E /* MapViewController.swift */; };
 		F491E7551A7F7E010026528E /* TermsAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491E7541A7F7E010026528E /* TermsAndConditionViewController.swift */; };
 		F4D750181BD38F0C009E1003 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D750171BD38F0C009E1003 /* SWRevealViewController.m */; };
+		FABF3C57EC328E3C0BC9D662 /* Pods_DeFrameApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E2E4176FDA68ECADE33E53 /* Pods_DeFrameApp.framework */; };
+		FD2B73FDA0FEC013A5FA8BFB /* Pods_DeFrameApp_DeFrameAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964649D6E4878E78C3F360D /* Pods_DeFrameApp_DeFrameAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,7 +150,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17CD2666E740BAE932E3FA5D /* Pods_DeFrameApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeFrameApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		351B5D932067357300F3D6E8 /* UrlImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UrlImage.png; sourceTree = "<group>"; };
 		351B5D952067576500F3D6E8 /* UserProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserProfile.png; sourceTree = "<group>"; };
 		351B5D962067576A00F3D6E8 /* userPic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPic2.png; sourceTree = "<group>"; };
@@ -202,6 +198,7 @@
 		35C6CEE720A0076700E3E220 /* robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robot.png; sourceTree = "<group>"; };
 		35CFAB182083052900054444 /* MuseumViewControllerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumViewControllerList.swift; sourceTree = "<group>"; };
 		35DCB61D20791E9800224480 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
+		5600E0C26921C0F65B58EB99 /* Pods-DeFrameApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeFrameApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp.debug.xcconfig"; sourceTree = "<group>"; };
 		580C106920CDCB2D004D5619 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		581F70CC1F4287040064496C /* ArtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
 		581F71991F5B24610064496C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -209,7 +206,6 @@
 		582037B31F33E82900C0F384 /* MuseumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		582037B51F33E8A300C0F384 /* CarouselView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselView.xib; sourceTree = "<group>"; };
 		582037B71F369CCA00C0F384 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
-		58233A751F219462008D125F /* CraftARResourcesODIR.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CraftARResourcesODIR.bundle; sourceTree = "<group>"; };
 		58233A791F21A68D008D125F /* CraftAROnDeviceRecognitionSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CraftAROnDeviceRecognitionSDK.framework; path = Pods/CraftAROnDeviceRecognitionSDK.framework; sourceTree = "<group>"; };
 		58233A7B1F21A6A0008D125F /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = Pods/Pods.framework; sourceTree = "<group>"; };
 		582BBD7C1F412DE600CDD73E /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../Library/Developer/Xcode/DerivedData/DeFrameApp-bdewxslgezsniraaqpddjhhoxnhf/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
@@ -221,10 +217,11 @@
 		58F68F181F7A0AF5006F7510 /* MuseumDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MuseumDetails.xib; sourceTree = "<group>"; };
 		58F68F191F7A0AF5006F7510 /* MuseumDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuseumDetailsView.swift; sourceTree = "<group>"; };
 		58FED4C21F40DC6800239CBC /* artCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = artCollectionViewCell.swift; sourceTree = "<group>"; };
-		61A2A6B9EF8C39827324BD97 /* Pods-DeFrameApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeFrameApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp.release.xcconfig"; sourceTree = "<group>"; };
-		6BFCBE683780C4B20A3FCB6F /* Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		78AB8B821B75E8AD250BDC34 /* Pods-DeFrameApp-DeFrameAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeFrameApp-DeFrameAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		99CBF01BEDEC7A6D7B3C4CA4 /* Pods-DeFrameApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeFrameApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5964649D6E4878E78C3F360D /* Pods_DeFrameApp_DeFrameAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeFrameApp_DeFrameAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6448C3C9DA65DD6A5C4BEA49 /* Pods-DeFrameApp-DeFrameAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeFrameApp-DeFrameAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		740555F3ED69A2101BA7BF35 /* Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8798E19F01E91AE24ED8B150 /* Pods-DeFrameApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeFrameApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp.release.xcconfig"; sourceTree = "<group>"; };
+		91E2E4176FDA68ECADE33E53 /* Pods_DeFrameApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeFrameApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0533DDB1FBF8D1100452BF9 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		A058F3781FC3C0F7001FC901 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A058F38B1FCFA7B0001FC901 /* ChatBotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBotViewController.swift; sourceTree = "<group>"; };
@@ -233,7 +230,6 @@
 		A0B6CCAE2088496C001060BE /* show-more-button-with-three-dots (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "show-more-button-with-three-dots (1).png"; sourceTree = "<group>"; };
 		A0CBDFC81FB7F13600D36FAD /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		A0FE6278208D672F00948CDD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D587A9E509B42E717AC93DC6 /* Pods_DeFrameApp_DeFrameAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeFrameApp_DeFrameAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47029F01A7F27DB00E30A3C /* DeFrameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeFrameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47029F41A7F27DB00E30A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F47029FA1A7F27DB00E30A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -260,10 +256,8 @@
 			files = (
 				3556093820635ED700621E4F /* CoreData.framework in Frameworks */,
 				582BBD7D1F412DE600CDD73E /* SDWebImage.framework in Frameworks */,
-				58233A7C1F21A6A0008D125F /* Pods.framework in Frameworks */,
-				58233A7A1F21A68D008D125F /* CraftAROnDeviceRecognitionSDK.framework in Frameworks */,
 				F4702A161A7F342F00E30A3C /* MapKit.framework in Frameworks */,
-				2C1D9F9BE02BB981F93AB80E /* Pods_DeFrameApp.framework in Frameworks */,
+				FABF3C57EC328E3C0BC9D662 /* Pods_DeFrameApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,20 +265,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64F69AB6FC7476B2A0C4EF27 /* Pods_DeFrameApp_DeFrameAppTests.framework in Frameworks */,
+				FD2B73FDA0FEC013A5FA8BFB /* Pods_DeFrameApp_DeFrameAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2ABFD8F0611323E53C5B83E4 /* Pods */ = {
+		13E788744C8410276F6FC9A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				99CBF01BEDEC7A6D7B3C4CA4 /* Pods-DeFrameApp.debug.xcconfig */,
-				61A2A6B9EF8C39827324BD97 /* Pods-DeFrameApp.release.xcconfig */,
-				6BFCBE683780C4B20A3FCB6F /* Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig */,
-				78AB8B821B75E8AD250BDC34 /* Pods-DeFrameApp-DeFrameAppTests.release.xcconfig */,
+				5600E0C26921C0F65B58EB99 /* Pods-DeFrameApp.debug.xcconfig */,
+				8798E19F01E91AE24ED8B150 /* Pods-DeFrameApp.release.xcconfig */,
+				740555F3ED69A2101BA7BF35 /* Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig */,
+				6448C3C9DA65DD6A5C4BEA49 /* Pods-DeFrameApp-DeFrameAppTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -416,13 +410,12 @@
 			isa = PBXGroup;
 			children = (
 				A0FE6278208D672F00948CDD /* Podfile */,
-				58233A751F219462008D125F /* CraftARResourcesODIR.bundle */,
 				F47029F21A7F27DB00E30A3C /* DeFrame */,
 				F4702A081A7F27DC00E30A3C /* SidebarMenuTests */,
 				F47029F11A7F27DB00E30A3C /* Products */,
-				2ABFD8F0611323E53C5B83E4 /* Pods */,
 				F4702A151A7F342F00E30A3C /* MapKit.framework */,
 				F923C9EBD7542375F3AD88E4 /* Frameworks */,
+				13E788744C8410276F6FC9A4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -521,8 +514,8 @@
 				582BBD7C1F412DE600CDD73E /* SDWebImage.framework */,
 				58233A7B1F21A6A0008D125F /* Pods.framework */,
 				58233A791F21A68D008D125F /* CraftAROnDeviceRecognitionSDK.framework */,
-				17CD2666E740BAE932E3FA5D /* Pods_DeFrameApp.framework */,
-				D587A9E509B42E717AC93DC6 /* Pods_DeFrameApp_DeFrameAppTests.framework */,
+				91E2E4176FDA68ECADE33E53 /* Pods_DeFrameApp.framework */,
+				5964649D6E4878E78C3F360D /* Pods_DeFrameApp_DeFrameAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -534,11 +527,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4702A0F1A7F27DC00E30A3C /* Build configuration list for PBXNativeTarget "DeFrameApp" */;
 			buildPhases = (
-				D1D10C2BB9F58FED3D3B2158 /* [CP] Check Pods Manifest.lock */,
+				7BAF27FACF013C456563FBBE /* [CP] Check Pods Manifest.lock */,
 				F47029EC1A7F27DB00E30A3C /* Sources */,
 				F47029ED1A7F27DB00E30A3C /* Frameworks */,
 				F47029EE1A7F27DB00E30A3C /* Resources */,
-				32ACFF2876E54B036C882144 /* [CP] Embed Pods Frameworks */,
+				CD9B37A62065D597E33EAEDA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -553,11 +546,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4702A121A7F27DC00E30A3C /* Build configuration list for PBXNativeTarget "DeFrameAppTests" */;
 			buildPhases = (
-				A28D34889E5925A4053CCF74 /* [CP] Check Pods Manifest.lock */,
+				08F4425B56C7BED64A519865 /* [CP] Check Pods Manifest.lock */,
 				F4702A011A7F27DC00E30A3C /* Sources */,
 				F4702A021A7F27DC00E30A3C /* Frameworks */,
 				F4702A031A7F27DC00E30A3C /* Resources */,
-				E65C640B1A68DE0435E5B33E /* [CP] Embed Pods Frameworks */,
+				9EDCF5E0A107DD98D74872DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -625,7 +618,6 @@
 				35DCB61E20791E9A00224480 /* library.png in Resources */,
 				35A25EBA204DFA7D0023A77D /* Logo.png in Resources */,
 				3557CEEA20685E9B00548D99 /* userPic3.png in Resources */,
-				58233A761F219462008D125F /* CraftARResourcesODIR.bundle in Resources */,
 				3552EC92209FB9EB00D1C29D /* display.png in Resources */,
 				351B5D942067357400F3D6E8 /* UrlImage.png in Resources */,
 				35A25EB7204DF9960023A77D /* Background.png in Resources */,
@@ -699,69 +691,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32ACFF2876E54B036C882144 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
-				"${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
-				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
-				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
-				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
-				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/Tamamushi/Tamamushi.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGRunkeeperSwitch.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tamamushi.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A28D34889E5925A4053CCF74 /* [CP] Check Pods Manifest.lock */ = {
+		08F4425B56C7BED64A519865 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -779,7 +709,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D1D10C2BB9F58FED3D3B2158 /* [CP] Check Pods Manifest.lock */ = {
+		7BAF27FACF013C456563FBBE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -797,7 +727,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E65C640B1A68DE0435E5B33E /* [CP] Embed Pods Frameworks */ = {
+		9EDCF5E0A107DD98D74872DD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -823,6 +753,7 @@
 				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/RMPZoomTransitionAnimator/RMPZoomTransitionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -849,6 +780,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RMPZoomTransitionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -857,6 +789,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD9B37A62065D597E33EAEDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/RMPZoomTransitionAnimator/RMPZoomTransitionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Tamamushi/Tamamushi.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGRunkeeperSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RMPZoomTransitionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tamamushi.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1056,7 +1052,7 @@
 		};
 		F4702A101A7F27DC00E30A3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99CBF01BEDEC7A6D7B3C4CA4 /* Pods-DeFrameApp.debug.xcconfig */;
+			baseConfigurationReference = 5600E0C26921C0F65B58EB99 /* Pods-DeFrameApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1081,7 +1077,7 @@
 		};
 		F4702A111A7F27DC00E30A3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A2A6B9EF8C39827324BD97 /* Pods-DeFrameApp.release.xcconfig */;
+			baseConfigurationReference = 8798E19F01E91AE24ED8B150 /* Pods-DeFrameApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1105,7 +1101,7 @@
 		};
 		F4702A131A7F27DC00E30A3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BFCBE683780C4B20A3FCB6F /* Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig */;
+			baseConfigurationReference = 740555F3ED69A2101BA7BF35 /* Pods-DeFrameApp-DeFrameAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1132,7 +1128,7 @@
 		};
 		F4702A141A7F27DC00E30A3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78AB8B821B75E8AD250BDC34 /* Pods-DeFrameApp-DeFrameAppTests.release.xcconfig */;
+			baseConfigurationReference = 6448C3C9DA65DD6A5C4BEA49 /* Pods-DeFrameApp-DeFrameAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

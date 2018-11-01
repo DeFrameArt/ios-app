@@ -1,18 +1,16 @@
-/*
- Copyright 2017-present the Material Components for iOS authors. All Rights Reserved.
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- */
+// Copyright 2017-present the Material Components for iOS authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 #import <CoreGraphics/CoreGraphics.h>
 
 #import "MDCBottomNavigationItemView.h"
@@ -24,25 +22,9 @@
 #import "MaterialMath.h"
 #import "MDCBottomNavigationItemBadge.h"
 
-static NSString *const MDCBottomNavigationItemViewTitleBelowIconKey =
-    @"MDCBottomNavigationItemViewTitleBelowIconKey";
-static NSString *const MDCBottomNavigationItemViewSelectedKey =
-    @"MDCBottomNavigationItemViewSelectedKey";
-static NSString *const MDCBottomNavigationItemViewTitleVisibilityKey =
-    @"MDCBottomNavigationItemViewTitleVisibilityKey";
-static NSString *const MDCBottomNavigationItemViewTitleKey = @"MDCBottomNavigationItemViewTitleKey";
-static NSString *const MDCBottomNavigationItemViewItemTitleFontKey =
-    @"MDCBottomNavigationItemViewItemTitleFontKey";
-static NSString *const MDCBottomNavigationItemViewBadgeColorKey =
-    @"MDCBottomNavigationItemViewBadgeColorKey";
-static NSString *const MDCBottomNavigationItemViewSelectedItemTintColorKey =
-    @"MDCBottomNavigationItemViewSelectedItemTintColorKey";
-static NSString *const MDCBottomNavigationItemViewUnselectedItemTintColorKey =
-    @"MDCBottomNavigationItemViewUnselectedItemTintColorKey";
-
 static const CGFloat MDCBottomNavigationItemViewInkOpacity = 0.150f;
-static const CGFloat kMDCBottomNavigationItemViewItemInset = 8.f;
 static const CGFloat MDCBottomNavigationItemViewTitleFontSize = 12.f;
+static const CGFloat kMDCBottomNavigationItemViewBadgeYOffset = 4.f;
 
 // The duration of the selection transition animation.
 static const NSTimeInterval kMDCBottomNavigationItemViewTransitionDuration = 0.180f;
@@ -56,6 +38,8 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
 @property(nonatomic, strong) MDCBottomNavigationItemBadge *badge;
 @property(nonatomic, strong) UIImageView *iconImageView;
 @property(nonatomic, strong) UILabel *label;
+@property(nonatomic) BOOL shouldPretendToBeATab;
+- (CGPoint)badgeCenterFromIconFrame:(CGRect)iconFrame isRTL:(BOOL)isRTL;
 
 @end
 
@@ -64,6 +48,17 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
 - (instancetype)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
+#if defined(__IPHONE_10_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
+#pragma clang diagnostic ignored "-Wtautological-pointer-compare"
+    if (&UIAccessibilityTraitTabBar == NULL) {
+      _shouldPretendToBeATab = YES;
+    }
+#pragma clang diagnostic pop
+#else
+    _shouldPretendToBeATab = YES;
+#endif
     _titleBelowIcon = YES;
     [self commonMDCBottomNavigationItemViewInit];
   }
@@ -99,51 +94,9 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
              @"Unexpected number of subviews. Expected %lu but restored %lu. Unarchiving may fail.",
              (unsigned long)self.subviews.count, (unsigned long)totalViewsProcessed);
 
-    if ([aDecoder containsValueForKey:MDCBottomNavigationItemViewTitleBelowIconKey]) {
-      _titleBelowIcon = [aDecoder decodeBoolForKey:MDCBottomNavigationItemViewTitleBelowIconKey];
-    }
-    if ([aDecoder containsValueForKey:MDCBottomNavigationItemViewSelectedKey]) {
-      _selected = [aDecoder decodeBoolForKey:MDCBottomNavigationItemViewSelectedKey];
-    }
-    if ([aDecoder containsValueForKey:MDCBottomNavigationItemViewTitleVisibilityKey]) {
-      _titleVisibility =
-          [aDecoder decodeIntegerForKey:MDCBottomNavigationItemViewTitleVisibilityKey];
-    }
-    if ([aDecoder containsValueForKey:MDCBottomNavigationItemViewTitleKey]) {
-      _title = [aDecoder decodeObjectForKey:MDCBottomNavigationItemViewTitleKey];
-    }
-    if ([aDecoder containsValueForKey:MDCBottomNavigationItemViewItemTitleFontKey]) {
-      _itemTitleFont = [aDecoder decodeObjectForKey:MDCBottomNavigationItemViewItemTitleFontKey];
-    }
-    if ([aDecoder containsValueForKey:MDCBottomNavigationItemViewBadgeColorKey]) {
-      _badgeColor = [aDecoder decodeObjectForKey:MDCBottomNavigationItemViewBadgeColorKey];
-    }
-    if ([aDecoder containsValueForKey:MDCBottomNavigationItemViewSelectedItemTintColorKey]) {
-      _selectedItemTintColor =
-          [aDecoder decodeObjectForKey:MDCBottomNavigationItemViewSelectedItemTintColorKey];
-    }
-    if ([aDecoder containsValueForKey:MDCBottomNavigationItemViewUnselectedItemTintColorKey]) {
-      _unselectedItemTintColor =
-      [aDecoder decodeObjectForKey:MDCBottomNavigationItemViewUnselectedItemTintColorKey];
-    }
-
     [self commonMDCBottomNavigationItemViewInit];
   }
   return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-  [super encodeWithCoder:aCoder];
-  [aCoder encodeBool:self.titleBelowIcon forKey:MDCBottomNavigationItemViewTitleBelowIconKey];
-  [aCoder encodeBool:self.selected forKey:MDCBottomNavigationItemViewSelectedKey];
-  [aCoder encodeInteger:self.titleVisibility forKey:MDCBottomNavigationItemViewTitleVisibilityKey];
-  [aCoder encodeObject:self.title forKey:MDCBottomNavigationItemViewTitleKey];
-  [aCoder encodeObject:self.itemTitleFont forKey:MDCBottomNavigationItemViewItemTitleFontKey];
-  [aCoder encodeObject:self.badgeColor  forKey:MDCBottomNavigationItemViewBadgeColorKey];
-  [aCoder encodeObject:self.selectedItemTintColor
-                forKey:MDCBottomNavigationItemViewSelectedItemTintColorKey];
-  [aCoder encodeObject:self.unselectedItemTintColor
-                forKey:MDCBottomNavigationItemViewUnselectedItemTintColorKey];
 }
 
 - (void)commonMDCBottomNavigationItemViewInit {
@@ -196,6 +149,7 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
     _button.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     _button.accessibilityLabel = [self accessibilityLabelWithTitle:_title];
     _button.accessibilityTraits &= ~UIAccessibilityTraitButton;
+    _button.accessibilityValue = self.accessibilityValue;
     [self addSubview:_button];
   }
 }
@@ -203,77 +157,92 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
 - (void)layoutSubviews {
   [super layoutSubviews];
 
-  CGSize labelSize = [self.title boundingRectWithSize:self.bounds.size
-                                              options:NSStringDrawingUsesLineFragmentOrigin
-                                           attributes:@{ NSFontAttributeName:self.label.font }
-                                              context:nil].size;
-  self.label.frame = CGRectMake(0, 0, labelSize.width, labelSize.height);
+  [self.label sizeToFit];
+  CGSize labelSize = CGSizeMake(CGRectGetWidth(self.label.bounds),
+                                CGRectGetHeight(self.label.bounds));
+  CGFloat maxWidth = CGRectGetWidth(self.bounds);
+  self.label.frame = CGRectMake(0, 0, MIN(maxWidth, labelSize.width), labelSize.height);
   self.inkView.maxRippleRadius =
       (CGFloat)(MDCHypot(CGRectGetHeight(self.bounds), CGRectGetWidth(self.bounds)) / 2);
   [self centerLayoutAnimated:NO];
 }
 
-- (void)centerLayoutAnimated:(bool)animated {
+- (void)centerLayoutAnimated:(BOOL)animated {
+  CGRect contentBoundingRect = UIEdgeInsetsInsetRect(self.bounds, self.contentInsets);
+  CGFloat centerY = CGRectGetMidY(contentBoundingRect);
+  CGFloat centerX = CGRectGetMidX(contentBoundingRect);
+  UIUserInterfaceLayoutDirection layoutDirection = self.mdf_effectiveUserInterfaceLayoutDirection;
+  BOOL isRTL = layoutDirection == UIUserInterfaceLayoutDirectionRightToLeft;
+  if (isRTL) {
+    centerX = CGRectGetWidth(self.bounds) - centerX;
+  }
+
   if (self.titleBelowIcon) {
-    CGPoint iconImageViewCenter =
-        CGPointMake(CGRectGetMidX(self.bounds), CGRectGetHeight(self.iconImageView.bounds) / 2 +
-                    kMDCBottomNavigationItemViewItemInset);
-    BOOL titleVisibilityNever = self.selected &&
-        self.titleVisibility == MDCBottomNavigationBarTitleVisibilityNever;
-    BOOL titleVisibilitySelectedNever = !self.selected &&
-        (self.titleVisibility == MDCBottomNavigationBarTitleVisibilitySelected ||
-         self.titleVisibility == MDCBottomNavigationBarTitleVisibilityNever);
-    if (titleVisibilityNever) {
-      iconImageViewCenter = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-    } else if (titleVisibilitySelectedNever) {
-      iconImageViewCenter = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+    BOOL titleHidden =
+        self.titleVisibility == MDCBottomNavigationBarTitleVisibilityNever ||
+        (self.titleVisibility == MDCBottomNavigationBarTitleVisibilitySelected && !self.selected);
+    CGFloat iconHeight = CGRectGetHeight(self.iconImageView.bounds);
+    CGFloat labelHeight = CGRectGetHeight(self.label.bounds);
+    CGFloat totalContentHeight = iconHeight;
+    if (!titleHidden) {
+      totalContentHeight += labelHeight + self.contentVerticalMargin;
     }
-    CGPoint badgeCenter =
-        CGPointMake(CGRectGetMidX(self.bounds) + CGRectGetWidth(self.iconImageView.bounds) / 2,
-                    iconImageViewCenter.y - CGRectGetMidX(self.iconImageView.bounds));
-    self.label.center =
-        CGPointMake(CGRectGetMidX(self.bounds), CGRectGetHeight(self.bounds) -
-                    CGRectGetHeight(self.label.bounds) / 2 - kMDCBottomNavigationItemViewItemInset);
+    CGPoint iconImageViewCenter =
+        CGPointMake(centerX, centerY - totalContentHeight / 2 + iconHeight / 2);
+    self.label.center = CGPointMake(centerX, centerY + totalContentHeight / 2 - labelHeight / 2);
     if (animated) {
       [UIView animateWithDuration:kMDCBottomNavigationItemViewTransitionDuration animations:^(void) {
         self.iconImageView.center = iconImageViewCenter;
-        self.badge.center = badgeCenter;
       }];
     } else {
       self.iconImageView.center = iconImageViewCenter;
-      self.badge.center = badgeCenter;
     }
     self.label.textAlignment = NSTextAlignmentCenter;
   } else {
-    UIUserInterfaceLayoutDirection layoutDirection = self.mdf_effectiveUserInterfaceLayoutDirection;
-    if (layoutDirection == UIUserInterfaceLayoutDirectionLeftToRight) {
+    CGFloat contentsWidth =
+        CGRectGetWidth(self.iconImageView.bounds) + CGRectGetWidth(self.label.bounds);
+    if (!isRTL) {
       CGPoint iconImageViewCenter =
-          CGPointMake(CGRectGetMidX(self.bounds) - CGRectGetWidth(self.bounds) * 0.2f,
-                      CGRectGetMidY(self.bounds));
+          CGPointMake(centerX - CGRectGetWidth(contentBoundingRect) * 0.2f, centerY);
       self.iconImageView.center = iconImageViewCenter;
-      self.label.center =
-          CGPointMake(iconImageViewCenter.x + CGRectGetWidth(self.iconImageView.bounds) +
-                      CGRectGetWidth(self.label.bounds) / 2,
-                      CGRectGetMidY(self.bounds));
-      self.badge.center =
-          CGPointMake(CGRectGetMidX(self.bounds) - CGRectGetWidth(self.bounds) * 0.2f +
-                      CGRectGetWidth(self.iconImageView.bounds) / 2,
-                      iconImageViewCenter.y - CGRectGetMidX(self.iconImageView.bounds));
+      CGFloat labelCenterX =
+          iconImageViewCenter.x + contentsWidth / 2 + self.contentHorizontalMargin;
+      self.label.center = CGPointMake(labelCenterX, centerY);
       self.label.textAlignment = NSTextAlignmentLeft;
     } else {
       CGPoint iconImageViewCenter =
-          CGPointMake(CGRectGetMidX(self.bounds) + CGRectGetWidth(self.bounds) * 0.2f,
-                      CGRectGetMidY(self.bounds));
+          CGPointMake(centerX + CGRectGetWidth(contentBoundingRect) * 0.2f, centerY);
       self.iconImageView.center = iconImageViewCenter;
-      self.label.center =
-          CGPointMake(iconImageViewCenter.x - CGRectGetWidth(self.iconImageView.bounds) -
-                      CGRectGetWidth(self.label.bounds) / 2,
-                      CGRectGetMidY(self.bounds));
-      self.badge.center =
-          CGPointMake(CGRectGetMidX(self.bounds) + CGRectGetWidth(self.bounds) * 0.2f +
-                      CGRectGetWidth(self.iconImageView.bounds) / 2,
-                      iconImageViewCenter.y - CGRectGetMidX(self.iconImageView.bounds));
+      CGFloat labelCenterX =
+          iconImageViewCenter.x - contentsWidth / 2 - self.contentHorizontalMargin;
+      self.label.center = CGPointMake(labelCenterX, centerY);
       self.label.textAlignment = NSTextAlignmentRight;
+    }
+  }
+  self.badge.center = [self badgeCenterFromIconFrame:CGRectStandardize(self.iconImageView.frame)
+                                               isRTL:isRTL];
+}
+
+- (void)updateLabelVisibility {
+  if (self.selected) {
+    switch (self.titleVisibility) {
+      case MDCBottomNavigationBarTitleVisibilitySelected:
+      case MDCBottomNavigationBarTitleVisibilityAlways:
+        self.label.hidden = NO;
+        break;
+      case MDCBottomNavigationBarTitleVisibilityNever:
+        self.label.hidden = YES;
+        break;
+    }
+  } else {
+    switch (self.titleVisibility) {
+      case MDCBottomNavigationBarTitleVisibilitySelected:
+      case MDCBottomNavigationBarTitleVisibilityNever:
+        self.label.hidden = YES;
+        break;
+      case MDCBottomNavigationBarTitleVisibilityAlways:
+        self.label.hidden = NO;
+        break;
     }
   }
 }
@@ -286,17 +255,28 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
     [labelComponents addObject:title];
   }
 
-  NSString *key =
-      kMaterialBottomNavigationStringTable[kStr_MaterialBottomNavigationTabElementAccessibilityLabel];
-  NSString *tabString =
-      NSLocalizedStringFromTableInBundle(key,
-                                         kMaterialBottomNavigationStringsTableName,
-                                         [[self class] bundle],
-                                         kMDCBottomNavigationItemViewTabString);
-  [labelComponents addObject:tabString];
+  if (self.shouldPretendToBeATab) {
+    NSString *key =
+        kMaterialBottomNavigationStringTable[kStr_MaterialBottomNavigationTabElementAccessibilityLabel];
+    NSString *tabString =
+        NSLocalizedStringFromTableInBundle(key,
+                                           kMaterialBottomNavigationStringsTableName,
+                                           [[self class] bundle],
+                                           kMDCBottomNavigationItemViewTabString);
+    [labelComponents addObject:tabString];
+  }
 
   // Speak components with a pause in between.
   return [labelComponents componentsJoinedByString:@", "];
+}
+
+- (CGPoint)badgeCenterFromIconFrame:(CGRect)iconFrame isRTL:(BOOL)isRTL {
+  if (isRTL) {
+    return CGPointMake(CGRectGetMinX(iconFrame),
+                       CGRectGetMinY(iconFrame) + kMDCBottomNavigationItemViewBadgeYOffset);
+  }
+  return CGPointMake(CGRectGetMaxX(iconFrame),
+                     CGRectGetMinY(iconFrame) + kMDCBottomNavigationItemViewBadgeYOffset);
 }
 
 - (NSString *)badgeValue {
@@ -315,34 +295,14 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
     self.label.textColor = self.selectedItemTitleColor;
     self.iconImageView.tintColor = self.selectedItemTintColor;
     self.button.accessibilityTraits |= UIAccessibilityTraitSelected;
-
-    switch (self.titleVisibility) {
-      case MDCBottomNavigationBarTitleVisibilitySelected:
-        self.label.hidden = NO;
-        break;
-      case MDCBottomNavigationBarTitleVisibilityAlways:
-        self.label.hidden = NO;
-        break;
-      case MDCBottomNavigationBarTitleVisibilityNever:
-        self.label.hidden = YES;
-        break;
-    }
+    self.iconImageView.image = (self.selectedImage) ? self.selectedImage : self.image;
+    [self updateLabelVisibility];
   } else {
     self.label.textColor = self.unselectedItemTintColor;
     self.iconImageView.tintColor = self.unselectedItemTintColor;
     self.button.accessibilityTraits &= ~UIAccessibilityTraitSelected;
-
-    switch (self.titleVisibility) {
-      case MDCBottomNavigationBarTitleVisibilitySelected:
-        self.label.hidden = YES;
-        break;
-      case MDCBottomNavigationBarTitleVisibilityAlways:
-        self.label.hidden = NO;
-        break;
-      case MDCBottomNavigationBarTitleVisibilityNever:
-        self.label.hidden = YES;
-        break;
-    }
+    self.iconImageView.image = self.image;
+    [self updateLabelVisibility];
   }
   [self centerLayoutAnimated:animated];
 }
@@ -353,9 +313,10 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
   if (self.selected) {
     self.iconImageView.tintColor = self.selectedItemTintColor;
     self.label.textColor = self.selectedItemTitleColor;
-    self.inkView.inkColor =
-        [self.selectedItemTintColor colorWithAlphaComponent:MDCBottomNavigationItemViewInkOpacity];
   }
+  self.inkView.inkColor =
+      [self.selectedItemTintColor colorWithAlphaComponent:MDCBottomNavigationItemViewInkOpacity];
+
 }
 
 - (void)setUnselectedItemTintColor:(UIColor *)unselectedItemTintColor {
@@ -363,8 +324,6 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
   if (!self.selected) {
     self.iconImageView.tintColor = self.unselectedItemTintColor;
     self.label.textColor = self.unselectedItemTintColor;
-    CGFloat alpha = MDCBottomNavigationItemViewInkOpacity;
-    self.inkView.inkColor = [self.unselectedItemTintColor colorWithAlphaComponent:alpha];
   }
 }
 
@@ -386,7 +345,9 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
     badgeValue = nil;
   }
   self.badge.badgeValue = badgeValue;
-  self.button.accessibilityValue = badgeValue;
+  if ([super accessibilityValue] == nil || [self accessibilityValue].length == 0) {
+    self.button.accessibilityValue = badgeValue;
+  }
   if (badgeValue == nil || badgeValue.length == 0) {
     self.badge.hidden = YES;
   } else {
@@ -397,6 +358,14 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
 - (void)setImage:(UIImage *)image {
   _image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
   self.iconImageView.image = _image;
+  self.iconImageView.tintColor = (self.selected) ? self.selectedItemTintColor
+      : self.unselectedItemTintColor;
+  [self.iconImageView sizeToFit];
+}
+
+-(void)setSelectedImage:(UIImage *)selectedImage {
+  _selectedImage = [selectedImage imageWithRenderingMode: UIImageRenderingModeAlwaysTemplate];
+  self.iconImageView.image = _selectedImage;
   self.iconImageView.tintColor = self.selectedItemTintColor;
   [self.iconImageView sizeToFit];
 }
@@ -407,10 +376,32 @@ static NSString *const kMDCBottomNavigationItemViewTabString = @"tab";
   self.button.accessibilityLabel = [self accessibilityLabelWithTitle:_title];
 }
 
+-(void)setTitleVisibility:(MDCBottomNavigationBarTitleVisibility)titleVisibility {
+  _titleVisibility = titleVisibility;
+  [self updateLabelVisibility];
+}
+
 - (void)setItemTitleFont:(UIFont *)itemTitleFont {
   _itemTitleFont = itemTitleFont;
   self.label.font = itemTitleFont;
   [self setNeedsLayout];
+}
+
+-(void)setAccessibilityValue:(NSString *)accessibilityValue {
+  [super setAccessibilityValue:accessibilityValue];
+  self.button.accessibilityValue = accessibilityValue;
+}
+
+- (NSString *)accessibilityValue {
+  return self.button.accessibilityValue;
+}
+
+-(void)setAccessibilityIdentifier:(NSString *)accessibilityIdentifier {
+  self.button.accessibilityIdentifier = accessibilityIdentifier;
+}
+
+-(NSString *)accessibilityIdentifier {
+  return self.button.accessibilityIdentifier;
 }
 
 #pragma mark - Resource bundle

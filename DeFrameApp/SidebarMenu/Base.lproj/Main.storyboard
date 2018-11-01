@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TD-bi-rsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3217.5" y="-1440.8450704225352"/>
+            <point key="canvasLocation" x="2896" y="-1747"/>
         </scene>
         <!--Museum-->
         <scene sceneID="Gh9-ZP-LsT">
@@ -9405,6 +9405,6 @@ AAbotQAG6LgABujKAAbozQAG6NIAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAAAbo1A
     <inferredMetricsTieBreakers>
         <segue reference="kFb-Uj-P5h"/>
         <segue reference="UZh-Ym-JJe"/>
-        <segue reference="5bQ-cI-Rx8"/>
+        <segue reference="3p1-Mz-F30"/>
     </inferredMetricsTieBreakers>
 </document>

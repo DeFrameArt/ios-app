@@ -1,18 +1,16 @@
-/*
- Copyright 2017-present the Material Components for iOS authors. All Rights Reserved.
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- */
+// Copyright 2017-present the Material Components for iOS authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 #import <UIKit/UIKit.h>
 
@@ -122,6 +120,32 @@ typedef NS_ENUM(NSInteger, MDCBottomNavigationBarAlignment) {
  To color the background of the view use -barTintColor instead.
  */
 @property(nullable, nonatomic,copy) UIColor *backgroundColor UI_APPEARANCE_SELECTOR;
+
+/**
+ The inset applied to each items bounds to determine the rect in which the items' contents will be
+ centered. The contents are centered in this rect, but not compressed, so they may still extend
+ beyond these bounds. Defaults to {0, 0, 0, 0}. The inset is flipped for RTL.
+ */
+@property(nonatomic, assign) UIEdgeInsets itemsContentInsets;
+
+/**
+ The margin between the item's icon and title when alignment is either Justified or Centered.
+ Defaults to 0.
+ */
+@property(nonatomic, assign) CGFloat itemsContentVerticalMargin;
+
+/**
+ The margin between the item's icon and title when alignment is JustifiedAdjacentTitles. Defaults to
+ 12.
+ */
+@property(nonatomic, assign) CGFloat itemsContentHorizontalMargin;
+
+/**
+ Returns the navigation bar subview associated with the specific item.
+
+ @param item A UITabBarItem
+ */
+- (nullable UIView *)viewForItem:(nonnull UITabBarItem *)item;
 
 @end
 
