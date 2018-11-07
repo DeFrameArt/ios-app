@@ -631,7 +631,6 @@
 				F47029ED1A7F27DB00E30A3C /* Frameworks */,
 				F47029EE1A7F27DB00E30A3C /* Resources */,
 				32ACFF2876E54B036C882144 /* [CP] Embed Pods Frameworks */,
-				C5A86615BF84D6769E95C198 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -651,7 +650,6 @@
 				F4702A021A7F27DC00E30A3C /* Frameworks */,
 				F4702A031A7F27DC00E30A3C /* Resources */,
 				E65C640B1A68DE0435E5B33E /* [CP] Embed Pods Frameworks */,
-				23E3BB5C33BD330735D9A194 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -829,21 +827,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23E3BB5C33BD330735D9A194 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		32ACFF2876E54B036C882144 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -926,21 +909,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C5A86615BF84D6769E95C198 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D1D10C2BB9F58FED3D3B2158 /* [CP] Check Pods Manifest.lock */ = {

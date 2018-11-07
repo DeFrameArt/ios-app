@@ -1,0 +1,12 @@
+DeFrame is a universal Free app for Museums and Art galleries. 
+
+DeFrame mobile application allows you to discover, connect, and interact with art museums near you. The content provided by DeFrame is ​constantly updated so you are always aware of what’s going on in the art world.
+
+1. Discover local museums and galleries near you
+2. Look at their art highlights
+3. Read about featured art exhibitions
+4. (Ask Frida) Your virtual Art Assistant any question related to Museums and Art.
+
+- Currently, we are featuring local Boston museums. Stay tuned for upcoming updates and addition of museum and art galleries in your city.
+
+One App - All Museums.

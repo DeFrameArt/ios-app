@@ -1,0 +1,8 @@
+app_identifier("com.DeFrame.DeFrameApp") # The bundle identifier of your app
+apple_id("prsverma4@gmail.com") # Your Apple email address
+
+itc_team_id("118804001") # App Store Connect Team ID
+team_id("J42C78J3VY") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

@@ -1,0 +1,1 @@
+The user can log in as a guest or register himself as a 'DeFrame' user.

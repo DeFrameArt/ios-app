@@ -1,0 +1,1 @@
+Fixed Text Overlap of the Art Image Title Name.
