@@ -250,8 +250,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
     cell.titleMuseum.text = museums.name
         if(modelName=="iPhone 5s"){
         
-        cell.titleMuseum.font = MDCTypography.subheadFont()
-            cell.titleMuseum.alpha = MDCTypography.display1FontOpacity()
+        //cell.titleMuseum.font = MDCTypography.subheadFont()
+          //  cell.titleMuseum.alpha = MDCTypography.display1FontOpacity()
             
             // If using autolayout, the following line is unnecessary as long
             // as all constraints are valid.
@@ -265,14 +265,16 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
             var temp : String?
             temp="\(museums.street ?? ""), \(museums.city ?? ""), \(museums.zip ?? "")"
             cell.address.text = temp
-             cell.address.font = MDCTypography.subheadFont()
-            cell.address.alpha = MDCTypography.subheadFontOpacity()
+           //  cell.address.font = MDCTypography.subheadFont()
+          //  cell.address.alpha = MDCTypography.subheadFontOpacity()
             
             // If using autolayout, the following line is unnecessary as long
             // as all constraints are valid.
            cell.address.sizeToFit()
-       
-          cell.infoView.layer.shadowOpacity = 0.5
+       // cell.coverView.layer.cornerRadius = 8.0
+        cell.infoView.layer.shadowOpacity = 0.8
+          cell.infoView.layer.cornerRadius = 8.0
+        cell.infoView.layer.masksToBounds = true
         cell.infoView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
          cell.infoView.layer.shadowRadius = 1.0
         cell.infoView.layer.shadowColor = UIColor.lightGray.cgColor

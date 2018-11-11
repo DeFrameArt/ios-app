@@ -67,7 +67,7 @@ class GuestViewSetUp:UIViewController,UICollectionViewDataSource, UICollectionVi
         let gradient:CAGradientLayer = CAGradientLayer()
         gradient.frame = self.toolBarGuest.bounds
         gradient.colors = [UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0).cgColor,UIColor(red:0.80, green:0.26, blue:0.48, alpha:1.0).cgColor,UIColor(red:0.75, green:0.26, blue:0.48, alpha:1.0).cgColor, UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0).cgColor]
-        self.toolBarGuest.layer.insertSublayer(gradient, at: 0)
+      //  self.toolBarGuest.layer.insertSublayer(gradient, at: 0)
     }
     @IBOutlet weak var toolBarGuest: UIToolbar!
     override func didReceiveMemoryWarning() {
