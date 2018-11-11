@@ -104,16 +104,18 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         super.viewDidLoad()
     
-        UIApplication.shared.statusBarStyle = .lightContent
+     //   UIApplication.shared.statusBarStyle = .lightContent
         
-     //   self.navigationController?.isNavigationBarHidden = false
+            self.navigationController?.isNavigationBarHidden = false
        // UIApplication.shared.statusBarStyle = .lightContent
         
       self.navigationController?.navigationBar.tintColor = UIColor.white
        // self.navigationController?.isNavigationBarHidden = false
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(gesture:)))
         let tapGestureBotButton = UITapGestureRecognizer(target: self, action: #selector(self.botButtonTapped(gesture:)))
-
+       
+        TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
+        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
         self.startDownloadingImagesData()
        
         
@@ -125,9 +127,9 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     override func viewWillAppear(_ animated: Bool) {
         
-       self.navigationController?.isNavigationBarHidden = false
+    self.navigationController?.isNavigationBarHidden = false
         TMGradientNavigationBar().setInitialBarGradientColor(direction: .horizontal, startColor: UIColor(red:0.82, green:0.26, blue:0.48, alpha:1.0), endColor: UIColor(red:0.60, green:0.26, blue:0.48, alpha:1.0))
-        setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
+    setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
          UIApplication.shared.statusBarStyle = .lightContent
 
         print("In will appear")

@@ -755,7 +755,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgn-6b-M0G">
-                                <rect key="frame" x="0.0" y="20" width="320" height="444"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="400"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" numberOfPages="6" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="ArK-M7-mlu">
                                 <rect key="frame" x="65" y="474" width="190" height="40"/>
@@ -884,9 +884,10 @@
         <!--Item-->
         <scene sceneID="fiE-T3-cFN">
             <objects>
-                <navigationController navigationBarHidden="YES" id="QkB-8Q-8iT" sceneMemberID="viewController">
+                <navigationController id="QkB-8Q-8iT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" selectedImage="compass.png" id="IK4-h6-i8z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tx4-8i-MUP">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
