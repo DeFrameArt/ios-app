@@ -67,7 +67,7 @@
                         <viewLayoutGuide key="safeArea" id="2Zg-Ws-kY5"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Shop" image="cart-sticker" selectedImage="cart-sticker" id="7gN-SO-mlQ"/>
+                    <tabBarItem key="tabBarItem" title="Shop" image="picture (3)" selectedImage="picture (3)" id="7gN-SO-mlQ"/>
                     <navigationItem key="navigationItem" id="bYQ-kn-PBN"/>
                     <connections>
                         <outlet property="webview" destination="kfd-8j-AWT" id="5C7-4M-bhu"/>
@@ -1909,7 +1909,6 @@ Contact Us If you have any questions or suggestions about our Terms and Conditio
         <image name="Logo_update" width="336" height="336"/>
         <image name="No-image-found" width="275" height="275"/>
         <image name="avatar.png" width="24" height="24"/>
-        <image name="cart-sticker" width="32" height="32"/>
         <image name="compass.png" width="24" height="24"/>
         <image name="feedback (1).png" width="32" height="32"/>
         <image name="ic_arrow_back_ios.png" width="24" height="24"/>
@@ -9472,6 +9471,7 @@ AAbotQAG6LgABujKAAbozQAG6NIAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAAAbo1A
         <image name="info (1).png" width="32" height="32"/>
         <image name="map-of-roads" width="128" height="128"/>
         <image name="menu" width="22" height="22"/>
+        <image name="picture (3)" width="32" height="32"/>
         <image name="robot.png" width="24" height="24"/>
         <image name="secure-file (1).png" width="32" height="32"/>
         <image name="sign-out-option" width="128" height="128"/>
