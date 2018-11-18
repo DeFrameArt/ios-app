@@ -170,16 +170,17 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width/3 - 1, height: collectionView.frame.size.width/3 - 1)
+        let numberOfColmuns: CGFloat = 3
+        let width = collectionView.frame.size.width
+        let xInsets: CGFloat = 10
+        let cellSpacing: CGFloat = 5
+        let height: CGFloat = 180
+        return CGSize(width: (width/numberOfColmuns)-(xInsets + cellSpacing), height: height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 2
-    }
+
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
+   
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -188,11 +189,17 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
        artImageView.sd_setImage(with: URL(string: featureImageURLsArray[indexPath.row]))
       
         print(featureImageURLsArray[indexPath.row])
-       
+    //  cell.infoView.layer.cornerRadius = 8.0
+        cell.cellView.layer.cornerRadius = 8.0
        cell.galleryHeadingLabel.text =  self.headingsArray[indexPath.row]
         cell.galleryHeadingLabel.font = MDCTypography.body1Font()
         cell.galleryHeadingLabel.alpha = MDCTypography.titleFontOpacity()
-        
+        cell.cellView.layer.shadowOpacity = 0.8
+       
+        cell.cellView.layer.masksToBounds = true
+        cell.cellView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        cell.cellView.layer.shadowRadius = 1.0
+        cell.cellView.layer.shadowColor = UIColor.lightGray.cgColor
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
        cell.galleryHeadingLabel.sizeToFit()

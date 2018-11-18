@@ -13,6 +13,7 @@ class artCollectionViewCell: UICollectionViewCell {
   
     @IBOutlet weak var artCollectionImageView: UIImageView!
     
+    @IBOutlet weak var cellView: UIView!
     
     @IBOutlet weak var galleryHeadingLabel: UILabel!
     
