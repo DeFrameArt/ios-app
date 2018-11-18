@@ -172,8 +172,8 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numberOfColmuns: CGFloat = 3
         let width = collectionView.frame.size.width
-        let xInsets: CGFloat = 10
-        let cellSpacing: CGFloat = 5
+        let xInsets: CGFloat = 3
+        let cellSpacing: CGFloat = 3
         let height: CGFloat = 180
         return CGSize(width: (width/numberOfColmuns)-(xInsets + cellSpacing), height: height)
     }
@@ -192,11 +192,14 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     //  cell.infoView.layer.cornerRadius = 8.0
         cell.cellView.layer.cornerRadius = 8.0
        cell.galleryHeadingLabel.text =  self.headingsArray[indexPath.row]
-        cell.galleryHeadingLabel.font = MDCTypography.body1Font()
-        cell.galleryHeadingLabel.alpha = MDCTypography.titleFontOpacity()
+       // cell.galleryHeadingLabel.font = MDCTypography.body1Font()
+        //cell.galleryHeadingLabel.alpha = MDCTypography.titleFontOpacity()
         cell.cellView.layer.shadowOpacity = 0.8
-       
-        cell.cellView.layer.masksToBounds = true
+        cell.cellView.layer.borderColor = UIColor.lightGray.cgColor
+        cell.insideCellView.layer.masksToBounds = true
+        cell.insideCellView.layer.cornerRadius = 8.0
+        //artImageView.layer.cornerRadius = 8.0
+       // cell.cellView.layer.masksToBounds = true
         cell.cellView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         cell.cellView.layer.shadowRadius = 1.0
         cell.cellView.layer.shadowColor = UIColor.lightGray.cgColor
@@ -260,8 +263,8 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         commentView.mapView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         commentView.mapView.layer.shadowRadius = 1.0
         commentView.mapView.layer.shadowColor = UIColor.lightGray.cgColor
-         commentView.streetLabel.font = MDCTypography.body1Font()
-         commentView.streetLabel.alpha = MDCTypography.body1FontOpacity()
+       //  commentView.streetLabel.font = MDCTypography.body1Font()
+        // commentView.streetLabel.alpha = MDCTypography.body1FontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.

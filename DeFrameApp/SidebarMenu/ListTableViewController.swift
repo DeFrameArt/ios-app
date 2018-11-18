@@ -274,7 +274,8 @@ class ListTableViewController: UIViewController,UITableViewDelegate, UITableView
        // cell.coverView.layer.cornerRadius = 8.0
         cell.infoView.layer.shadowOpacity = 0.8
           cell.infoView.layer.cornerRadius = 8.0
-        cell.infoView.layer.masksToBounds = true
+        cell.imageCell.layer.masksToBounds = true
+        cell.imageCell.layer.cornerRadius = 8.0
         cell.infoView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
          cell.infoView.layer.shadowRadius = 1.0
         cell.infoView.layer.shadowColor = UIColor.lightGray.cgColor
