@@ -173,16 +173,20 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numberOfColmuns: CGFloat = 3
         let width = collectionView.frame.size.width
-        let xInsets: CGFloat = 3
-        let cellSpacing: CGFloat = 3
+        
         let height: CGFloat = 180
-        return CGSize(width: (width/numberOfColmuns)-(xInsets + cellSpacing), height: height)
+        return CGSize(width: (width/numberOfColmuns), height: height)
     }
     
 
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    } 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "artCollectionViewCell", for: indexPath) as! artCollectionViewCell

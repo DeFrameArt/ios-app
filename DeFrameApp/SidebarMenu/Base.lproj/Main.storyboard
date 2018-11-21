@@ -322,7 +322,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="orU-r6-pWb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="746"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="oTx-F0-RcA">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oTx-F0-RcA">
                                     <size key="itemSize" width="124" height="145"/>
                                     <size key="headerReferenceSize" width="50" height="484"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
