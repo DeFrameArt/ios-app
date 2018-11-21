@@ -11,12 +11,14 @@ import SDWebImage
 import SwiftyJSON
 import MaterialComponents.MaterialTypography
 import Tamamushi
+import PinterestLayout
 
 class MuseumViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     @IBOutlet weak var backBtn: UIBarButtonItem!
     
     @IBOutlet weak var navBar: UINavigationBar!
-    
+    let layout = PinterestLayout()
+
     
 
    
@@ -118,7 +120,6 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         setGradientBarWithIndexPath(indexPath: lastSelectedIndexPath, onBar: (navigationController?.navigationBar)!)
         self.startDownloadingImagesData()
        
-        
     }
     
 
@@ -194,18 +195,18 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
        cell.galleryHeadingLabel.text =  self.headingsArray[indexPath.row]
        // cell.galleryHeadingLabel.font = MDCTypography.body1Font()
         //cell.galleryHeadingLabel.alpha = MDCTypography.titleFontOpacity()
-        cell.cellView.layer.shadowOpacity = 0.8
-        cell.cellView.layer.borderColor = UIColor.lightGray.cgColor
-        cell.insideCellView.layer.masksToBounds = true
-        cell.insideCellView.layer.cornerRadius = 8.0
+        //cell.cellView.layer.shadowOpacity = 0.8
+        //cell.cellView.layer.borderColor = UIColor.lightGray.cgColor
+        //cell.insideCellView.layer.masksToBounds = true
+        //cell.insideCellView.layer.cornerRadius = 8.0
         //artImageView.layer.cornerRadius = 8.0
        // cell.cellView.layer.masksToBounds = true
-        cell.cellView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        cell.cellView.layer.shadowRadius = 1.0
-        cell.cellView.layer.shadowColor = UIColor.lightGray.cgColor
+        //cell.cellView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        //cell.cellView.layer.shadowRadius = 1.0
+        //cell.cellView.layer.shadowColor = UIColor.lightGray.cgColor
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
-       cell.galleryHeadingLabel.sizeToFit()
+       //cell.galleryHeadingLabel.sizeToFit()
        
         
         return cell
@@ -229,9 +230,9 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         
         //
-       // commentView.countryLabel.text=museumCountryLabel
-       // commentView.countryLabel.font = MDCTypography.body1Font()
-      //  commentView.countryLabel.alpha = MDCTypography.body1FontOpacity()
+     // commentView.countryLabel.text=museumCountryLabel
+     // commentView.countryLabel.font = MDCTypography.body1Font()
+    //commentView.countryLabel.alpha = MDCTypography.body1FontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
@@ -263,8 +264,8 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         commentView.mapView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         commentView.mapView.layer.shadowRadius = 1.0
         commentView.mapView.layer.shadowColor = UIColor.lightGray.cgColor
-       //  commentView.streetLabel.font = MDCTypography.body1Font()
-        // commentView.streetLabel.alpha = MDCTypography.body1FontOpacity()
+        commentView.streetLabel.font = MDCTypography.body1Font()
+        commentView.streetLabel.alpha = MDCTypography.body1FontOpacity()
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
@@ -278,7 +279,7 @@ class MuseumViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         // If using autolayout, the following line is unnecessary as long
         // as all constraints are valid.
-        commentView.cityStateZipLabel.sizeToFit()
+        //commentView.cityStateZipLabel.sizeToFit()
         
         
         commentView.museumImageView.sd_setImage(with: URL(string:museumbannerURL! ))

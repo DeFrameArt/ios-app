@@ -21,7 +21,7 @@ target 'DeFrameApp' do
       pod 'ScalingCarousel', '= 2.2'
       pod 'Tamamushi'
       pod 'FontAwesomeKit'
-      pod 'ChameleonFramework/Swift'
+      pod 'PinterestLayout'
      target 'DeFrameAppTests' do
 
    end

@@ -17,6 +17,7 @@ import BubbleTransition
 import MaterialComponents.MaterialTypography
 import DGRunkeeperSwitch
 import Tamamushi
+import StoreKit
 //protocol AddItemProtocol {
     //code for the requirements of this protocole
   //  func addMusuem(_ item:SelectedMuseum)
@@ -97,7 +98,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     func setGradientBarWithIndexPath(indexPath: IndexPath, onBar: UINavigationBar) {
         TMGradientNavigationBar().setGradientColorOnNavigationBar(bar: onBar, direction: gradientDirection, typeName: colorNames[indexPath.row])
     }
-   
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          self.tabBarController?.delegate = self
@@ -186,7 +188,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         UIApplication.shared.statusBarStyle = .default
-
+       // SKStoreReviewController.requestReview()
+        score+=1
+        if score > 5{
+            review()
+            score=0
+        }
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
@@ -225,7 +232,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
 
 
 }
+    var score = 0
+    
 
+    func review(){
+        SKStoreReviewController.requestReview()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

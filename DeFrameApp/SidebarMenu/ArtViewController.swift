@@ -119,12 +119,19 @@ class ArtViewController: UIViewController, UICollectionViewDataSource, UICollect
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfColmuns: CGFloat = 3
+        let width = collectionView.frame.size.width
+        let xInsets: CGFloat = 3
+        let cellSpacing: CGFloat = 3
+        let height: CGFloat = 180
+        return CGSize(width: (width/numberOfColmuns)-(xInsets + cellSpacing), height: height)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return artPageImageURLsArray.count
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: artCollectionView.frame.size.width/3 - 1, height: artCollectionView.frame.size.width/3 - 1)
-    }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2

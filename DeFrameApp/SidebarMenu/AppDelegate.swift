@@ -13,6 +13,7 @@ import CoreLocation
 import MapKit
 import ApiAI
 import CoreData
+import StoreKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 /////
@@ -30,7 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         let configuration: AIConfiguration = AIDefaultConfiguration()
         configuration.clientAccessToken = "2b4cf0614aed45d28422a28ceaa439e9"
         let apiai = ApiAI.shared()
+        
         apiai?.configuration = configuration
+      
         return true
         
     }

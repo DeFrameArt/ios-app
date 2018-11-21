@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PinterestLayout
 
 class artCollectionViewCell: UICollectionViewCell {
     
@@ -18,6 +19,6 @@ class artCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var galleryHeadingLabel: UILabel!
     
-    
+ 
     
 }
