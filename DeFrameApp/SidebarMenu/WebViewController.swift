@@ -11,19 +11,25 @@ import WebKit
 
 class WebViewController: UIViewController {
 
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var webview: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
     UIApplication.shared.statusBarStyle = .default
+      
+         self.indicator.startAnimating()
+         webview.navigationDelegate = self
+        UIApplication.shared.statusBarStyle = .default
         let url = URL (string: "https://www.deframeart.com/gallery/")
         let request = URLRequest(url: url!)
+        
         webview.load(request)
        // myWebView.loadRequest(requestObj);
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.shared.statusBarStyle = .default
+      UIApplication.shared.statusBarStyle = .default
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,14 +37,15 @@ class WebViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+extension WebViewController: WKNavigationDelegate {
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print("Finished navigating to url")
+        self.indicator.isHidden = true
+         self.indicator.stopAnimating()
+        self.indicator.hidesWhenStopped = true
     }
-    */
-
+    
 }

@@ -54,12 +54,17 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Izg-6D-Y9x">
+                                <rect key="frame" x="150" y="259.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kfd-8j-AWT" firstAttribute="top" secondItem="2Zg-Ws-kY5" secondAttribute="top" id="Ede-pz-Anr"/>
                             <constraint firstItem="2Zg-Ws-kY5" firstAttribute="bottom" secondItem="kfd-8j-AWT" secondAttribute="bottom" id="G3R-Zy-dV0"/>
+                            <constraint firstItem="Izg-6D-Y9x" firstAttribute="centerY" secondItem="2Zg-Ws-kY5" secondAttribute="centerY" id="Ulq-aX-Z21"/>
                             <constraint firstItem="2Zg-Ws-kY5" firstAttribute="trailing" secondItem="kfd-8j-AWT" secondAttribute="trailing" id="Z7J-b4-5Wd"/>
+                            <constraint firstItem="Izg-6D-Y9x" firstAttribute="centerX" secondItem="2Zg-Ws-kY5" secondAttribute="centerX" id="vxi-qV-MZ1"/>
                             <constraint firstItem="kfd-8j-AWT" firstAttribute="leading" secondItem="2Zg-Ws-kY5" secondAttribute="leading" id="zuc-l0-xYd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Zg-Ws-kY5"/>
@@ -68,6 +73,7 @@
                     <tabBarItem key="tabBarItem" title="Shop" image="picture (3)" selectedImage="picture (3)" id="7gN-SO-mlQ"/>
                     <navigationItem key="navigationItem" id="bYQ-kn-PBN"/>
                     <connections>
+                        <outlet property="indicator" destination="Izg-6D-Y9x" id="PiB-AE-YYO"/>
                         <outlet property="webview" destination="kfd-8j-AWT" id="5C7-4M-bhu"/>
                     </connections>
                 </viewController>
