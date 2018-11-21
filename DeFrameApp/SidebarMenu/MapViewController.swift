@@ -183,16 +183,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
     
     
     
-    
+    var reviewed = false
     var saveUser: [NSManagedObject] = []
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         UIApplication.shared.statusBarStyle = .default
        // SKStoreReviewController.requestReview()
         score+=1
-        if score > 5{
+        if score == 10 {
+           
             review()
-            score=0
+        
+            //score=0
         }
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
