@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import PinterestLayout
 
 class artCollectionViewCell: UICollectionViewCell {
     
   
     @IBOutlet weak var artCollectionImageView: UIImageView!
     
+    @IBOutlet weak var insideCellView: UIView!
+    @IBOutlet weak var cellView: UIView!
     
     @IBOutlet weak var galleryHeadingLabel: UILabel!
     
-    
+ 
     
 }

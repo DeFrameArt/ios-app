@@ -77,7 +77,7 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var passwordText: UITextField!
     
     override func viewDidLoad() {
-        
+           self.navigationController?.isNavigationBarHidden = true
         if revealViewController() != nil {
             //view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             navigationController?.navigationBar.barTintColor = UIColor(red: 200/255.0, green: 31/255.0, blue: 97/255.0, alpha:1.0)
@@ -169,6 +169,7 @@ class LoginViewController: UIViewController{
         
         super.viewWillAppear(true)
          createGradientLayer()
+        self.navigationController?.isNavigationBarHidden = true
         // When relaunching the screen, allow user to sign without showing facebook login page
         if(FBSDKAccessToken.current() != nil) {
             let deviceScale = Int(UIScreen.main.scale)
@@ -188,7 +189,7 @@ class LoginViewController: UIViewController{
           print("User not logged In")
         }
         
-         self.navigationController?.isNavigationBarHidden = true
+        // self.navigationController?.isNavigationBarHidden = true
    }
     
    override func viewWillDisappear(_ animated: Bool) {

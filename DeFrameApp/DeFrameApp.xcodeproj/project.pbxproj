@@ -50,6 +50,8 @@
 		357E908C20688FDA00B595D5 /* userPic11.png in Resources */ = {isa = PBXBuildFile; fileRef = 357E908B20688FDA00B595D5 /* userPic11.png */; };
 		357E908E206890C600B595D5 /* GuestViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E908D206890C600B595D5 /* GuestViewHeader.swift */; };
 		357E90902068A4EB00B595D5 /* GuestViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E908D206890C600B595D5 /* GuestViewHeader.swift */; };
+		3581676F21A0E4CF00758EA5 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581676E21A0E4CE00758EA5 /* ArtistsViewController.swift */; };
+		3581677021A0E4CF00758EA5 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581676E21A0E4CE00758EA5 /* ArtistsViewController.swift */; };
 		359615CA2079B52000B6760D /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 359615C82079B51A00B6760D /* info.png */; };
 		359615CB2079B52000B6760D /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 359615C82079B51A00B6760D /* info.png */; };
 		359615CC2079B52000B6760D /* secure-file.png in Resources */ = {isa = PBXBuildFile; fileRef = 359615C92079B51D00B6760D /* secure-file.png */; };
@@ -225,6 +227,7 @@
 		3569731E20A2AA55006340EC /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		357E908B20688FDA00B595D5 /* userPic11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPic11.png; sourceTree = "<group>"; };
 		357E908D206890C600B595D5 /* GuestViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewHeader.swift; sourceTree = "<group>"; };
+		3581676E21A0E4CE00758EA5 /* ArtistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
 		359615C82079B51A00B6760D /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		359615C92079B51D00B6760D /* secure-file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secure-file.png"; sourceTree = "<group>"; };
 		359615CE2079B5E100B6760D /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback.png; sourceTree = "<group>"; };
@@ -353,6 +356,14 @@
 				78AB8B821B75E8AD250BDC34 /* Pods-DeFrameApp-DeFrameAppTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3581676D21A0E49400758EA5 /* Artists */ = {
+			isa = PBXGroup;
+			children = (
+				3581676E21A0E4CE00758EA5 /* ArtistsViewController.swift */,
+			);
+			name = Artists;
 			sourceTree = "<group>";
 		};
 		35C9C3E62185491D00110F46 /* Font Lato */ = {
@@ -533,6 +544,7 @@
 		F47029F21A7F27DB00E30A3C /* DeFrame */ = {
 			isa = PBXGroup;
 			children = (
+				3581676D21A0E49400758EA5 /* Artists */,
 				35C9C3E62185491D00110F46 /* Font Lato */,
 				F47029F41A7F27DB00E30A3C /* Info.plist */,
 				F47029F91A7F27DB00E30A3C /* Main.storyboard */,
@@ -635,6 +647,7 @@
 				F47029ED1A7F27DB00E30A3C /* Frameworks */,
 				F47029EE1A7F27DB00E30A3C /* Resources */,
 				32ACFF2876E54B036C882144 /* [CP] Embed Pods Frameworks */,
+				618E66EE376993E840750801 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -654,6 +667,7 @@
 				F4702A021A7F27DC00E30A3C /* Frameworks */,
 				F4702A031A7F27DC00E30A3C /* Resources */,
 				E65C640B1A68DE0435E5B33E /* [CP] Embed Pods Frameworks */,
+				ECC969589A2FD286A63B8401 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -841,7 +855,6 @@
 				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
-				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -859,6 +872,8 @@
 				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/PinterestLayout/PinterestLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/RMPZoomTransitionAnimator/RMPZoomTransitionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -869,7 +884,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGRunkeeperSwitch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -887,6 +901,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinterestLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RMPZoomTransitionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -895,6 +911,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		618E66EE376993E840750801 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp/Pods-DeFrameApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A28D34889E5925A4053CCF74 /* [CP] Check Pods Manifest.lock */ = {
@@ -943,7 +978,6 @@
 				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
-				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -961,6 +995,8 @@
 				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/PinterestLayout/PinterestLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/RMPZoomTransitionAnimator/RMPZoomTransitionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -971,7 +1007,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGRunkeeperSwitch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -989,6 +1024,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinterestLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RMPZoomTransitionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -997,6 +1034,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECC969589A2FD286A63B8401 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeFrameApp-DeFrameAppTests/Pods-DeFrameApp-DeFrameAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1039,6 +1095,7 @@
 				35A25EAB204DF9460023A77D /* UserNamePasswordViewController.swift in Sources */,
 				58F68F1B1F7A0AF5006F7510 /* MuseumDetailsView.swift in Sources */,
 				586B94951F14A8C900F89AE8 /* AnnotationView.swift in Sources */,
+				3581676F21A0E4CF00758EA5 /* ArtistsViewController.swift in Sources */,
 				35490F22201ADCDD00429192 /* artHeaderCollectionReusableView.swift in Sources */,
 				F491E74A1A7F4B300026528E /* NewsTableViewController.swift in Sources */,
 				35A25EB4204DF9820023A77D /* NewUser.swift in Sources */,
@@ -1068,6 +1125,7 @@
 				586B94931F144D4500F89AE8 /* locationAnnotation.swift in Sources */,
 				35A7C7D32198CCFA00D219A5 /* WebViewController.swift in Sources */,
 				35A25EB5204DF9820023A77D /* NewUser.swift in Sources */,
+				3581677021A0E4CF00758EA5 /* ArtistsViewController.swift in Sources */,
 				A058F3851FC40B82001FC901 /* MapViewController.swift in Sources */,
 				35C10C1E2178285200E0D6A3 /* Dismiss.swift in Sources */,
 				A058F3821FC40B47001FC901 /* CarouselView.swift in Sources */,
