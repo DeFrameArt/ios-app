@@ -27,6 +27,8 @@ class Museum: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     
     
+   // init(city:city, musuem:[id: String, name:String, acronym:String, street: String, city: String, state: String, country: String, zip: String, lat:Double, lon:Double, bannerURL:String, logoURL: String])
+    
     init(id: String, name:String, acronym:String, street: String, city: String, state: String, country: String, zip: String, lat:Double, lon:Double, bannerURL:String, logoURL: String){
         
         self.id = id

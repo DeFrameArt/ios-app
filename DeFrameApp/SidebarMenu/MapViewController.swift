@@ -28,6 +28,7 @@ protocol AddItemProtocol {
     //code for the requirements of this protocole
     func addItemtoCheckList(_ item:[Museum])
 }
+var museumDictionaries =  [String: [Museum]]()
 var allMuseums:[Museum] = [Museum]()
 var downloadedMuseums:[Museum] = [Museum]()
 class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewControllerTransitioningDelegate,UITabBarControllerDelegate {
@@ -410,7 +411,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIViewCont
         transition.bubbleColor = UIColor.white
         return transition
     }
-    
+    var dictionaryMuseum = Dictionary<String, [String] >()
     
 }
 
@@ -476,7 +477,7 @@ func startDownloadingMuseums(){
 //    }
     
     
-    let url : String = "http://deframe-test-api.us-east-1.elasticbeanstalk.com/museums"
+    let url : String = "http://deframe-test-api.us-east-1.elasticbeanstalk.com/museums/museumsbycity"
     print("in  start download prediction callback ")
     
     if(Thread.isMainThread){
@@ -493,7 +494,7 @@ func startDownloadingMuseums(){
     print("Schedule cant be called here")
     
 }
-
+   
     func downloadMuseums(_ urlStr:String, completion: @escaping (_ array:[Museum]) -> ()) {
         
         let concurrentQueue = DispatchQueue(label: "com.queue.Concurrent", attributes: .concurrent)
@@ -531,8 +532,51 @@ func startDownloadingMuseums(){
                             else{
                                 
                                 for result in (json?.arrayValue)! {
+                                   // dictionaryMuseum
+                                    let key1 = result["city"]
+                                    let newKey=key1.stringValue
                                     
-                                    let id = result["id"].stringValue
+                                    for key1 in result{
+                                       let sublist = result["museums"]
+                                        for list1 in sublist {
+                                           // if let list = result["museum"] as? [AnyObject: Any] {
+                                                // access nested dictionary values by key
+                                            
+                                        let id = list1.1["id"].stringValue
+                                           
+                                         let name = list1.1["name"].stringValue
+                                         let acronym = list1.1["acronym"].stringValue
+                                         let street = list1.1["street"].stringValue
+                                         let city = list1.1["city"].stringValue
+                                         let state = list1.1["state"].stringValue
+                                            let country = list1.1["country"].stringValue
+                                         let zip = list1.1["zip"].stringValue
+                                         let lat = list1.1["lat"].doubleValue
+                                         let lon = list1.1["lng"].doubleValue
+                                            let bannerURL = list1.1["bannerUrl"].stringValue
+                                         let logoURL = list1.1["logoUrl"].stringValue
+                                        let newMuseum = Museum(id:id, name: name, acronym:acronym, street:street, city:city, state:state, country:country, zip:zip, lat: lat, lon: lon, bannerURL: bannerURL, logoURL:logoURL )
+                                        // allMuseums.append(newMuseum)
+                                            if museumDictionaries.index(forKey:newKey) != nil {
+                                                // the key exists in the dictionary
+                                                 museumDictionaries[newKey]?.append(newMuseum)
+                                            }
+
+                                          
+                     
+                                        else{
+                                            museumDictionaries.updateValue([newMuseum], forKey: newKey)
+                                        }
+                                        }
+                                        
+                                    
+                                    
+                                }
+                                   // museumDictionaries
+                                    //let list = result["museums"]
+                                    
+                                   
+                                   /* let id = result["id"].stringValue
                                     let name = result["name"].stringValue
                                     let acronym = result["acronym"].stringValue
                                     let street = result["street"].stringValue
@@ -543,16 +587,17 @@ func startDownloadingMuseums(){
                                     let lat = result["lat"].doubleValue
                                     let lon = result["lng"].doubleValue
                                     let bannerURL = result["bannerUrl"].stringValue
-                                    let logoURL = result["logoUrl"].stringValue
+                                    let logoURL = result["logoUrl"].stringValue */
                                     
                                     if(Thread.isMultiThreaded()){
                                         print("in Multi-Thread")
                                     }
                                     
+                                  
                                     
-                                    let newMuseum = Museum(id:id, name: name, acronym:acronym, street:street, city:city, state:state, country:country, zip:zip, lat: lat, lon: lon, bannerURL: bannerURL, logoURL:logoURL )
-                                    allMuseums.append(newMuseum)
-                                    
+                                  // let newMuseum = Museum(id:id, name: name, acronym:acronym, street:street, city:city, state:state, country:country, zip:zip, lat: lat, lon: lon, bannerURL: bannerURL, logoURL:logoURL )
+                                   // allMuseums.append(newMuseum)
+                                   
                                     DispatchQueue.main.async(execute: {
                                         completion(allMuseums)
                                         self.map.addAnnotations(allMuseums)

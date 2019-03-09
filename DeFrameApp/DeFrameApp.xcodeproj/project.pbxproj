@@ -44,6 +44,8 @@
 		3557CEF820685F2C00548D99 /* userPic8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3557CEF220685F2700548D99 /* userPic8.png */; };
 		3557CEFA206868A400548D99 /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557CEF9206868A400548D99 /* GuestCell.swift */; };
 		3557CEFB206868A400548D99 /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557CEF9206868A400548D99 /* GuestCell.swift */; };
+		356465082201344300B21A6B /* MuseumListClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356465072201344300B21A6B /* MuseumListClass.swift */; };
+		356465092201344300B21A6B /* MuseumListClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356465072201344300B21A6B /* MuseumListClass.swift */; };
 		356813A7201AD3C40094B16E /* NewMuseumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356813A6201AD3C40094B16E /* NewMuseumViewController.swift */; };
 		3569731F20A2AA55006340EC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3569731E20A2AA55006340EC /* AccountViewController.swift */; };
 		3569732020A2AA55006340EC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3569731E20A2AA55006340EC /* AccountViewController.swift */; };
@@ -83,10 +85,22 @@
 		35A7C7D32198CCFA00D219A5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7C7D12198CCFA00D219A5 /* WebViewController.swift */; };
 		35B0DA8A208ECE650005272C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35B0DA89208ECE640005272C /* Info.plist */; };
 		35B0DA8B208ECE650005272C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35B0DA89208ECE640005272C /* Info.plist */; };
+		35B4B52B2206609900E77EE5 /* TableViewOfMuseumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4B52A2206609900E77EE5 /* TableViewOfMuseumCollectionViewController.swift */; };
+		35B4B52C2206609900E77EE5 /* TableViewOfMuseumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4B52A2206609900E77EE5 /* TableViewOfMuseumCollectionViewController.swift */; };
+		35B4B52E220660E400E77EE5 /* TableCellCollectionOfMuseumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4B52D220660E400E77EE5 /* TableCellCollectionOfMuseumsTableViewCell.swift */; };
+		35B4B52F220660E400E77EE5 /* TableCellCollectionOfMuseumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4B52D220660E400E77EE5 /* TableCellCollectionOfMuseumsTableViewCell.swift */; };
+		35B4B5312206614000E77EE5 /* CollectionCellOfCollectionMuseumsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4B5302206614000E77EE5 /* CollectionCellOfCollectionMuseumsCollectionViewCell.swift */; };
+		35B4B5322206614000E77EE5 /* CollectionCellOfCollectionMuseumsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4B5302206614000E77EE5 /* CollectionCellOfCollectionMuseumsCollectionViewCell.swift */; };
 		35BCA31F2079D7C20068E899 /* bank (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA31E2079D7BD0068E899 /* bank (1).png */; };
 		35BCA3212079DAD90068E899 /* secure-file (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3202079DAD40068E899 /* secure-file (2).png */; };
 		35BCA3232079DB1A0068E899 /* info (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3222079DB160068E899 /* info (2).png */; };
 		35BCA3252079DB870068E899 /* feedback (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCA3242079DB830068E899 /* feedback (2).png */; };
+		35BF9F9121A9CE9E00B6586F /* ViewControllerMuseumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF9F9021A9CE9E00B6586F /* ViewControllerMuseumList.swift */; };
+		35BF9F9221A9CE9E00B6586F /* ViewControllerMuseumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF9F9021A9CE9E00B6586F /* ViewControllerMuseumList.swift */; };
+		35BF9F9421A9CEDA00B6586F /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF9F9321A9CEDA00B6586F /* ListTableViewCell.swift */; };
+		35BF9F9521A9CEDA00B6586F /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF9F9321A9CEDA00B6586F /* ListTableViewCell.swift */; };
+		35BF9F9721A9E64D00B6586F /* CollectionViewCellListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF9F9621A9E64D00B6586F /* CollectionViewCellListView.swift */; };
+		35BF9F9821A9E64D00B6586F /* CollectionViewCellListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF9F9621A9E64D00B6586F /* CollectionViewCellListView.swift */; };
 		35C10C172178093900E0D6A3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C10C162178093900E0D6A3 /* ImageViewController.swift */; };
 		35C10C182178093900E0D6A3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C10C162178093900E0D6A3 /* ImageViewController.swift */; };
 		35C10C1A2178278400E0D6A3 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C10C192178278400E0D6A3 /* Interactor.swift */; };
@@ -223,6 +237,7 @@
 		3557CEF120685F2100548D99 /* userPic9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPic9.png; sourceTree = "<group>"; };
 		3557CEF220685F2700548D99 /* userPic8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPic8.png; sourceTree = "<group>"; };
 		3557CEF9206868A400548D99 /* GuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCell.swift; sourceTree = "<group>"; };
+		356465072201344300B21A6B /* MuseumListClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumListClass.swift; sourceTree = "<group>"; };
 		356813A6201AD3C40094B16E /* NewMuseumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMuseumViewController.swift; sourceTree = "<group>"; };
 		3569731E20A2AA55006340EC /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		357E908B20688FDA00B595D5 /* userPic11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPic11.png; sourceTree = "<group>"; };
@@ -243,10 +258,16 @@
 		35A25EB9204DFA7C0023A77D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		35A7C7D12198CCFA00D219A5 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		35B0DA89208ECE640005272C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35B4B52A2206609900E77EE5 /* TableViewOfMuseumCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewOfMuseumCollectionViewController.swift; sourceTree = "<group>"; };
+		35B4B52D220660E400E77EE5 /* TableCellCollectionOfMuseumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellCollectionOfMuseumsTableViewCell.swift; sourceTree = "<group>"; };
+		35B4B5302206614000E77EE5 /* CollectionCellOfCollectionMuseumsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellOfCollectionMuseumsCollectionViewCell.swift; sourceTree = "<group>"; };
 		35BCA31E2079D7BD0068E899 /* bank (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank (1).png"; sourceTree = "<group>"; };
 		35BCA3202079DAD40068E899 /* secure-file (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secure-file (2).png"; sourceTree = "<group>"; };
 		35BCA3222079DB160068E899 /* info (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info (2).png"; sourceTree = "<group>"; };
 		35BCA3242079DB830068E899 /* feedback (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback (2).png"; sourceTree = "<group>"; };
+		35BF9F9021A9CE9E00B6586F /* ViewControllerMuseumList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMuseumList.swift; sourceTree = "<group>"; };
+		35BF9F9321A9CEDA00B6586F /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		35BF9F9621A9E64D00B6586F /* CollectionViewCellListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellListView.swift; sourceTree = "<group>"; };
 		35C10C162178093900E0D6A3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		35C10C192178278400E0D6A3 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		35C10C1C2178285200E0D6A3 /* Dismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismiss.swift; sourceTree = "<group>"; };
@@ -358,12 +379,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		356465062201341200B21A6B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				586B948B1F11E09100F89AE8 /* Museum.swift */,
+				356465072201344300B21A6B /* MuseumListClass.swift */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
 		3581676D21A0E49400758EA5 /* Artists */ = {
 			isa = PBXGroup;
 			children = (
 				3581676E21A0E4CE00758EA5 /* ArtistsViewController.swift */,
 			);
 			name = Artists;
+			sourceTree = "<group>";
+		};
+		35B4B5292206605900E77EE5 /* CollectionOfMuseums */ = {
+			isa = PBXGroup;
+			children = (
+				35B4B52A2206609900E77EE5 /* TableViewOfMuseumCollectionViewController.swift */,
+				35B4B52D220660E400E77EE5 /* TableCellCollectionOfMuseumsTableViewCell.swift */,
+				35B4B5302206614000E77EE5 /* CollectionCellOfCollectionMuseumsCollectionViewCell.swift */,
+			);
+			name = CollectionOfMuseums;
+			sourceTree = "<group>";
+		};
+		35BF9F8F21A9CD0600B6586F /* List of Museums */ = {
+			isa = PBXGroup;
+			children = (
+				35BF9F9021A9CE9E00B6586F /* ViewControllerMuseumList.swift */,
+				35BF9F9321A9CEDA00B6586F /* ListTableViewCell.swift */,
+				35BF9F9621A9E64D00B6586F /* CollectionViewCellListView.swift */,
+			);
+			name = "List of Museums";
 			sourceTree = "<group>";
 		};
 		35C9C3E62185491D00110F46 /* Font Lato */ = {
@@ -414,7 +464,6 @@
 				35C6CEE720A0076700E3E220 /* robot.png */,
 				3552EC93209FD3DE00D1C29D /* compass.png */,
 				58F68F121F759BA6006F7510 /* ArtView.swift */,
-				586B948B1F11E09100F89AE8 /* Museum.swift */,
 				356813A6201AD3C40094B16E /* NewMuseumViewController.swift */,
 				35490F21201ADCDD00429192 /* artHeaderCollectionReusableView.swift */,
 				3544612F20748B2300FA1CBF /* MuseumTableViewCell.swift */,
@@ -544,6 +593,9 @@
 		F47029F21A7F27DB00E30A3C /* DeFrame */ = {
 			isa = PBXGroup;
 			children = (
+				35B4B5292206605900E77EE5 /* CollectionOfMuseums */,
+				356465062201341200B21A6B /* Class */,
+				35BF9F8F21A9CD0600B6586F /* List of Museums */,
 				3581676D21A0E49400758EA5 /* Artists */,
 				35C9C3E62185491D00110F46 /* Font Lato */,
 				F47029F41A7F27DB00E30A3C /* Info.plist */,
@@ -1063,6 +1115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C10C1D2178285200E0D6A3 /* Dismiss.swift in Sources */,
+				35B4B52B2206609900E77EE5 /* TableViewOfMuseumCollectionViewController.swift in Sources */,
 				581F70CD1F4287040064496C /* ArtViewController.swift in Sources */,
 				F4D750181BD38F0C009E1003 /* SWRevealViewController.m in Sources */,
 				3544613020748B2300FA1CBF /* MuseumTableViewCell.swift in Sources */,
@@ -1076,10 +1129,15 @@
 				581F719A1F5B24610064496C /* LoginViewController.swift in Sources */,
 				581F719C1F6993E70064496C /* FloorPlanViewController.swift in Sources */,
 				58F68F131F759BA6006F7510 /* ArtView.swift in Sources */,
+				35BF9F9721A9E64D00B6586F /* CollectionViewCellListView.swift in Sources */,
 				586B94921F144D4500F89AE8 /* locationAnnotation.swift in Sources */,
+				35B4B52E220660E400E77EE5 /* TableCellCollectionOfMuseumsTableViewCell.swift in Sources */,
 				580C106A20CDCB2D004D5619 /* AppDelegate.swift in Sources */,
 				F4702A181A7F351C00E30A3C /* MenuController.swift in Sources */,
+				356465082201344300B21A6B /* MuseumListClass.swift in Sources */,
 				586B948C1F11E09100F89AE8 /* Museum.swift in Sources */,
+				35BF9F9421A9CEDA00B6586F /* ListTableViewCell.swift in Sources */,
+				35B4B5312206614000E77EE5 /* CollectionCellOfCollectionMuseumsCollectionViewCell.swift in Sources */,
 				3544613320748B9200FA1CBF /* ListTableViewController.swift in Sources */,
 				3556093620635E3300621E4F /* loginedUser.xcdatamodeld in Sources */,
 				A058F3791FC3C0F7001FC901 /* Constants.swift in Sources */,
@@ -1094,6 +1152,7 @@
 				3569731F20A2AA55006340EC /* AccountViewController.swift in Sources */,
 				35A25EAB204DF9460023A77D /* UserNamePasswordViewController.swift in Sources */,
 				58F68F1B1F7A0AF5006F7510 /* MuseumDetailsView.swift in Sources */,
+				35BF9F9121A9CE9E00B6586F /* ViewControllerMuseumList.swift in Sources */,
 				586B94951F14A8C900F89AE8 /* AnnotationView.swift in Sources */,
 				3581676F21A0E4CF00758EA5 /* ArtistsViewController.swift in Sources */,
 				35490F22201ADCDD00429192 /* artHeaderCollectionReusableView.swift in Sources */,
@@ -1120,21 +1179,28 @@
 				3557CEE020675B4B00548D99 /* GuestViewSetUp.swift in Sources */,
 				F4702A0C1A7F27DC00E30A3C /* SidebarMenuTests.swift in Sources */,
 				35A25EB2204DF9720023A77D /* UploadProfilePicViewController.swift in Sources */,
+				35BF9F9821A9E64D00B6586F /* CollectionViewCellListView.swift in Sources */,
 				35C10C182178093900E0D6A3 /* ImageViewController.swift in Sources */,
+				35BF9F9521A9CEDA00B6586F /* ListTableViewCell.swift in Sources */,
+				35B4B52F220660E400E77EE5 /* TableCellCollectionOfMuseumsTableViewCell.swift in Sources */,
 				586B94961F14A8C900F89AE8 /* AnnotationView.swift in Sources */,
 				586B94931F144D4500F89AE8 /* locationAnnotation.swift in Sources */,
 				35A7C7D32198CCFA00D219A5 /* WebViewController.swift in Sources */,
 				35A25EB5204DF9820023A77D /* NewUser.swift in Sources */,
 				3581677021A0E4CF00758EA5 /* ArtistsViewController.swift in Sources */,
+				35B4B5322206614000E77EE5 /* CollectionCellOfCollectionMuseumsCollectionViewCell.swift in Sources */,
+				35BF9F9221A9CE9E00B6586F /* ViewControllerMuseumList.swift in Sources */,
 				A058F3851FC40B82001FC901 /* MapViewController.swift in Sources */,
 				35C10C1E2178285200E0D6A3 /* Dismiss.swift in Sources */,
 				A058F3821FC40B47001FC901 /* CarouselView.swift in Sources */,
 				35A25EAF204DF9590023A77D /* RegistrationViewController.swift in Sources */,
 				A058F3891FC40B9B001FC901 /* Constants.swift in Sources */,
 				A058F3861FC40B86001FC901 /* FloorPlanViewController.swift in Sources */,
+				35B4B52C2206609900E77EE5 /* TableViewOfMuseumCollectionViewController.swift in Sources */,
 				A058F3881FC40B8C001FC901 /* MuseumViewController.swift in Sources */,
 				357E90902068A4EB00B595D5 /* GuestViewHeader.swift in Sources */,
 				35A4BAD7201B870200FA1786 /* artHeaderCollectionReusableView.swift in Sources */,
+				356465092201344300B21A6B /* MuseumListClass.swift in Sources */,
 				3555AF9F201E8A2B00202931 /* NewMuseumViewController.swift in Sources */,
 				A058F3811FC40B3D001FC901 /* artCollectionViewCell.swift in Sources */,
 				586B948D1F11E09100F89AE8 /* Museum.swift in Sources */,
