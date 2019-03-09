@@ -98,8 +98,8 @@ class LoginViewController: UIViewController{
         userNameText.layer.cornerRadius = 5.0
         passwordText.layer.cornerRadius = 5.0
         
-        let modelName = UIDevice.current.modelName
-        if(modelName=="iPhone 5s"){
+     //   let modelName = UIDevice.current.modelName
+      /*  if(modelName=="iPhone 5s"){
             let line2 = CAShapeLayer()
             let line = CAShapeLayer()
             let screenSize = UIScreen.main.bounds
@@ -151,7 +151,7 @@ class LoginViewController: UIViewController{
             label.text = "OR"
             label.textColor=UIColor.white
             self.view.addSubview(label)
-        }
+        }*/
         navigationController?.navigationBar.barTintColor = UIColor(red: 200/255.0, green: 31/255.0, blue: 97/255.0, alpha:1.0)
         
       //  loginButton.delegate = self
